@@ -25,9 +25,9 @@ Apresente também alguns (pelo menos 2) objetivos específicos dependendo de ond
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A proposta deste tema surge a partir da crescente demanda por alternativas flexíveis de ensino, especialmente no contexto pós-pandemia, em que a educação remota e o aprendizado autônomo ganharam destaque. Além disso, busca-se fomentar o conhecimento para além da sala de aula, incentivando o aluno a explorar outras formas de aprendizagem quando o ensino tradicional não for suficiente ou quando o seu processo de aprendizado exigir maior investimento.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+A aplicação proposta tem como objetivo facilitar a conexão entre alunos e professores particulares, permitindo que os usuários encontrem profissionais qualificados conforme suas áreas de interesse, disponibilidade de horários e metas específicas. A solução pretende oferecer um ambiente intuitivo e eficiente para a contratação de aulas, promovendo a acessibilidade, a autonomia no aprendizado e a valorização do ensino individualizado.
 
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
