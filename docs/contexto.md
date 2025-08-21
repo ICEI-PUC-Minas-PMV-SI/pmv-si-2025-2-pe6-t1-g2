@@ -26,8 +26,13 @@ A aplicação proposta tem como objetivo facilitar a conexão entre alunos e pro
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+O público-alvo da plataforma é formado principalmente por dois perfis complementares:
+
+- **Alunos:** 
+Pessoas entre 15 e 45 anos, desde estudantes que precisam de reforço em matérias escolares até universitários ou indivíduos interessados em aprender novos idiomas, adquirir habilidades técnicas, desenvolver competências específicas para a vida profissional ou até mesmo aderir a um hobby. São usuários que já possuem certa familiaridade com tecnologia, utilizam dispositivos móveis e plataformas digitais no dia a dia e valorizam a possibilidade de escolher de acordo com seus próprios critérios, como flexibilidade de horários, preço e estilo de ensino.
+- **Professores:** 
+Profissionais autônomos, tutores e especialistas em diferentes áreas, entre 22 e 55 anos, que desejam iniciar ou ampliar a divulgação de seus serviços e sua rede de alunos. Ativos em redes sociais, com domínio digital que varia de básico a intermediário. Valorizam a possibilidade de alcançar públicos mais amplos, aumentar sua credibilidade por meio de avaliações e consolidar sua atividade como uma fonte de renda.
+
 
 Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
