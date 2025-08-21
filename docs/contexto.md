@@ -3,11 +3,8 @@
 Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
+A busca por professores particulares qualificados é uma tarefa desafiadora. A dificuldade de aprendizado em ambientes tradicionais de sala de aula e a carência de habilidades autodidatas impulsionam a necessidade crescente por apoio educacional individualizado. No entanto, estudantes e pais enfrentam a dificuldade de encontrar profissionais adequados, comparar valores e avaliar a credibilidade e as recomendações de cada um. Essa falta de uma plataforma centralizada para pesquisa e agendamento resulta em um processo ineficiente, fragmentado e, muitas vezes, inseguro. O problema reside, portanto, na inexistência de uma solução que conecte de forma simples e direta a demanda por ensino particular à oferta de profissionais qualificados.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
 
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
@@ -124,11 +121,12 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 ### Semana 1
 
-Atualizado em: 21/04/2024
+Atualizado em: 20/08/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 05/02/2024      |
+| AlunaX        | Introdução | 01/02/2024     | 07/02/2024 |     |       |
+| Laís Lara Ferreira dos Santos | Problema | 20/08/2025     | 22/08/2025 | ✔️    | 20/08/2025      |
 | AlunaZ        | Objetivos    | 03/02/2024     | 10/02/2024 | 📝    |                 |
 | AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
 | AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
