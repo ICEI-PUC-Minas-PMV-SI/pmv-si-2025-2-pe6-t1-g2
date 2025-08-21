@@ -6,11 +6,6 @@ Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o pr
 A busca por professores particulares qualificados é uma tarefa desafiadora. A dificuldade de aprendizado em ambientes tradicionais de sala de aula e a carência de habilidades autodidatas impulsionam a necessidade crescente por apoio educacional individualizado. No entanto, estudantes e pais enfrentam a dificuldade de encontrar profissionais adequados, comparar valores e avaliar a credibilidade e as recomendações de cada um. Essa falta de uma plataforma centralizada para pesquisa e agendamento resulta em um processo ineficiente, fragmentado e, muitas vezes, inseguro. O problema reside, portanto, na inexistência de uma solução que conecte de forma simples e direta a demanda por ensino particular à oferta de profissionais qualificados.
 
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
-
 ## Objetivos
 
 Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
