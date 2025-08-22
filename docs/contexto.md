@@ -35,6 +35,16 @@ Pessoas entre 15 e 45 anos, desde estudantes que precisam de reforço em matéri
 - **Professores:** 
 Profissionais autônomos, tutores e especialistas em diferentes áreas, entre 22 e 55 anos, que desejam iniciar ou ampliar a divulgação de seus serviços e sua rede de alunos. Ativos em redes sociais, com domínio digital que varia de básico a intermediário. Valorizam a possibilidade de alcançar públicos mais amplos, aumentar sua credibilidade por meio de avaliações e consolidar sua atividade como uma fonte de renda.
 
+### Mapa de stakeholders:
+
+| Stakeholders | Nível de Interesse |
+|--------------|---------------------|
+| Aluno        | Alto                |
+| Professores  | Alto                |
+
+
+
+
 
 Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
