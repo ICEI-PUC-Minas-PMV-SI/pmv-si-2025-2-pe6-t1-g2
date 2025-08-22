@@ -39,8 +39,9 @@ Profissionais autônomos, tutores e especialistas em diferentes áreas, entre 22
 
 | Stakeholders | Nível de Interesse |
 |--------------|---------------------|
-| Aluno        | Alto                |
+| Alunos       | Alto                |
 | Professores  | Alto                |
+
 
 
 
