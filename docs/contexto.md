@@ -8,9 +8,11 @@ A busca por professores particulares qualificados é uma tarefa desafiadora. A d
 
 ## Objetivos
 - Objetivo geral
+  
 Construir um ambiente de aprendizagem com o intuito de conectar pessoas em busca de conhecimento a especialistas qualificados, facilitando o desenvolvimento de habilidades de forma personalizada, interativa e acessível para qualquer área de interesse.
 
-- Objetivos específicos
+ - Objetivos específicos
+ 
 Criar uma plataforma de busca e filtragem avançada que facilite os usuários encontrar especialistas em uma vasta gama de áreas (acadêmicas, profissionais, hobbies, etc.), podendo comparar por qualificação, metodologia, preço e avaliações.
 
 Oferecer perfis públicos e personalizáveis para os especialistas, que funcionem como um portfólio digital, permitindo-lhes divulgar seu trabalho, metodologia, experiência e receber avaliações que construam sua reputação na plataforma.
