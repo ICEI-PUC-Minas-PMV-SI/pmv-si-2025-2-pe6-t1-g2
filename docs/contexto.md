@@ -7,13 +7,13 @@ A busca por professores particulares qualificados é uma tarefa desafiadora. A d
 
 
 ## Objetivos
+- Objetivo geral
+Construir um ambiente de aprendizagem com o intuito de conectar pessoas em busca de conhecimento a especialistas qualificados, facilitando o desenvolvimento de habilidades de forma personalizada, interativa e acessível para qualquer área de interesse.
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+- Objetivos específicos
+Criar uma plataforma de busca e filtragem avançada que facilite os usuários encontrar especialistas em uma vasta gama de áreas (acadêmicas, profissionais, hobbies, etc.), podendo comparar por qualificação, metodologia, preço e avaliações.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Oferecer perfis públicos e personalizáveis para os especialistas, que funcionem como um portfólio digital, permitindo-lhes divulgar seu trabalho, metodologia, experiência e receber avaliações que construam sua reputação na plataforma.
 
 ## Justificativa
 
