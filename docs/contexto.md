@@ -67,6 +67,16 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----|
 |RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
 |RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-003| Gerenciar administrador   | MÉDIA |
+|RF-004| Gerenciar usuários   | MÉDIA |
+|RF-005| Gerenciar comentários   | MÉDIA |
+|RF-006| Gerenciar avaliações   | MÉDIA |
+|RF-007| Avaliar denúncias   | MÉDIA |
+|RF-008| Gerenciar publicação   | MÉDIA |
+|RF-009| Buscar por filtro   | MÉDIA |
+|RF-010| Gerenciar preferências   | MÉDIA |
+|RF-011| Logar no sistema   | MÉDIA |
+|RF-012| Pontuar usuários   | MÉDIA |
 
 ### Requisitos não Funcionais
 
