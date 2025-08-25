@@ -83,7 +83,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-002| Deve processar requisições do usuário em no máximo 2s |  BAIXA |
+|RNF-003| Sistem deve comportar 10000 usuários simultaneamente |  BAIXA |
+|RNF-004| Sistema deve seguir as normas da LGPD |  BAIXA |
+|RNF-005| Rodar nos sistemas de windows, linux ou mac |  BAIXA |
+|RNF-006| Rodar em dispositivos móveis tendo uma boa diagramação de páginas |  BAIXA |
+|RNF-007| O sistema deverá funcionar nos navegadores Safari Google Chrome, Microdoft Edge, Firefox e Opera |  BAIXA |
+|RNF-008| O produto deve restringir o acesso por meio de senha individual para usuário |  BAIXA |
+
+
+
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
