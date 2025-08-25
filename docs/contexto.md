@@ -64,9 +64,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
-|RF-003| Gerenciar administrador   | MÉDIA |
+|RF-001| Gerenciar prestador de serviço | ALTA | 
+|RF-002| Gerenciar curriculo   | MÉDIA |
+|RF-003| Gerenciar administrador   | ALTA |
 |RF-004| Gerenciar usuários   | MÉDIA |
 |RF-005| Gerenciar comentários   | MÉDIA |
 |RF-006| Gerenciar avaliações   | MÉDIA |
@@ -76,6 +76,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-010| Gerenciar preferências   | MÉDIA |
 |RF-011| Logar no sistema   | MÉDIA |
 |RF-012| Pontuar usuários   | MÉDIA |
+|RF-013| Agendamento de aulas   | MÉDIA |
 
 ### Requisitos não Funcionais
 
@@ -84,7 +85,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
 |RNF-002| Deve processar requisições do usuário em no máximo 2s |  BAIXA |
 |RNF-003| Sistem deve comportar 10000 usuários simultaneamente |  BAIXA |
-|RNF-004| Sistema deve seguir as normas da LGPD |  BAIXA |
+|RNF-004| Sistema deve seguir as normas da LGPD |  ALTO |
 |RNF-005| Rodar nos sistemas de windows, linux ou mac |  BAIXA |
 |RNF-006| Rodar em dispositivos móveis tendo uma boa diagramação de páginas |  BAIXA |
 |RNF-007| O sistema deverá funcionar nos navegadores Safari Google Chrome, Microdoft Edge, Firefox e Opera |  BAIXA |
