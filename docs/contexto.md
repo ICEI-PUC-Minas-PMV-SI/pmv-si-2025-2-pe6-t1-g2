@@ -31,7 +31,7 @@ A aplicação proposta tem como objetivo facilitar a conexão entre alunos e pro
 O público-alvo da plataforma é formado principalmente por dois perfis complementares:
 
 - **Alunos:** 
-Pessoas entre 15 e 45 anos, desde estudantes que precisam de reforço em matérias escolares até universitários ou indivíduos interessados em aprender novos idiomas, adquirir habilidades técnicas, desenvolver competências específicas para a vida profissional ou até mesmo aderir a um hobby. São usuários que já possuem certa familiaridade com tecnologia, utilizam dispositivos móveis e plataformas digitais no dia a dia e valorizam a possibilidade de escolher de acordo com seus próprios critérios, como flexibilidade de horários, preço e estilo de ensino.
+Pessoas a partir de 15, desde estudantes que precisam de reforço em matérias escolares até universitários ou indivíduos interessados em aprender novos idiomas, adquirir habilidades técnicas, desenvolver competências específicas para a vida profissional ou até mesmo aderir a um hobby. São usuários que já possuem certa familiaridade com tecnologia, utilizam dispositivos móveis e plataformas digitais no dia a dia e valorizam a possibilidade de escolher de acordo com seus próprios critérios, como flexibilidade de horários, preço e estilo de ensino.
 - **Professores:** 
 Profissionais autônomos, tutores e especialistas em diferentes áreas, entre 22 e 55 anos, que desejam iniciar ou ampliar a divulgação de seus serviços e sua rede de alunos. Ativos em redes sociais, com domínio digital que varia de básico a intermediário. Valorizam a possibilidade de alcançar públicos mais amplos, aumentar sua credibilidade por meio de avaliações e consolidar sua atividade como uma fonte de renda.
 
