@@ -70,8 +70,7 @@ Persona 05 - Zélia do Carmo, 63 anos, é uma professora de história aposentada
 
 Persona 06 - Theo Galhardo de Lima, de 24 anos, acabou de se formar em sistema de informações e já iniciou seu curso de mestrado em computação aplicada a matemática, mas para a cadeira de equações diferencias ordinárias, Theo está tendo muita dificuldade e precisa de aulas de apoio que possuem um custo alto, pois são muito específicas, para isso, ele optou em dar aulas particulares na mesma plataforma em que tem aulas.
 
-
-
+Persona 07 - Joana tem 16 anos e mora no interior de São Paulo em uma cidade muito pequena somente com escola pública e não tem cursinho para Enem e ela ama estudar e quer se formar em medicina em uma grande universidade, mas para isso precisa ter ótimas notas. A forma que ela encontrou para reforçar seus estudos foi o com aulas particulares que ela contrata e consegue aprofundar nos conteúdos e ter contato com professores mais familiarizados com o processo do Enem. 
 
 ## Requisitos
 
@@ -108,12 +107,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-007| O sistema deverá funcionar nos navegadores Safari Google Chrome, Microdoft Edge, Firefox e Opera |  BAIXA |
 |RNF-008| O produto deve restringir o acesso por meio de senha individual para usuário |  BAIXA |
 
-
-
-
-
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
 - [Requisitos Funcionais
  (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
  correspondem a uma funcionalidade que deve estar presente na
