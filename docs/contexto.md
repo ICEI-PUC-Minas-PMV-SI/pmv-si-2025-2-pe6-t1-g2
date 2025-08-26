@@ -56,6 +56,23 @@ Adicione informações sobre o público-alvo por meio de uma descrição textual
 
 # Especificações do Projeto
 
+## Personas
+
+Persona 01 - Claudia tem 60 anos é médica em Barbacena MG, ela e apaixonada por violão e nunca pode aprender por falta de tempo, agora que está com os filhos criados e com mais tempo entre os plantões, Claudia busca uma forma de aprender violão, pois ela não tem nenhuma base musical e precisa de um professor para iniciar do zero com aulas presenciais.
+
+Persona 02 - A família Sampaio e formada por Bento, Ana e Carlinhos, eles são um casal de 33 anos com um filho de 6 anos, Bento e engenheiro e Ana é professora de matemática. Eles acreditam que a educação do filho já deveria ter uma iniciação de língua estrangeira junto com a alfabetização na língua portuguesa, eles buscam uma professora formada com especialização em ensino infantil para acompanhar seu filho no aprendizado da língua estrangeira.
+
+Persona 03 - Consuelo De Andrade Goulart, 75 anos, é uma idosa ativa e recentemente ficou viúva, moradora do bairro Savassi, em Belo Horizonte. Ela e seu ex parceiro (José Antônio de Andrade) eram um casal muito próximo e sua partida fez uma enorme falta. Seus três filhos (Ana Luiza, Diogo e Gisele) apoiam a mãe em sua nova iniciativa de voltar a fazer crochê e tricô para ocupar o tempo, para isso elas buscam uma professora que também tenha formação em terapia ocupacional para que possa ministrar aulas a mãe e acompanhar o desenvolvimento dela.
+
+Persona 04 - Eduarda Lima e Luiz Alves são um casal, ambos de 24 anos. Eles estão juntos há 4 anos e pretendem se casar, Eduardo e formado em matemática com mestrado em álgebra linear e trabalha em um banco, mas para pagar a festa de casamento e a lua de mel, Eduardo pretende voltar a dar aulas particulares de reforço para universitário e com isso juntar um valor que ele considera possível em um ano para custear os sonhos do casal. 
+
+Persona 05 - Zélia do Carmo, 63 anos, é uma professora de história aposentada em Belo Horizonte. Como o valor da aposentadoria que ela recebe não é muito alto e ela ainda tem muita saúde e disposição para lecionar, Zélia pretender dar aulas particulares, pois ela pode aumentar sua renda, praticar a atividade que gosta, ter horários flexíveis e manter a mente sadia e em atividade.
+
+Persona 06 - Theo Galhardo de Lima, de 24 anos, acabou de se formar em sistema de informações e já iniciou seu curso de mestrado em computação aplicada a matemática, mas para a cadeira de equações diferencias ordinárias, Theo está tendo muita dificuldade e precisa de aulas de apoio que possuem um custo alto, pois são muito específicas, para isso, ele optou em dar aulas particulares na mesma plataforma em que tem aulas.
+
+
+
+
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
