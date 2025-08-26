@@ -152,9 +152,9 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 > Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
 
-### Semana 1
+### Semana 1 
 
-Atualizado em: 20/08/2025
+Atualizado em: 18/08/2025 a 24/08/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
@@ -166,7 +166,7 @@ Atualizado em: 20/08/2025
 
 #### Semana 2
 
-Atualizado em: 21/04/2024
+Atualizado em: 25/08/2025 a 31/08/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
