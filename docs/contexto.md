@@ -186,10 +186,10 @@ Atualizado em: 25/08/2025 a 31/08/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | CSS unificado    | 03/02/2024     | 10/03/2024 | 📝    |                 |
-| AlunoY        | Página de login  | 01/02/2024     | 07/03/2024 | ⌛     |                 |
-| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       |
+| Ant Rubens    | Introdução   | 26/08/2025     | 27/08/2025 | ✔️    | 27/08/2025      |
+| Ant Rubens    | Personas   | 18/08/2025     | 25/08/2025 | ✔️    | 26/08/2025      |
+| Ant Rubens    | Requisitos Funcionais  | 18/08/2025     | 25/08/2025 | ✔️    | 27/08/2025      |
+| Ant Rubens    | Restrições  | 18/08/2025     | 25/08/2025 | ✔️    | 27/08/2025      |
 
 Legenda:
 - ✔️: terminado
