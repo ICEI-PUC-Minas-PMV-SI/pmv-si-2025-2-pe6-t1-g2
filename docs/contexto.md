@@ -83,7 +83,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-001| Gerenciar prestador de serviço | ALTA | 
 |RF-002| Gerenciar curriculo   | MÉDIA |
 |RF-003| Gerenciar administrador   | ALTA |
-|RF-004| Gerenciar usuários   | MÉDIA |
+|RF-004| Gerenciar usuários   | ALTA |
 |RF-005| Gerenciar comentários   | MÉDIA |
 |RF-006| Gerenciar avaliações   | MÉDIA |
 |RF-007| Avaliar denúncias   | MÉDIA |
@@ -92,7 +92,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-010| Gerenciar preferências   | MÉDIA |
 |RF-011| Logar no sistema   | MÉDIA |
 |RF-012| Pontuar usuários   | MÉDIA |
-|RF-013| Agendamento de aulas   | MÉDIA |
+|RF-013| Agendamento de aulas   |ALTA |
 
 ### Requisitos não Funcionais
 
