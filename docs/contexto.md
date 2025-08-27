@@ -176,7 +176,7 @@ Atualizado em: 18/08/2025 a 24/08/2025
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | AlunaX        | Introdução | 01/02/2024     | 07/02/2024 |     |       |
 | Laís Lara Ferreira dos Santos | Problema | 20/08/2025     | 22/08/2025 | ✔️    | 20/08/2025      |
-| AlunaZ        | Objetivos    | 03/02/2024     | 10/02/2024 | 📝    |                 |
+| Beatriz Pereira da Costa        | Justificativa    | 18/08/2025     | 19/08/2025 | ✔️    |                 |
 | AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
 | AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
 
