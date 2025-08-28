@@ -160,18 +160,18 @@ Descreva aqui todos os serviços que serão disponibilizados pelo seu projeto, d
 	
 **Catálogo Visão TI	
 |Nome do Serviço	|Agendamento service|
-Descrição|	Serviço de agendamento de horários|
-Tipo	|
-Quem Suporta|	Suporte 1° Nível|
-Responsável|	Zé|
-Impacto|	Alto|
-Prioridade|	Alta|
-Interfaces API	Endpoints, contratos, autenticação|
-Dependencias	Bancos de dados, filas, outros serviços|
-SLO/SLA Técnico	99,9% uptime mensal, latência p95 < 500ms|
-Segurança Compliance	Classificação de dados, políticas de acesso, auditorias|
-Custo/Tag.Financeiro	|       |
-Ambiente|	|
+|Descrição|	Serviço de agendamento de horários|
+|Tipo	|
+|Quem Suporta|	Suporte 1° Nível|
+|Responsável|	Zé|
+|Impacto|	Alto|
+|Prioridade|	Alta|
+|Interfaces API	Endpoints, contratos, autenticação|
+|Dependencias	Bancos de dados, filas, outros serviços|
+|SLO/SLA Técnico	99,9% uptime mensal, latência p95 < 500ms|
+|Segurança Compliance	Classificação de dados, políticas de acesso, auditorias|
+|Custo/Tag.Financeiro	|       |
+|Ambiente|	|
 
 # Arquitetura da Solução
 
