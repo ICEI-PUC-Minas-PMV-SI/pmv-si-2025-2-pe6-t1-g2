@@ -82,32 +82,25 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Gerenciar prestador de serviço | ALTA | 
-|RF-002| Gerenciar curriculo   | MÉDIA |
-|RF-003| Gerenciar administrador   | ALTA |
-|RF-004| Gerenciar usuários   | ALTA |
-|RF-005| Gerenciar comentários   | MÉDIA |
-|RF-006| Gerenciar avaliações   | MÉDIA |
-|RF-007| Avaliar denúncias   | MÉDIA |
-|RF-008| Gerenciar publicação   | MÉDIA |
-|RF-009| Buscar por filtro   | MÉDIA |
-|RF-010| Gerenciar preferências   | MÉDIA |
-|RF-011| Logar no sistema   | MÉDIA |
-|RF-012| Pontuar usuários   | MÉDIA |
-|RF-013| Agendamento de aulas   |ALTA |
+|RF-001| Gerenciar usuários | ALTA | 
+|RF-002| Gerenciar Instrutor   | ALTA |
+|RF-003| Visualizar Instrutores   | ALTA |
+|RF-004| Gerenciar agendamento   | ALTA |
+|RF-005| Gerenciar avaliações   | MÉDIA|
+|RF-006| Gerenciar Administrador   | MÉDIA |
+|RF-007| Aprovar perfil instrutor   | MÉDIA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 2s |  BAIXA |
-|RNF-003| Sistem deve comportar 10000 usuários simultaneamente |  BAIXA |
-|RNF-004| Sistema deve seguir as normas da LGPD |  ALTO |
-|RNF-005| Rodar nos sistemas de windows, linux ou mac |  BAIXA |
-|RNF-006| Rodar em dispositivos móveis tendo uma boa diagramação de páginas |  BAIXA |
-|RNF-007| O sistema deverá funcionar nos navegadores Safari Google Chrome, Microdoft Edge, Firefox e Opera |  BAIXA |
-|RNF-008| O produto deve restringir o acesso por meio de senha individual para usuário |  BAIXA |
+|RNF-001| O sistema deve ser responsivo, adaptando-se a diferentes tamanhos de tela e dispositivos. | ALTO | 
+|RNF-002| O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD). |  ALTO |
+|RNF-003| O sistema deve utilizar criptografia HTTPS. |  ALTO |
+|RNF-004| As senhas devem ser amazenadas de forma criptografada no banco de dados. |  ALTO |
+|RNF-005| O sistema deve ser compatível com os principais navegadores web: Google Chrome, Microsoft Edge, Mozilla Firefox, Safari e Opera. |  MÉDIO |
+|RNF-006| O sistema deve ser compatível com os principais sistemas operacionais móveis, especificamente Android e iOS. |  MÉDIO |
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 - [Requisitos Funcionais
