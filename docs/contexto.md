@@ -145,7 +145,7 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 Descreva aqui todos os serviços que serão disponibilizados pelo seu projeto, detalhando suas características e funcionalidades.
 ## Catálogo de Serviços Visão Usuário
-|Caracteristicas  |Descrição |
+|Campo  |Descrição |
 |------------------------|-------------------------------------------|
 |Nome do Serviço |	Agendamento |
 |Descrição|	Agendamento das aulas|
@@ -157,7 +157,7 @@ Descreva aqui todos os serviços que serão disponibilizados pelo seu projeto, d
 |Documentação Usuário|	Usuario|
 	
 ## Catálogo de Serviços Visão TI	
-|Caracteristicas  |Descrição |
+|Campo  |Descrição |
 |------------------------|-------------------------------------------|
 |Nome do Serviço	|Agendamento service|
 |Descrição|	Serviço de agendamento de horários|
