@@ -137,6 +137,9 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 # Catálogo de Serviços
 
 Descreva aqui todos os serviços que serão disponibilizados pelo seu projeto, detalhando suas características e funcionalidades.
+
+- **Busca e Filtragem Avançada**: Ferramenta de pesquisa que permite aos alunos localizar especialistas combinando critérios (área de conhecimento, faixa de preço, avaliações, modalidade, distância e horários disponíveis) exibindo apenas profissionais que realmente atendem às suas necessidades. O serviço prioriza resultados por relevância e disponibilidade, facilitando agendamentos e melhorando a correspondência entre expectativas e oferta.
+
 ## Catálogo de Serviços Visão Usuário
 |Campo  |Descrição |
 |------------------------|-------------------------------------------|
