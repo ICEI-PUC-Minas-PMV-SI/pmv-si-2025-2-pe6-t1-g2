@@ -120,12 +120,13 @@ todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-|03| O projeto deverá ter uma aplicação Mobile        |
-|04| Atuação local na grande Belo Horizonte        |
+|ID| Restrição                                             	|
+|--|-------------------------------------------------------	|
+|01| O projeto deverá ser entregue até o final do semestre 	|
+|02| O projeto deverá ter uma aplicação Mobile        		|
+|03| A plataforma não realizará intermediação de pagamentos	|
+|04| O sistema não contemplará funcionalidades de suporte	|
+|05| Não será implementado mecanismo de verificação documental avançada dos instrutores (ex.: análise automática de diplomas);	|
 
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
@@ -138,7 +139,17 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 Descreva aqui todos os serviços que serão disponibilizados pelo seu projeto, detalhando suas características e funcionalidades.
 
+## Serviços para Usuários
+
+- **Cadastro e Gerenciamento de Conta:** Possibilita ao usuário criar uma conta na plataforma, fornecendo informações básicas como nome, e-mail e senha. Uma vez cadastrado, o usuário pode acessar seu perfil pessoal, onde terá a opção de editar dados e excluir sua conta, caso não deseje mais utilizá-la. Esse serviço garante autonomia ao usuário na gestão de seus próprios dados, além de ser essencial para viabilizar a participação ativa na plataforma.
+
 - **Busca e Filtragem Avançada**: Ferramenta de pesquisa que permite aos alunos localizar especialistas combinando critérios (área de conhecimento, faixa de preço, avaliações, modalidade, distância e horários disponíveis) exibindo apenas profissionais que realmente atendem às suas necessidades. O serviço prioriza resultados por relevância e disponibilidade, facilitando agendamentos e melhorando a correspondência entre expectativas e oferta.
+
+- **Visualização de Perfil do Instrutor:** Permite ao usuário acessar informações detalhadas sobre o instrutor antes de contratar uma aula. No perfil, são exibidos dados como formação acadêmica, experiência profissional, metodologia de ensino, valor da hora-aula, modalidades oferecidas (presencial ou online) e horários disponíveis. Esse serviço tem como objetivo aumentar a transparência e facilitar a escolha do professor mais adequado, oferecendo ao aluno segurança e clareza para sua tomada de decisão.
+
+- **Agendamento de Aulas:** Serviço que possibilita ao usuário solicitar aulas diretamente pelo perfil do instrutor. O aluno preenche um formulário onde comunica a data, horário, duração e modalidade de acordo com a disponibilidade oferecida pelo professor. Após o agendamento, o usuário acompanha a confirmação do instrutor e pode verificar todos os compromissos ativos em seu perfil. Além disso, há a possibilidade de cancelamento de agendamentos enviados, garantindo maior flexibilidade e controle.
+
+- **Avaliação de Instrutores:** Após o cumprimento de uma aula, o usuário pode avaliar o instrutor contratado, atribuindo notas e deixando comentários sobre critérios como didática, clareza na explicação, pontualidade e domínio do conteúdo. Esse serviço não apenas auxilia outros alunos na escolha de professores, como também contribui para a construção da reputação dos instrutores na plataforma.
 
 ## Catálogo de Serviços Visão Usuário
 |Campo  |Descrição |
