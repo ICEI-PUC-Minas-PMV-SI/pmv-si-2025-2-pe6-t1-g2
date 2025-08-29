@@ -189,14 +189,38 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+### Front-End
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+- **HTML**: Define a estrutura semântica das páginas e organiza os elementos da interface, servindo como base para todo o conteúdo exibido na plataforma.
+    
+- **CSS**: Responsável pelo design visual, cores, tipografia e layout, garantindo uma experiência responsiva e acessível em diferentes tamanhos de tela e dispositivos.
+    
+- **JavaScript**: Adiciona interatividade e dinamismo à aplicação, permitindo buscas em tempo real, filtros, agendamentos e atualização instantânea de dados sem recarregar a página.
+
+### Back-End
+
+
+- **Node.js**: Plataforma baseada no motor V8 do Chrome que permite executar JavaScript no servidor, oferecendo alta escalabilidade, desempenho assíncrono e suporte a APIs rápidas para aplicações web e mobile.
+    
+- **Python**: Linguagem de programação versátil, de sintaxe simples e poderosa, utilizada para automações, análise de dados, inteligência artificial e serviços de backend, facilitando integrações complexas.
+    
+- **REST**: Estilo de arquitetura para APIs que organiza recursos e operações usando requisições HTTP padronizadas, promovendo simplicidade, interoperabilidade e escalabilidade na comunicação entre sistemas.
+
+### Banco de Dados
+
+- **PostgreSQL**: Sistema de gerenciamento de banco de dados relacional avançado e open source, conhecido por sua robustez, escalabilidade e suporte a recursos complexos, como consultas SQL avançadas, transações seguras, extensões geoespaciais e alta integridade dos dados, sendo ideal para aplicações web que exigem confiabilidade e performance.
+
+### Mobile
+
+- **React Native**: Framework desenvolvido pelo Facebook que permite criar aplicativos móveis nativos para Android e iOS utilizando JavaScript e React, oferecendo desempenho próximo ao nativo, reutilização de código entre plataformas e integração com recursos do dispositivo, acelerando o desenvolvimento de apps multiplataforma.
+
+### IDE de desenvolvimento
+
+- **Visual Studio Code**: Editor de código-fonte leve, gratuito e multiplataforma, com suporte integrado para diversas linguagens de programação, extensões para frameworks e ferramentas modernas, controle de versão com Git, integração com ambientes em nuvem e terminal embutido, proporcionando um ambiente completo e personalizável para o desenvolvimento do projeto web e mobile.
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
+- **Microsoft Azure**: Plataforma de nuvem que será usada para hospedar todos os componentes do projeto, fornecendo serviços específicos como  para o frontend em HTML, CSS, JavaScript e React, para rodar o backend, para gerenciar o banco de dados PostgreSQL com segurança e escalabilidade.
 # Planejamento
 
 ##  Quadro de tarefas
