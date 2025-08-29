@@ -238,6 +238,8 @@ Atualizado em: 18/08/2025 a 24/08/2025
 | Beatriz Pereira da Costa        | Justificativa    | 18/08/2025     | 22/08/2025 | ✔️    | 19/08/2025                |
 | AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
 | Arthur Neves da Silveira        | Público-alvo  |    21/08/2025        | 22/08/2025 | ✔️    | 21/08/2025      |
+| Denis Alves da Silva Leite        | Mapa de Stakeholders  | 20/08/2025     | 22/08/2025 | ✔️      | 22/08/2025            |
+
 
 #### Semana 2
 
