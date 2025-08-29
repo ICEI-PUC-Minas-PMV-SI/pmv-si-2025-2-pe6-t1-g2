@@ -1,4 +1,8 @@
-# TÍTULO DO PROJETO
+# Saber+
+
+<div align=center>
+<img width="437" height="200" alt="logo" src="https://github.com/user-attachments/assets/28293d83-8072-4940-95c7-931fe32a1330"/>
+</div>
 
 `CURSO: Sistemas de Informação`
 
@@ -6,7 +10,7 @@
 
 `SEMESTRE: 6º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Saber+ é uma plataforma web e mobile que conecta alunos a professores particulares, oferecendo busca avançada, agendamento de aulas e avaliações. Voltada para quem deseja aprender ou ensinar, proporciona um ambiente intuitivo, seguro e acessível para o desenvolvimento de habilidades e a valorização do ensino individualizado.
 
 ## Integrantes
 
