@@ -213,7 +213,7 @@ Atualizado em: 18/08/2025 a 24/08/2025
 | Laís Lara Ferreira dos Santos | Problema | 20/08/2025     | 22/08/2025 | ✔️    | 20/08/2025      |
 | Beatriz Pereira da Costa        | Justificativa    | 18/08/2025     | 22/08/2025 | ✔️    | 19/08/2025                |
 | AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
-| AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
+| Arthur Neves da Silveira        | Público-alvo  |    21/08/2025        | 22/08/2025 | ✔️    | 21/08/2025      |
 
 #### Semana 2
 
@@ -225,6 +225,8 @@ Atualizado em: 25/08/2025 a 31/08/2025
 | Ant Rubens    | Personas   | 18/08/2025     | 25/08/2025 | ✔️    | 26/08/2025      |
 | Ant Rubens    | Requisitos Funcionais  | 18/08/2025     | 25/08/2025 | ✔️    | 27/08/2025      |
 | Ant Rubens    | Restrições  | 18/08/2025     | 25/08/2025 | ✔️    | 27/08/2025      |
+| Arthur Neves da Silveira        | Restriçoes  |    21/08/2025        | 22/08/2025 | ✔️    | 21/08/2025      |
+| Arthur Neves da Silveira        | Catálogo de Serviços   |    28/08/2025        | 29/08/2025 | ✔️    | 28/08/2025      |
 
 Legenda:
 - ✔️: terminado
