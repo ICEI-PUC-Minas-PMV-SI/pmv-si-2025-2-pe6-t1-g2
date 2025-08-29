@@ -188,11 +188,11 @@ Definição de como o software é estruturado em termos dos componentes que faze
 #### API
 - **REST**: Estilo de arquitetura para APIs que organiza recursos e operações usando requisições HTTP padronizadas, promovendo simplicidade, interoperabilidade e escalabilidade na comunicação entre sistemas.
 
-### Banco de Dados
+#### Banco de Dados
 
 - **MySQL**: Sistema de gerenciamento de banco de dados relacional avançado e open source, conhecido por sua robustez, escalabilidade e suporte a recursos complexos, como consultas SQL avançadas, transações seguras, extensões geoespaciais e alta integridade dos dados, sendo ideal para aplicações web que exigem confiabilidade e performance.
 
-### IDE de desenvolvimento
+#### IDE de desenvolvimento
 
 - **Visual Studio Code**: Editor de código-fonte leve, gratuito e multiplataforma, com suporte integrado para diversas linguagens de programação, extensões para frameworks e ferramentas modernas, controle de versão com Git, integração com ambientes em nuvem e terminal embutido, proporcionando um ambiente completo e personalizável para o desenvolvimento do projeto web e mobile.
 
