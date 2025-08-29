@@ -236,7 +236,7 @@ Atualizado em: 18/08/2025 a 24/08/2025
 | AlunaX        | Introdução | 01/02/2024     | 07/02/2024 |     |       |
 | Laís Lara Ferreira dos Santos | Problema | 20/08/2025     | 22/08/2025 | ✔️    | 20/08/2025      |
 | Beatriz Pereira da Costa        | Justificativa    | 18/08/2025     | 22/08/2025 | ✔️    | 19/08/2025                |
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
+| Sávio Sérgio Pereira da Silva      | Objetivos  | 20/08/2025    | 22/08/2025 | ✔️     |  20/08/2025               |
 | Arthur Neves da Silveira        | Público-alvo  |    21/08/2025        | 22/08/2025 | ✔️    | 21/08/2025      |
 | Denis Alves da Silva Leite        | Mapa de Stakeholders  | 20/08/2025     | 22/08/2025 | ✔️      | 22/08/2025            |
 
@@ -253,6 +253,8 @@ Atualizado em: 25/08/2025 a 31/08/2025
 | Ant Rubens    | Restrições  | 18/08/2025     | 25/08/2025 | ✔️    | 27/08/2025      |
 | Arthur Neves da Silveira        | Restriçoes  |    21/08/2025        | 22/08/2025 | ✔️    | 21/08/2025      |
 | Arthur Neves da Silveira        | Catálogo de Serviços   |    28/08/2025        | 29/08/2025 | ✔️    | 28/08/2025      |
+| Sávio Sérgio Pereira da Silva | Catálogo de Serviços | 28/08/2025 | 29/08/2025 | ✔️ | 28/08/2025 |
+| Atividade desenvolvida com a partipação de todos os integrantes | Requisitos | 27/08/2025 |-| ✔️ | 27/08/2025 |
 
 Legenda:
 - ✔️: terminado
