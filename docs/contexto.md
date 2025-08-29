@@ -25,17 +25,15 @@ A proposta deste tema surge a partir da crescente demanda por alternativas flex�
 
 A aplicação proposta tem como objetivo facilitar a conexão entre alunos e professores particulares, permitindo que os usuários encontrem profissionais qualificados conforme suas áreas de interesse, disponibilidade de horários e metas específicas. A solução pretende oferecer um ambiente intuitivo e eficiente para a contratação de aulas, promovendo a acessibilidade, a autonomia no aprendizado e a valorização do ensino individualizado.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
 O público-alvo da plataforma é formado principalmente por dois perfis complementares:
 
 - **Alunos:** 
-Todo os tipos de pessoas que tem alguma necessidade, entusiasmo ou interessados em adquirir conhecimentos, habilidades e desenvolver competências para a vida profissional ou para satisfazer suas necessidades próprias. São usuários que já possuem certa familiaridade com tecnologia, utilizam dispositivos móveis e plataformas digitais no dia a dia e valorizam a possibilidade de escolher, de acordo com seus critérios, horário das aulas, preço e estilo de ensino, área de conhecimento e o programa de ensino.
+Todos os tipos de pessoas que tem alguma necessidade, entusiasmo ou interesse em adquirir conhecimentos, habilidades e desenvolver competências para a vida profissional ou pessoal. São usuários que já possuem certa familiaridade com tecnologia, utilizam dispositivos móveis e plataformas digitais no dia a dia e valorizam a possibilidade de escolher, de acordo com seus critérios, horário das aulas, preço e estilo de ensino, área de conhecimento e o programa de ensino.
 - **Professores:** 
-Profissionais autônomos, tutores e especialistas em diferentes áreas, que desejam iniciar ou ampliar a divulgação de seus serviços e sua rede de alunos. Ativos em redes sociais, com domínio digital que varia de básico a intermediário. Valorizam a possibilidade de alcançar públicos mais amplos, aumentar sua credibilidade por meio de avaliações e consolidar sua atividade como uma fonte de renda.
+Profissionais autônomos, tutores ou especialistas em diferentes áreas, que desejam iniciar ou ampliar a divulgação de seus serviços e sua rede de alunos. Ativos em redes sociais, com domínio digital que varia de básico a intermediário. Valorizam a possibilidade de alcançar públicos mais amplos, aumentar sua credibilidade por meio de avaliações e consolidar sua atividade como uma fonte de renda.
 
 ### Mapa de stakeholders:
 
@@ -48,13 +46,6 @@ Profissionais autônomos, tutores e especialistas em diferentes áreas, que dese
 | Investidores  | Alto                |
 | Desenvolvedores  | Alto                |
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
 
 # Especificações do Projeto
 
@@ -88,33 +79,20 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-004| Gerenciar agendamento   | ALTA |
 |RF-005| Gerenciar avaliações   | MÉDIA|
 |RF-006| Gerenciar Administrador   | MÉDIA |
-|RF-007| Aprovar perfil instrutor   | MÉDIA |
+|RF-007| Aprovar perfil instrutor   | BAIXA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
+|------|-----------------------------------------|----|
 |RNF-001| O sistema deve ser responsivo, adaptando-se a diferentes tamanhos de tela e dispositivos. | ALTO | 
 |RNF-002| O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD). |  ALTO |
 |RNF-003| O sistema deve utilizar criptografia HTTPS. |  ALTO |
 |RNF-004| As senhas devem ser amazenadas de forma criptografada no banco de dados. |  ALTO |
-|RNF-005| O sistema deve ser compatível com os principais navegadores web: Google Chrome, Microsoft Edge, Mozilla Firefox, Safari e Opera. |  MÉDIO |
-|RNF-006| O sistema deve ser compatível com os principais sistemas operacionais móveis, especificamente Android e iOS. |  MÉDIO |
+|RNF-005| O sistema deve ser compatível com os principais navegadores web: Google Chrome, Microsoft Edge, Mozilla Firefox, Safari e Opera. |  MÉDIA |
+|RNF-006| O sistema deve ser compatível com os principais sistemas operacionais móveis, especificamente Android e iOS. |  MÉDIA |
 
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
@@ -126,18 +104,13 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |02| O projeto deverá ter uma aplicação Mobile        		|
 |03| A plataforma não realizará intermediação de pagamentos	|
 |04| O sistema não contemplará funcionalidades de suporte	|
-|05| Não será implementado mecanismo de verificação documental avançada dos instrutores (ex.: análise automática de diplomas);	|
+|05| Não será implementado mecanismo de verificação documental avançada dos instrutores (ex.: análise automática de diplomas)	|
 
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 # Catálogo de Serviços
 
-Descreva aqui todos os serviços que serão disponibilizados pelo seu projeto, detalhando suas características e funcionalidades.
+Descrição de todos os serviços que serão disponibilizados pelo projeto, com detalhes de suas características e funcionalidades.
 
 ## Serviços para Usuários
 
@@ -225,15 +198,13 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ##  Quadro de tarefas
 
-> Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
+### Semana 1 (18/08/2025 a 24/08/2025)
 
-### Semana 1 
-
-Atualizado em: 18/08/2025 a 24/08/2025
+Atualizado em: 29/08/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Introdução | 01/02/2024     | 07/02/2024 |     |       |
+| Partipação de todos (em reunião) | Discussão e definição do tema do projeto | 18/08/2025 | 22/08/2025 | ✔️ | 20/08/2025 |
 | Laís Lara Ferreira dos Santos | Problema | 20/08/2025     | 22/08/2025 | ✔️    | 20/08/2025      |
 | Beatriz Pereira da Costa        | Justificativa    | 18/08/2025     | 22/08/2025 | ✔️    | 19/08/2025                |
 | Sávio Sérgio Pereira da Silva      | Objetivos  | 20/08/2025    | 22/08/2025 | ✔️     |  20/08/2025               |
@@ -241,20 +212,25 @@ Atualizado em: 18/08/2025 a 24/08/2025
 | Denis Alves da Silva Leite        | Mapa de Stakeholders  | 20/08/2025     | 22/08/2025 | ✔️      | 22/08/2025            |
 
 
-#### Semana 2
+#### Semana 2 (25/08/2025 a 31/08/2025)
 
-Atualizado em: 25/08/2025 a 31/08/2025
+Atualizado em: 29/08/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Ant Rubens    | Introdução   | 26/08/2025     | 27/08/2025 | ✔️    | 27/08/2025      |
+| Ant Rubens    | Introdução   | 26/08/2025 | 27/08/2025 | ✔️    | 27/08/2025      |
 | Ant Rubens    | Personas   | 18/08/2025     | 25/08/2025 | ✔️    | 26/08/2025      |
 | Ant Rubens    | Requisitos Funcionais  | 18/08/2025     | 25/08/2025 | ✔️    | 27/08/2025      |
 | Ant Rubens    | Restrições  | 18/08/2025     | 25/08/2025 | ✔️    | 27/08/2025      |
-| Arthur Neves da Silveira        | Restriçoes  |    21/08/2025        | 22/08/2025 | ✔️    | 21/08/2025      |
+| Arthur Neves da Silveira        | Restrições  |    21/08/2025        | 22/08/2025 | ✔️    | 21/08/2025      |
 | Arthur Neves da Silveira        | Catálogo de Serviços   |    28/08/2025        | 29/08/2025 | ✔️    | 28/08/2025      |
 | Sávio Sérgio Pereira da Silva | Catálogo de Serviços | 28/08/2025 | 29/08/2025 | ✔️ | 28/08/2025 |
-| Atividade desenvolvida com a partipação de todos os integrantes | Requisitos | 27/08/2025 |-| ✔️ | 27/08/2025 |
+| Partipação de todos (em reunião)    | Discussão, criação e definição do fluxo dos usuários dentro do sistema | 25/08/2025 | 27/08/2025 | ✔️ | 25/08/2025 |
+| Partipação de todos (em reunião)    | Discussão e definição dos requisitos funcionais | 27/08/2025 | 27/08/2025 | ✔️ | 27/08/2025 |
+| Partipação de todos (em reunião)    | Discussão e definição dos requisitos não funcionais | 27/08/2025 | 27/08/2025 | ✔️ | 27/08/2025 |
+| Partipação de todos (em reunião)    | Discussão das restrições | 27/08/2025 | 27/08/2025 | ✔️ | 27/08/2025 |
+| Partipação de todos (em reunião)    | Discussão das tecnologias que serão utilizadas | 27/08/2025 | 27/08/2025 | ✔️ | 27/08/2025 |
+
 
 Legenda:
 - ✔️: terminado
