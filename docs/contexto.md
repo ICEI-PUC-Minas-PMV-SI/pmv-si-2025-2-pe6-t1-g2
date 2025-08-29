@@ -114,7 +114,7 @@ Descrição de todos os serviços que serão disponibilizados pelo projeto, com 
 
 ## Serviços para Usuários
 
-- **Cadastro e Gerenciamento de Conta:** Possibilita ao usuário criar uma conta na plataforma, fornecendo informações básicas como nome, e-mail e senha. Uma vez cadastrado, o usuário pode acessar seu perfil pessoal, onde terá a opção de editar dados e excluir sua conta, caso não deseje mais utilizá-la. Esse serviço garante autonomia ao usuário na gestão de seus próprios dados, além de ser essencial para viabilizar a participação ativa na plataforma.
+- **Cadastro e Gerenciamento de Perfil:** Possibilita ao usuário criar uma conta na plataforma, fornecendo informações básicas como nome, e-mail e senha. Uma vez cadastrado, o usuário pode acessar seu perfil pessoal, onde terá a opção de editar dados e excluir sua conta, caso não deseje mais utilizá-la. Esse serviço garante autonomia ao usuário na gestão de seus próprios dados, além de ser essencial para viabilizar a participação ativa na plataforma.
 
 - **Busca e Filtragem Avançada**: Ferramenta de pesquisa que permite aos alunos localizar especialistas combinando critérios (área de conhecimento, faixa de preço, avaliações, modalidade, distância e horários disponíveis) exibindo apenas profissionais que realmente atendem às suas necessidades. O serviço prioriza resultados por relevância e disponibilidade, facilitando agendamentos e melhorando a correspondência entre expectativas e oferta.
 
@@ -123,6 +123,18 @@ Descrição de todos os serviços que serão disponibilizados pelo projeto, com 
 - **Agendamento de Aulas:** Serviço que possibilita ao usuário solicitar aulas diretamente pelo perfil do instrutor. O aluno preenche um formulário onde comunica a data, horário, duração e modalidade de acordo com a disponibilidade oferecida pelo professor. Após o agendamento, o usuário acompanha a confirmação do instrutor e pode verificar todos os compromissos ativos em seu perfil. Além disso, há a possibilidade de cancelamento de agendamentos enviados, garantindo maior flexibilidade e controle.
 
 - **Avaliação de Instrutores:** Após o cumprimento de uma aula, o usuário pode avaliar o instrutor contratado, atribuindo notas e deixando comentários sobre critérios como didática, clareza na explicação, pontualidade e domínio do conteúdo. Esse serviço não apenas auxilia outros alunos na escolha de professores, como também contribui para a construção da reputação dos instrutores na plataforma.
+
+## Serviços para Usuário Instrutor
+
+- **Solicitação de Mudança de Perfil:** Usuários cadastrados têm a possibilidade de solicitar a alteração de seu perfil para um perfil de instrutor. Para isso, devem preencher um formulário com informações detalhadas sobre sua formação, experiência e áreas de atuação. A solicitação é então enviada para avaliação de um administrador, que verifica a veracidade dos dados e a adequação ao padrão da plataforma. Uma vez aprovada, a conta do usuário passa a ter acesso às ferramentas exclusivas de instrutor. Esse serviço garante que apenas profissionais validados possam oferecer aulas, promovendo segurança e confiança no ambiente.
+
+- **Portfólio:** O instrutor pode editar e manter atualizado seu portfólio digital dentro da plataforma. Esse espaço funciona como uma vitrine, permitindo ao professor incluir informações sobre sua metodologia, áreas de especialização, histórico acadêmico, experiência prática, valor da hora-aula e horários disponíveis. Além disso, o portfólio reúne as avaliações feitas pelos alunos, servindo como referência para novos interessados. Esse serviço fortalece a imagem do instrutor, aumenta sua visibilidade e melhora suas chances de conquistar novos alunos.
+
+- **Gerir Agendamentos:** O instrutor pode administrar as solicitações de aulas feitas pelos alunos em seu perfil. O professor recebe notificações de novos pedidos de agendamento e pode aceitá-los ou recusá-los. Essa funcionalidade garante maior controle ao instrutor sobre seu tempo, além de assegurar uma comunicação clara e organizada com os alunos.
+
+## Serviços para Administradores
+
+- **Aprovação de Perfis de Instrutores:** O administrador é responsável por analisar todas as solicitações de mudança de perfil enviadas pelos usuários que desejam atuar como instrutores. Nesse processo, são validados os dados fornecidos, como formação, experiência e documentos comprobatórios, garantindo que apenas aqueles com capacitação didática sejam aprovados. Após a validação, o perfil é liberado e passa a ser exibido como instrutor ativo, podendo oferecer aulas. Esse serviço é fundamental para manter a credibilidade da plataforma, assegurando que os alunos tenham acesso a professores qualificados.
 
 ## Catálogo de Serviços Visão Usuário
 |Campo  |Descrição |
