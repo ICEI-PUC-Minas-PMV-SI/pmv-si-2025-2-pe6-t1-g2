@@ -169,37 +169,22 @@ Descrição de todos os serviços que serão disponibilizados pelo projeto, com 
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-![arq](https://github.com/user-attachments/assets/b9402e05-8445-47c3-9d47-f11696e38a3d)
+![arq](https://github.com/user-attachments/assets/b9402e05-8445-47c3-9d47-f11696e38a3d) 
 
 
 ## Tecnologias Utilizadas
 
-#### Front-End Desktop
-- React
-
-#### Front End Mobile
-- React Native
-
-  
-#### Back-End
-
-- **Node.js**: Plataforma baseada no motor V8 do Chrome que permite executar JavaScript no servidor, oferecendo alta escalabilidade, desempenho assíncrono e suporte a APIs rápidas para aplicações web e mobile.
-    
-#### API
-- **REST**: Estilo de arquitetura para APIs que organiza recursos e operações usando requisições HTTP padronizadas, promovendo simplicidade, interoperabilidade e escalabilidade na comunicação entre sistemas.
-
-#### Banco de Dados
-
-- **MySQL**: Sistema de gerenciamento de banco de dados relacional avançado e open source, conhecido por sua robustez, escalabilidade e suporte a recursos complexos, como consultas SQL avançadas, transações seguras, extensões geoespaciais e alta integridade dos dados, sendo ideal para aplicações web que exigem confiabilidade e performance.
-
-#### IDE de desenvolvimento
-
-- **Visual Studio Code**: Editor de código-fonte leve, gratuito e multiplataforma, com suporte integrado para diversas linguagens de programação, extensões para frameworks e ferramentas modernas, controle de versão com Git, integração com ambientes em nuvem e terminal embutido, proporcionando um ambiente completo e personalizável para o desenvolvimento do projeto web e mobile.
+- **Front-End Web:** HTML, CSS, JavaScript e React;
+- **Front-End Mobile:** React Native;
+- **Back-End:** Node.js com Express;
+- **Banco de Dados:** MySQL;
+- **IDE de desenvolvimento:** Visual Studio Code
 
 ## Hospedagem
 
 - **Microsoft Azure**: Plataforma de nuvem que será usada para hospedar todos os componentes do projeto, fornecendo serviços específicos como  para o frontend em HTML, CSS, JavaScript e React, para rodar o backend, para gerenciar o banco de dados com segurança e escalabilidade.
-- 
+
+
 # Planejamento
 
 ##  Quadro de tarefas
