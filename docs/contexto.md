@@ -221,7 +221,7 @@ Atualizado em: 29/08/2025
 | Partipação de todos (em reunião)    | Discussão e definição dos requisitos não funcionais | 27/08/2025 | 27/08/2025 | ✔️ | 27/08/2025 |
 | Partipação de todos (em reunião)    | Discussão das restrições | 27/08/2025 | 27/08/2025 | ✔️ | 27/08/2025 |
 | Partipação de todos (em reunião)    | Discussão das tecnologias que serão utilizadas | 27/08/2025 | 27/08/2025 | ✔️ | 27/08/2025 |
-| Antonio Rubens O Junqueira        | Contriuições em geral nos tópicos   |    31/08/2025        | 31/08/2025 | ✔️    | 31/08/2025      |
+| Antonio Rubens O Junqueira        | Contribuições em geral nos tópicos   |    31/08/2025        | 31/08/2025 | ✔️    | 31/08/2025      |
 
 Legenda:
 - ✔️: terminado
