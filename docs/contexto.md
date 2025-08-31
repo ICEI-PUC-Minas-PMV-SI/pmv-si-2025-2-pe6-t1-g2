@@ -90,7 +90,7 @@ Persona 03 - Consuelo De Andrade Goulart, 75 anos, é uma idosa ativa e recentem
 ### Persona 04 - Eduarda e Luiz
 
 <div align="center" style="border:2px dotted green; padding:10px; display:inline-block;">
-<img width="650" height="650" alt="eduarda e luiz" src="https://github.com/user-attachments/assets/10194757-2ae6-4246-95b5-e65d2eba876c" />
+<img width="200" height="200" alt="eduarda e luiz" src="https://github.com/user-attachments/assets/10194757-2ae6-4246-95b5-e65d2eba876c" />
 </div>
 
 * **Quem são**: Eduarda Lima e Luiz Alves, um casal de 24 anos.
