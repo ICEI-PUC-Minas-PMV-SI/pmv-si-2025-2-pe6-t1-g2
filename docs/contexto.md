@@ -1,7 +1,8 @@
 # Introdução
 
-A profissão de educador é uma das mais antigas da humanidade e a aprendizagem é uma ferramenta de sobrevivência da nossa espécie. Ao longo do tempo, mais conhecimentos vêm sendo gerados. Consequentemente, a geração atual tem que absorver uma carga muito grande desses conhecimentos para desempenhar as mais diferentes atividades, para os mais diferentes objetivos. Nos últimos anos, uma grande mudança tem sido a quebra no modelo tradicional do processo de ensino e aprendizagem. Hoje, as ferramentas digitais ajudam pessoas de diferentes regiões a trocarem conhecimentos, em tempo real ou por áudios e vídeos gravados. As aulas remotas ou virtuais, assim como vídeo aulas, podem transmitir tanto os conhecimentos tácitos como os explícitos. 
-É comum que, durante o processo da aprendizagem, algumas pessoas tenham dificuldade de compreender e elaborar o conhecimento somente lendo livros ou assistindo às aulas. Dessa forma, a mediação de um professor ou um instrutor é muito importante para dar suporte e contribuir para que do conhecimento seja absorvido, da melhor forma possível, pela pessoa que o deseja.
+O cenário da educação vem passando por uma transformação acelerada, impulsionada pela tecnologia e por novas demandas de aprendizado. Ferramentas digitais, como aulas remotas e conteúdos gravados, ampliaram o acesso ao conhecimento e consolidaram um modelo de aprendizagem mais flexível e contínuo. Nesse contexto, o modelo tradicional de sala de aula, embora essencial, nem sempre atende às necessidades individuais, o que reforça a importância do professor particular e do mentor especialista como mediadores para um aprendizado personalizado e eficaz.
+
+Entretanto, a crescente procura por esse tipo de acompanhamento evidenciou uma lacuna: a dificuldade de conectar, de forma segura e eficiente, quem deseja aprender com quem tem o conhecimento para ensinar. A busca por profissionais qualificados ainda ocorre de maneira fragmentada e informal. Diante disso, este projeto propõe o desenvolvimento de uma plataforma digital que simplifique essa conexão, oferecendo um ambiente acessível e confiável, voltado a professores interessados em divulgar seus serviços e a alunos que buscam encontrar professores particulares de forma prática e segura.
 
 
 ## Problema
@@ -9,12 +10,10 @@ A busca por professores particulares qualificados é uma tarefa desafiadora. A d
 
 
 ## Objetivos
-- Objetivo geral
-  
+### Objetivo geral
 Construir um ambiente de aprendizagem com o intuito de conectar pessoas em busca de conhecimento a especialistas qualificados, facilitando o desenvolvimento de habilidades de forma personalizada, interativa e acessível para qualquer área de interesse.
 
- - Objetivos específicos
- 
+### Objetivos específicos
 Desenvolver uma plataforma de busca e filtragem avançada que facilite os usuários encontrar especialistas em uma vasta gama de áreas (acadêmicas, profissionais, hobbies, etc.), podendo comparar por qualificação, metodologia, preço e avaliações.
 
 Implementar perfis públicos e personalizáveis para os especialistas, que funcionem como um portfólio digital, permitindo-lhes divulgar seu trabalho, metodologia, experiência e receber avaliações que construam sua reputação na plataforma.
@@ -102,7 +101,7 @@ Persona 07 - Joana tem 16 anos e mora no interior de São Paulo em uma cidade mu
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
 
 ### Requisitos Funcionais
 
@@ -166,24 +165,21 @@ Descrição de todos os serviços que serão disponibilizados pelo projeto, com 
 
 # Arquitetura da Solução
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+A arquitetura do sistema é composta por três camadas principais. A camada "Cliente", disponível nas versões Web e Mobile, é responsável pela interação com o usuário. Essas interfaces consomem os serviços da camada "Back-end/API", que concentra as regras de negócio e disponibiliza as funcionalidades de gerenciamento de perfil, agendamentos de aulas, avaliações, visualizações dos perfis de professores, busca de instrutores com filtros, gerenciamento de portfólio e gestão de agendamentos. Por fim, o SGBD relacional é utilizado para armazenar e organizar os dados da aplicação, garantindo consistência e integridade. Essa estrutura permite modularidade, escalabilidade e integração eficiente entre os componentes do sistema.
 
 ![Arquitetura da Solução](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t1-g2/raw/main/docs/img/arquitetura_solucao_saber_mais_3.png)
 
 
-
 ## Tecnologias Utilizadas
 
-- **Front-End Web:** HTML, CSS, JavaScript e React;
+- **Front-End Web:** HTML, CSS, JavaScript e React.js;
 - **Front-End Mobile:** React Native;
 - **Back-End:** Node.js com Express;
 - **Banco de Dados:** MySQL;
 - **IDE de desenvolvimento:** Visual Studio Code
 
 ## Hospedagem
-
-<!--
-- **Microsoft Azure**: Plataforma de nuvem que será usada para hospedar todos os componentes do projeto, fornecendo serviços específicos como  para o frontend em HTML, CSS, JavaScript e React, para rodar o backend, para gerenciar o banco de dados com segurança e escalabilidade. -->
+A hospedagem do sistema será realizada integralmente na AWS, utilizando seus serviços de nuvem para disponibilizar tanto o frontend quanto o backend.
 
 
 # Planejamento
@@ -204,9 +200,9 @@ Atualizado em: 29/08/2025
 | Denis Alves da Silva Leite        | Mapa de Stakeholders  | 20/08/2025     | 22/08/2025 | ✔️      | 22/08/2025            |
 
 
-#### Semana 2 (25/08/2025 a 31/08/2025)
+### Semana 2 (25/08/2025 a 31/08/2025)
 
-Atualizado em: 29/08/2025
+Atualizado em: 31/08/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
@@ -223,8 +219,11 @@ Atualizado em: 29/08/2025
 | Partipação de todos (em reunião)    | Discussão e definição dos requisitos não funcionais | 27/08/2025 | 27/08/2025 | ✔️ | 27/08/2025 |
 | Partipação de todos (em reunião)    | Discussão das restrições | 27/08/2025 | 27/08/2025 | ✔️ | 27/08/2025 |
 | Partipação de todos (em reunião)    | Discussão das tecnologias que serão utilizadas | 27/08/2025 | 27/08/2025 | ✔️ | 27/08/2025 |
-| Antonio Rubens O Junqueira        | Contribuições em geral nos tópicos   |    31/08/2025        | 31/08/2025 | ✔️    | 31/08/2025      |
+| Antonio Rubens O Junqueira        | Contribuições em geral nos tópicos   |    31/08/2025        | 31/08/2025 | ✔️    | 31/08/2025    |
 | Beatriz Pereira da Costa        | Modelo de Arquitetura de Solução   |    31/08/2025        | 31/08/2025 | ✔️    | 29/08/2025      |
+| Laís Lara Ferreira dos Santos      | Arquitetura de Solução   |    27/08/2025        | 31/08/2025 | ✔️    | 29/08/2025      |
+| Laís Lara Ferreira dos Santos      | Revisão geral no documento "contexto.md"  |  31/08/2025     | 31/08/2025 | ✔️  | 31/08/2025    |
+| Sávio Sérgio Pereira da Silva      | Revisão geral no documento "contexto.md" e atualização do README.md  |  29/08/2025     | 31/08/2025 | ✔️  | 31/08/2025    |
 
 Legenda:
 - ✔️: terminado
