@@ -206,6 +206,8 @@ Descrição de todos os serviços que serão disponibilizados pelo projeto, com 
 
 - **Aprovação de Perfis de Instrutores:** O administrador é responsável por analisar todas as solicitações de mudança de perfil enviadas pelos usuários que desejam atuar como instrutores. Nesse processo, são validados os dados fornecidos, como formação, experiência e documentos comprobatórios, garantindo que apenas aqueles com capacitação didática sejam aprovados. Após a validação, o perfil é liberado e passa a ser exibido como instrutor ativo, podendo oferecer aulas. Esse serviço é fundamental para manter a credibilidade da plataforma, assegurando que os alunos tenham acesso a professores qualificados.
 
+- **Gerenciamento de Comentários:** O administrador é responsável por analisar todos os comentários e avaliações feitos aos instrutores, garantindo que o conteúdo esteja em conformidade com a legislação vigente, incluindo a Lei Geral de Proteção de Dados (LGPD), bem como com os Termos de Uso da plataforma. São vedados comentários contendo palavras ofensivas, informações pessoais de terceiros sem consentimento, difamação ou indícios de ilícitos. Após a validação, os comentários são disponibilizados no perfil do instrutor.
+
 # Arquitetura da Solução
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
