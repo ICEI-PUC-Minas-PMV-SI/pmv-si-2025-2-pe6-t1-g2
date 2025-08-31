@@ -215,6 +215,7 @@ Atualizado em: 29/08/2025
 | Antonio Rubens O Junqueira    | Requisitos Funcionais  | 18/08/2025     | 25/08/2025 | ✔️    | 27/08/2025      |
 | Antonio Rubens O Junqueira    | Restrições  | 18/08/2025     | 25/08/2025 | ✔️    | 27/08/2025      |
 | Arthur Neves da Silveira        | Restrições  |    21/08/2025        | 22/08/2025 | ✔️    | 21/08/2025      |
+| Denis Alves da Silva Leite | Arquitetura da Solução | 27/08/2025  | 29/08/2025 |   ✔️   |  28/08/2025  |
 | Arthur Neves da Silveira        | Catálogo de Serviços   |    28/08/2025        | 29/08/2025 | ✔️    | 28/08/2025      |
 | Sávio Sérgio Pereira da Silva | Catálogo de Serviços | 28/08/2025 | 29/08/2025 | ✔️ | 28/08/2025 |
 | Partipação de todos (em reunião)    | Discussão, criação e definição do fluxo dos usuários dentro do sistema | 25/08/2025 | 27/08/2025 | ✔️ | 25/08/2025 |
