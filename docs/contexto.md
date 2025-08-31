@@ -55,6 +55,7 @@ Profissionais autônomos, tutores ou especialistas em diferentes áreas, que des
 | <img width="200" height="200" alt="claudia" src="https://github.com/user-attachments/assets/da9d1e85-eef8-4c92-89ad-650e0bc598b3" /> | - **Quem é**: Claudia, **60 anos**, **médica** em Barbacena, MG. <br> - **Contexto**: Sempre amou violão, mas a falta de tempo a impediu de aprender. Agora, com os filhos criados e mais tempo livre, ela quer realizar esse sonho. <br> - **O que busca**: Um **professor para aulas presenciais** para iniciar do zero, já que não tem nenhuma base musical. |
 | <img width="200" height="200" alt="eduarda e luiz" src="https://github.com/user-attachments/assets/10194757-2ae6-4246-95b5-e65d2eba876c" /> | - **Quem são**: Eduarda Lima e Luiz Alves, um casal de 24 anos. <br> - **Contexto**: Eles estão juntos há 4 anos, planejam se casar e, para custear a festa e a lua de mel, Eduarda (formada em matemática e com mestrado) quer dar aulas particulares. <br> - **O que buscam**: Uma plataforma ou oportunidade para Eduarda dar aulas de reforço para universitários e, assim, levantar o dinheiro que precisam. |
 
+<!--
 Persona 01 - Claudia tem 60 anos é médica em Barbacena MG, ela e apaixonada por violão e nunca pode aprender por falta de tempo, agora que está com os filhos criados e com mais tempo entre os plantões, Claudia busca uma forma de aprender violão, pois ela não tem nenhuma base musical e precisa de um professor para iniciar do zero com aulas presenciais.
 
 Persona 02 - A família Sampaio e formada por Bento, Ana e Carlinhos, eles são um casal de 33 anos com um filho de 6 anos, Bento e engenheiro e Ana é professora de matemática. Eles acreditam que a educação do filho já deveria ter uma iniciação de língua estrangeira junto com a alfabetização na língua portuguesa, eles buscam uma professora formada com especialização em ensino infantil para acompanhar seu filho no aprendizado da língua estrangeira.
@@ -97,7 +98,7 @@ Persona 06 - Theo Galhardo de Lima, de 24 anos, acabou de se formar em sistema d
 * **Contexto**: Mora em uma cidade sem cursinhos preparatórios para o ENEM e tem o sonho de cursar medicina em uma universidade renomada.
 * **O que busca**: Aulas particulares para aprofundar seus estudos, reforçar o conteúdo e ter contato com professores mais experientes no processo do ENEM.
 
-Persona 07 - Joana tem 16 anos e mora no interior de São Paulo em uma cidade muito pequena somente com escola pública e não tem cursinho para Enem e ela ama estudar e quer se formar em medicina em uma grande universidade, mas para isso precisa ter ótimas notas. A forma que ela encontrou para reforçar seus estudos foi o com aulas particulares que ela contrata e consegue aprofundar nos conteúdos e ter contato com professores mais familiarizados com o processo do Enem. 
+Persona 07 - Joana tem 16 anos e mora no interior de São Paulo em uma cidade muito pequena somente com escola pública e não tem cursinho para Enem e ela ama estudar e quer se formar em medicina em uma grande universidade, mas para isso precisa ter ótimas notas. A forma que ela encontrou para reforçar seus estudos foi o com aulas particulares que ela contrata e consegue aprofundar nos conteúdos e ter contato com professores mais familiarizados com o processo do Enem. -->
 
 ## Requisitos
 
@@ -180,7 +181,8 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ## Hospedagem
 
-- **Microsoft Azure**: Plataforma de nuvem que será usada para hospedar todos os componentes do projeto, fornecendo serviços específicos como  para o frontend em HTML, CSS, JavaScript e React, para rodar o backend, para gerenciar o banco de dados com segurança e escalabilidade.
+<!--
+- **Microsoft Azure**: Plataforma de nuvem que será usada para hospedar todos os componentes do projeto, fornecendo serviços específicos como  para o frontend em HTML, CSS, JavaScript e React, para rodar o backend, para gerenciar o banco de dados com segurança e escalabilidade. -->
 
 
 # Planejamento
