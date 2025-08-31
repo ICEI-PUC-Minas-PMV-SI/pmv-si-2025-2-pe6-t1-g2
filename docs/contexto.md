@@ -209,10 +209,10 @@ Atualizado em: 29/08/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Ant Rubens    | Introdução   | 26/08/2025 | 27/08/2025 | ✔️    | 27/08/2025      |
-| Ant Rubens    | Personas   | 18/08/2025     | 25/08/2025 | ✔️    | 26/08/2025      |
-| Ant Rubens    | Requisitos Funcionais  | 18/08/2025     | 25/08/2025 | ✔️    | 27/08/2025      |
-| Ant Rubens    | Restrições  | 18/08/2025     | 25/08/2025 | ✔️    | 27/08/2025      |
+| Antonio Rubens O Junqueira    | Introdução   | 26/08/2025 | 27/08/2025 | ✔️    | 27/08/2025      |
+| Antonio Rubens O Junqueira    | Personas   | 18/08/2025     | 25/08/2025 | ✔️    | 26/08/2025      |
+| Antonio Rubens O Junqueira    | Requisitos Funcionais  | 18/08/2025     | 25/08/2025 | ✔️    | 27/08/2025      |
+| Antonio Rubens O Junqueira    | Restrições  | 18/08/2025     | 25/08/2025 | ✔️    | 27/08/2025      |
 | Arthur Neves da Silveira        | Restrições  |    21/08/2025        | 22/08/2025 | ✔️    | 21/08/2025      |
 | Arthur Neves da Silveira        | Catálogo de Serviços   |    28/08/2025        | 29/08/2025 | ✔️    | 28/08/2025      |
 | Sávio Sérgio Pereira da Silva | Catálogo de Serviços | 28/08/2025 | 29/08/2025 | ✔️ | 28/08/2025 |
@@ -221,7 +221,7 @@ Atualizado em: 29/08/2025
 | Partipação de todos (em reunião)    | Discussão e definição dos requisitos não funcionais | 27/08/2025 | 27/08/2025 | ✔️ | 27/08/2025 |
 | Partipação de todos (em reunião)    | Discussão das restrições | 27/08/2025 | 27/08/2025 | ✔️ | 27/08/2025 |
 | Partipação de todos (em reunião)    | Discussão das tecnologias que serão utilizadas | 27/08/2025 | 27/08/2025 | ✔️ | 27/08/2025 |
-
+| Antonio Rubens O Junqueira        | Contriuições em geral nos tópicos   |    31/08/2025        | 31/08/2025 | ✔️    | 31/08/2025      |
 
 Legenda:
 - ✔️: terminado
