@@ -50,52 +50,16 @@ Profissionais autônomos, tutores ou especialistas em diferentes áreas, que des
 # Especificações do Projeto
 
 ## Personas
-
-### Persona 01 - Claudia
-
-<div align="center" style="border:2px dotted green; padding:10px; display:inline-block;">
- <img width="200" height="200" alt="claudia" src="https://github.com/user-attachments/assets/da9d1e85-eef8-4c92-89ad-650e0bc598b3" />
-</div>
-
-* **Quem é**: Claudia, **60 anos**, **médica** em Barbacena, MG.
-* **Contexto**: Sempre amou violão, mas a falta de tempo a impediu de aprender. Agora, com os filhos criados e mais tempo livre, ela quer realizar esse sonho.
-* **O que busca**: Um **professor para aulas presenciais** para iniciar do zero, já que não tem nenhuma base musical.
+|Foto | Descrição da Persona|
+|-----------|---------------------|
+| <img width="200" height="200" alt="claudia" src="https://github.com/user-attachments/assets/da9d1e85-eef8-4c92-89ad-650e0bc598b3" /> | - **Quem é**: Claudia, **60 anos**, **médica** em Barbacena, MG. <br> - **Contexto**: Sempre amou violão, mas a falta de tempo a impediu de aprender. Agora, com os filhos criados e mais tempo livre, ela quer realizar esse sonho. <br> - **O que busca**: Um **professor para aulas presenciais** para iniciar do zero, já que não tem nenhuma base musical. |
+| <img width="200" height="200" alt="eduarda e luiz" src="https://github.com/user-attachments/assets/10194757-2ae6-4246-95b5-e65d2eba876c" /> | - **Quem são**: Eduarda Lima e Luiz Alves, um casal de 24 anos. <br> - **Contexto**: Eles estão juntos há 4 anos, planejam se casar e, para custear a festa e a lua de mel, Eduarda (formada em matemática e com mestrado) quer dar aulas particulares. <br> - **O que buscam**: Uma plataforma ou oportunidade para Eduarda dar aulas de reforço para universitários e, assim, levantar o dinheiro que precisam. |
 
 Persona 01 - Claudia tem 60 anos é médica em Barbacena MG, ela e apaixonada por violão e nunca pode aprender por falta de tempo, agora que está com os filhos criados e com mais tempo entre os plantões, Claudia busca uma forma de aprender violão, pois ela não tem nenhuma base musical e precisa de um professor para iniciar do zero com aulas presenciais.
 
-### Persona 02 - Família Sampaio
-
-<div align="center" style="border:2px dotted green; padding:10px; display:inline-block;">
-  <img width="200" height="200" alt="familia" src="https://github.com/user-attachments/assets/c070b476-43b5-46d9-a20f-bf48efa5ebb8" />
-</div>
-
-* **Quem são**: A família Sampaio é formada por Bento (engenheiro), Ana (professora de matemática), ambos com 33 anos, e o filho Carlinhos, 6 anos.
-* **Contexto**: Eles acreditam que a iniciação em uma língua estrangeira deve acontecer junto com a alfabetização em português do filho.
-* **O que buscam**: Uma professora com especialização em ensino infantil para acompanhar o aprendizado de Carlinhos.
-
 Persona 02 - A família Sampaio e formada por Bento, Ana e Carlinhos, eles são um casal de 33 anos com um filho de 6 anos, Bento e engenheiro e Ana é professora de matemática. Eles acreditam que a educação do filho já deveria ter uma iniciação de língua estrangeira junto com a alfabetização na língua portuguesa, eles buscam uma professora formada com especialização em ensino infantil para acompanhar seu filho no aprendizado da língua estrangeira.
 
-### Persona 03 - Consuelo
-
-<div align="center" style="border:2px dotted green; padding:10px; display:inline-block;">
- <img width="200" height="200" alt="zelia" src="https://github.com/user-attachments/assets/e6388ea5-3935-464a-814b-da79add06de9" />
-</div>
-
-* **Quem é**: Consuelo De Andrade Goulart, 75 anos, viúva e moradora de Belo Horizonte.
-* **Contexto**: A recente perda do marido fez com que ela buscasse uma nova atividade para ocupar o tempo e lidar com a solidão, incentivada pelos filhos.
-* **O que busca**: Uma professora com formação em terapia ocupacional que possa ministrar aulas de crochê e tricô e acompanhar seu desenvolvimento.
-
 Persona 03 - Consuelo De Andrade Goulart, 75 anos, é uma idosa ativa e recentemente ficou viúva, moradora do bairro Savassi, em Belo Horizonte. Ela e seu ex parceiro (José Antônio de Andrade) eram um casal muito próximo e sua partida fez uma enorme falta. Seus três filhos (Ana Luiza, Diogo e Gisele) apoiam a mãe em sua nova iniciativa de voltar a fazer crochê e tricô para ocupar o tempo, para isso elas buscam uma professora que também tenha formação em terapia ocupacional para que possa ministrar aulas a mãe e acompanhar o desenvolvimento dela.
-
-### Persona 04 - Eduarda e Luiz
-
-<div align="center" style="border:2px dotted green; padding:10px; display:inline-block;">
-<img width="200" height="200" alt="eduarda e luiz" src="https://github.com/user-attachments/assets/10194757-2ae6-4246-95b5-e65d2eba876c" />
-</div>
-
-* **Quem são**: Eduarda Lima e Luiz Alves, um casal de 24 anos.
-* **Contexto**: Eles estão juntos há 4 anos, planejam se casar e, para custear a festa e a lua de mel, Eduarda (formada em matemática e com mestrado) quer dar aulas particulares.
-* **O que buscam**: Uma plataforma ou oportunidade para Eduarda dar aulas de reforço para universitários e, assim, levantar o dinheiro que precisam.
 
 Persona 04 - Eduarda Lima e Luiz Alves são um casal, ambos de 24 anos. Eles estão juntos há 4 anos e pretendem se casar, Eduardo e formado em matemática com mestrado em álgebra linear e trabalha em um banco, mas para pagar a festa de casamento e a lua de mel, Eduardo pretende voltar a dar aulas particulares de reforço para universitário e com isso juntar um valor que ele considera possível em um ano para custear os sonhos do casal. 
 
@@ -145,11 +109,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----|
 |RF-001| Gerenciar usuários | ALTA | 
 |RF-002| Gerenciar Instrutor   | ALTA |
-|RF-003| Visualizar Instrutores   | ALTA |
+|RF-003| Consultar Instrutores   | ALTA |
 |RF-004| Gerenciar agendamento   | ALTA |
 |RF-005| Gerenciar avaliações   | MÉDIA|
-|RF-006| Gerenciar Administrador   | MÉDIA |
-|RF-007| Aprovar perfil instrutor   | BAIXA |
 
 ### Requisitos não Funcionais
 
@@ -184,7 +146,7 @@ Descrição de todos os serviços que serão disponibilizados pelo projeto, com 
 
 ## Serviços para Usuários
 
-- **Cadastro e Gerenciamento de Perfil:** Possibilita ao usuário criar uma conta na plataforma, fornecendo informações básicas como nome, e-mail e senha. Uma vez cadastrado, o usuário pode acessar seu perfil pessoal, onde terá a opção de editar dados e excluir sua conta, caso não deseje mais utilizá-la. Esse serviço garante autonomia ao usuário na gestão de seus próprios dados, além de ser essencial para viabilizar a participação ativa na plataforma.
+- **Cadastro e Gerenciamento de Perfil:** Possibilita ao usuário criar uma conta na plataforma, fornecendo informações básicas como nome, e-mail e senha. Uma vez cadastrado, o usuário pode acessar seu perfil pessoal, onde terá a opção de editar dados e excluir sua conta, caso não deseje mais utilizá-la. Além disso, os usuários cadastrados têm a possibilidade de solicitar a alteração de seu perfil para um perfil de instrutor. Para isso, devem preencher um formulário com informações detalhadas sobre sua formação, experiência e áreas de atuação. Dessa forma, a conta do usuário passa a ter acesso às ferramentas exclusivas de instrutor. Esse serviço garante autonomia ao usuário na gestão de seus próprios dados, além de ser essencial para viabilizar a participação ativa na plataforma.
 
 - **Busca e Filtragem Avançada**: Ferramenta de pesquisa que permite aos alunos localizar especialistas combinando critérios (área de conhecimento, faixa de preço, avaliações, modalidade, distância e horários disponíveis) exibindo apenas profissionais que realmente atendem às suas necessidades. O serviço prioriza resultados por relevância e disponibilidade, facilitando agendamentos e melhorando a correspondência entre expectativas e oferta.
 
@@ -196,17 +158,10 @@ Descrição de todos os serviços que serão disponibilizados pelo projeto, com 
 
 ## Serviços para Usuário Instrutor
 
-- **Solicitação de Mudança de Perfil:** Usuários cadastrados têm a possibilidade de solicitar a alteração de seu perfil para um perfil de instrutor. Para isso, devem preencher um formulário com informações detalhadas sobre sua formação, experiência e áreas de atuação. A solicitação é então enviada para avaliação de um administrador, que verifica a veracidade dos dados e a adequação ao padrão da plataforma. Uma vez aprovada, a conta do usuário passa a ter acesso às ferramentas exclusivas de instrutor. Esse serviço garante que apenas profissionais validados possam oferecer aulas, promovendo segurança e confiança no ambiente.
-
 - **Portfólio:** O instrutor pode editar e manter atualizado seu portfólio digital dentro da plataforma. Esse espaço funciona como uma vitrine, permitindo ao professor incluir informações sobre sua metodologia, áreas de especialização, histórico acadêmico, experiência prática, valor da hora-aula e horários disponíveis. Além disso, o portfólio reúne as avaliações feitas pelos alunos, servindo como referência para novos interessados. Esse serviço fortalece a imagem do instrutor, aumenta sua visibilidade e melhora suas chances de conquistar novos alunos.
 
 - **Gerir Agendamentos:** O instrutor pode administrar as solicitações de aulas feitas pelos alunos em seu perfil. O professor recebe notificações de novos pedidos de agendamento e pode aceitá-los ou recusá-los. Essa funcionalidade garante maior controle ao instrutor sobre seu tempo, além de assegurar uma comunicação clara e organizada com os alunos.
 
-## Serviços para Administradores
-
-- **Aprovação de Perfis de Instrutores:** O administrador é responsável por analisar todas as solicitações de mudança de perfil enviadas pelos usuários que desejam atuar como instrutores. Nesse processo, são validados os dados fornecidos, como formação, experiência e documentos comprobatórios, garantindo que apenas aqueles com capacitação didática sejam aprovados. Após a validação, o perfil é liberado e passa a ser exibido como instrutor ativo, podendo oferecer aulas. Esse serviço é fundamental para manter a credibilidade da plataforma, assegurando que os alunos tenham acesso a professores qualificados.
-
-- **Gerenciamento de Comentários:** O administrador é responsável por analisar todos os comentários e avaliações feitos aos instrutores, garantindo que o conteúdo esteja em conformidade com a legislação vigente, incluindo a Lei Geral de Proteção de Dados (LGPD), bem como com os Termos de Uso da plataforma. São vedados comentários contendo palavras ofensivas, informações pessoais de terceiros sem consentimento, difamação ou indícios de ilícitos. Após a validação, os comentários são disponibilizados no perfil do instrutor.
 
 # Arquitetura da Solução
 
