@@ -51,17 +51,87 @@ Profissionais autônomos, tutores ou especialistas em diferentes áreas, que des
 
 ## Personas
 
+### Persona 01 - Claudia
+
+<div align="center" style="border:2px dotted green; padding:10px; display:inline-block;">
+ <img width="200" height="200" alt="claudia" src="https://github.com/user-attachments/assets/da9d1e85-eef8-4c92-89ad-650e0bc598b3" />
+</div>
+
+* **Quem é**: Claudia, **60 anos**, **médica** em Barbacena, MG.
+* **Contexto**: Sempre amou violão, mas a falta de tempo a impediu de aprender. Agora, com os filhos criados e mais tempo livre, ela quer realizar esse sonho.
+* **O que busca**: Um **professor para aulas presenciais** para iniciar do zero, já que não tem nenhuma base musical.
+
 Persona 01 - Claudia tem 60 anos é médica em Barbacena MG, ela e apaixonada por violão e nunca pode aprender por falta de tempo, agora que está com os filhos criados e com mais tempo entre os plantões, Claudia busca uma forma de aprender violão, pois ela não tem nenhuma base musical e precisa de um professor para iniciar do zero com aulas presenciais.
+
+### Persona 02 - Família Sampaio
+
+<div align="center" style="border:2px dotted green; padding:10px; display:inline-block;">
+  <img width="200" height="200" alt="familia" src="https://github.com/user-attachments/assets/c070b476-43b5-46d9-a20f-bf48efa5ebb8" />
+</div>
+
+* **Quem são**: A família Sampaio é formada por Bento (engenheiro), Ana (professora de matemática), ambos com 33 anos, e o filho Carlinhos, 6 anos.
+* **Contexto**: Eles acreditam que a iniciação em uma língua estrangeira deve acontecer junto com a alfabetização em português do filho.
+* **O que buscam**: Uma professora com especialização em ensino infantil para acompanhar o aprendizado de Carlinhos.
 
 Persona 02 - A família Sampaio e formada por Bento, Ana e Carlinhos, eles são um casal de 33 anos com um filho de 6 anos, Bento e engenheiro e Ana é professora de matemática. Eles acreditam que a educação do filho já deveria ter uma iniciação de língua estrangeira junto com a alfabetização na língua portuguesa, eles buscam uma professora formada com especialização em ensino infantil para acompanhar seu filho no aprendizado da língua estrangeira.
 
+### Persona 03 - Consuelo
+
+<div align="center" style="border:2px dotted green; padding:10px; display:inline-block;">
+ <img width="200" height="200" alt="zelia" src="https://github.com/user-attachments/assets/e6388ea5-3935-464a-814b-da79add06de9" />
+</div>
+
+* **Quem é**: Consuelo De Andrade Goulart, 75 anos, viúva e moradora de Belo Horizonte.
+* **Contexto**: A recente perda do marido fez com que ela buscasse uma nova atividade para ocupar o tempo e lidar com a solidão, incentivada pelos filhos.
+* **O que busca**: Uma professora com formação em terapia ocupacional que possa ministrar aulas de crochê e tricô e acompanhar seu desenvolvimento.
+
 Persona 03 - Consuelo De Andrade Goulart, 75 anos, é uma idosa ativa e recentemente ficou viúva, moradora do bairro Savassi, em Belo Horizonte. Ela e seu ex parceiro (José Antônio de Andrade) eram um casal muito próximo e sua partida fez uma enorme falta. Seus três filhos (Ana Luiza, Diogo e Gisele) apoiam a mãe em sua nova iniciativa de voltar a fazer crochê e tricô para ocupar o tempo, para isso elas buscam uma professora que também tenha formação em terapia ocupacional para que possa ministrar aulas a mãe e acompanhar o desenvolvimento dela.
+
+### Persona 04 - Eduarda e Luiz
+
+<div align="center" style="border:2px dotted green; padding:10px; display:inline-block;">
+<img width="650" height="650" alt="eduarda e luiz" src="https://github.com/user-attachments/assets/10194757-2ae6-4246-95b5-e65d2eba876c" />
+</div>
+
+* **Quem são**: Eduarda Lima e Luiz Alves, um casal de 24 anos.
+* **Contexto**: Eles estão juntos há 4 anos, planejam se casar e, para custear a festa e a lua de mel, Eduarda (formada em matemática e com mestrado) quer dar aulas particulares.
+* **O que buscam**: Uma plataforma ou oportunidade para Eduarda dar aulas de reforço para universitários e, assim, levantar o dinheiro que precisam.
 
 Persona 04 - Eduarda Lima e Luiz Alves são um casal, ambos de 24 anos. Eles estão juntos há 4 anos e pretendem se casar, Eduardo e formado em matemática com mestrado em álgebra linear e trabalha em um banco, mas para pagar a festa de casamento e a lua de mel, Eduardo pretende voltar a dar aulas particulares de reforço para universitário e com isso juntar um valor que ele considera possível em um ano para custear os sonhos do casal. 
 
+### Persona 05 - Zélia
+
+<div align="center" style="border:2px dotted white; padding:10px; display:inline-block;">
+ <img width="200" height="200" alt="claudia" src="https://github.com/user-attachments/assets/da9d1e85-eef8-4c92-89ad-650e0bc598b3" />
+</div>
+
+* **Quem é**: Zélia do Carmo, 63 anos, professora de história aposentada.
+* **Contexto**: A renda da aposentadoria não é suficiente, e ela ainda tem saúde e disposição para lecionar. Dar aulas é uma forma de complementar a renda e continuar ativa.
+* **O que busca**: Um lugar para dar aulas particulares, pois permite flexibilidade de horários, aumenta a renda e mantém a mente sã.
+
 Persona 05 - Zélia do Carmo, 63 anos, é uma professora de história aposentada em Belo Horizonte. Como o valor da aposentadoria que ela recebe não é muito alto e ela ainda tem muita saúde e disposição para lecionar, Zélia pretender dar aulas particulares, pois ela pode aumentar sua renda, praticar a atividade que gosta, ter horários flexíveis e manter a mente sadia e em atividade.
 
+### Persona 06 - Theo
+
+<div align="center" style="border:2px dotted white; padding:10px; display:inline-block;">
+ <img width="200" height="200" alt="claudia" src="https://github.com/user-attachments/assets/da9d1e85-eef8-4c92-89ad-650e0bc598b3" />
+</div>
+
+* **Quem é**: Theo Galhardo de Lima, 24 anos, mestrando em computação aplicada à matemática.
+* **Contexto**: Está com dificuldades em uma disciplina específica (equações diferenciais ordinárias) e precisa de aulas de apoio, que são muito caras.
+* **O que busca**: Um local para dar aulas particulares na mesma plataforma em que estuda, para gerar renda e custear as aulas de reforço que precisa.
+
 Persona 06 - Theo Galhardo de Lima, de 24 anos, acabou de se formar em sistema de informações e já iniciou seu curso de mestrado em computação aplicada a matemática, mas para a cadeira de equações diferencias ordinárias, Theo está tendo muita dificuldade e precisa de aulas de apoio que possuem um custo alto, pois são muito específicas, para isso, ele optou em dar aulas particulares na mesma plataforma em que tem aulas.
+
+### Persona 07 - Joana
+
+<div align="center" style="border:2px dotted white; padding:10px; display:inline-block;">
+ <img width="200" height="200" alt="claudia" src="https://github.com/user-attachments/assets/da9d1e85-eef8-4c92-89ad-650e0bc598b3" />
+</div>
+
+* **Quem é**: Joana, 16 anos, estudante do ensino médio em uma cidade pequena do interior de São Paulo.
+* **Contexto**: Mora em uma cidade sem cursinhos preparatórios para o ENEM e tem o sonho de cursar medicina em uma universidade renomada.
+* **O que busca**: Aulas particulares para aprofundar seus estudos, reforçar o conteúdo e ter contato com professores mais experientes no processo do ENEM.
 
 Persona 07 - Joana tem 16 anos e mora no interior de São Paulo em uma cidade muito pequena somente com escola pública e não tem cursinho para Enem e ela ama estudar e quer se formar em medicina em uma grande universidade, mas para isso precisa ter ótimas notas. A forma que ela encontrou para reforçar seus estudos foi o com aulas particulares que ela contrata e consegue aprofundar nos conteúdos e ter contato com professores mais familiarizados com o processo do Enem. 
 
