@@ -168,7 +168,7 @@ Descrição de todos os serviços que serão disponibilizados pelo projeto, com 
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-![Arquitetura da Solução](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t1-g2/raw/main/docs/img/arquitetura_solucao_saber_mais_2.png)
+![Arquitetura da Solução](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t1-g2/raw/main/docs/img/arquitetura_solucao_saber_mais_3.png)
 
 
 
