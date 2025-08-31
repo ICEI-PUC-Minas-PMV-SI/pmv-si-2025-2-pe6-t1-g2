@@ -15,9 +15,9 @@ Construir um ambiente de aprendizagem com o intuito de conectar pessoas em busca
 
  - Objetivos específicos
  
-Criar uma plataforma de busca e filtragem avançada que facilite os usuários encontrar especialistas em uma vasta gama de áreas (acadêmicas, profissionais, hobbies, etc.), podendo comparar por qualificação, metodologia, preço e avaliações.
+Desenvolver uma plataforma de busca e filtragem avançada que facilite os usuários encontrar especialistas em uma vasta gama de áreas (acadêmicas, profissionais, hobbies, etc.), podendo comparar por qualificação, metodologia, preço e avaliações.
 
-Oferecer perfis públicos e personalizáveis para os especialistas, que funcionem como um portfólio digital, permitindo-lhes divulgar seu trabalho, metodologia, experiência e receber avaliações que construam sua reputação na plataforma.
+Implementar perfis públicos e personalizáveis para os especialistas, que funcionem como um portfólio digital, permitindo-lhes divulgar seu trabalho, metodologia, experiência e receber avaliações que construam sua reputação na plataforma.
 
 ## Justificativa
 
@@ -135,35 +135,6 @@ Descrição de todos os serviços que serão disponibilizados pelo projeto, com 
 ## Serviços para Administradores
 
 - **Aprovação de Perfis de Instrutores:** O administrador é responsável por analisar todas as solicitações de mudança de perfil enviadas pelos usuários que desejam atuar como instrutores. Nesse processo, são validados os dados fornecidos, como formação, experiência e documentos comprobatórios, garantindo que apenas aqueles com capacitação didática sejam aprovados. Após a validação, o perfil é liberado e passa a ser exibido como instrutor ativo, podendo oferecer aulas. Esse serviço é fundamental para manter a credibilidade da plataforma, assegurando que os alunos tenham acesso a professores qualificados.
-
-## Catálogo de Serviços Visão Usuário
-|Campo  |Descrição |
-|------------------------|-------------------------------------------|
-|Nome do Serviço |	Agendamento |
-|Descrição|	Agendamento das aulas|
-|Publico Alvo|	Alunos e Professores|
-|Como Solicitar/acessar|	Solicitar via page de agendamento|
-|Disponibilidade|	99%|
-|SLA|	|
-|Canais Suporte|	Fale Conosco|
-|Documentação Usuário|	Usuario|
-	
-## Catálogo de Serviços Visão TI	
-|Campo  |Descrição |
-|------------------------|-------------------------------------------|
-|Nome do Serviço	|Agendamento service|
-|Descrição|	Serviço de agendamento de horários|
-|Tipo	|                |
-|Quem Suporta|	Suporte 1° Nível|
-|Responsável|	Zé|
-|Impacto|	Alto|
-|Prioridade|	Alta|
-|Interfaces API|	Endpoints, contratos, autenticação|
-|Dependencias|	Bancos de dados, filas, outros serviços|
-|SLO/SLA Técnico |	99,9% uptime mensal, latência p95 < 500ms|
-|Segurança Compliance|	Classificação de dados, políticas de acesso, auditorias|
-|Custo/Tag.Financeiro	|       |
-|Ambiente|	|
 
 # Arquitetura da Solução
 
