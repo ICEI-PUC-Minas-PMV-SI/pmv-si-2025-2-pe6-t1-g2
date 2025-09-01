@@ -132,12 +132,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             	|
 |--|-------------------------------------------------------	|
-|01| O projeto deverá ser entregue até o final do semestre 	|
-|02| O projeto deverá ter uma aplicação Mobile        		|
-|03| A plataforma não realizará intermediação de pagamentos	|
-|04| O sistema não contemplará funcionalidades de suporte	|
-|05| Não será implementado mecanismo de verificação documental avançada dos instrutores (ex.: análise automática de diplomas)	|
-
+|01| O projeto deverá ser entregue até o final do semestre. 	|
 
 
 # Catálogo de Serviços
