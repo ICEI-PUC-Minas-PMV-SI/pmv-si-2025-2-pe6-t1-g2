@@ -220,6 +220,14 @@ Atualizado em: 31/08/2025
 | Laís Lara Ferreira dos Santos      | Revisão geral no documento "contexto.md"  |  31/08/2025     | 31/08/2025 | ✔️  | 31/08/2025    |
 | Sávio Sérgio Pereira da Silva      | Revisão geral no documento "contexto.md" e atualização do README.md  |  29/08/2025     | 31/08/2025 | ✔️  | 31/08/2025    |
 
+### Semana 3 (01/09/2025 a 07/09/2025)
+
+Atualizado em: 01/09/2025
+
+| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
+| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
+|               |                  |                |            | ✔️     |                 |
+
 Legenda:
 - ✔️: terminado
 - 📝: em execução
