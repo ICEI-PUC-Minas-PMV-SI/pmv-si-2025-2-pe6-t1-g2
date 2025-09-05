@@ -117,12 +117,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID     | Descrição do Requisito  |Prioridade |
 |------|-----------------------------------------|----|
-|RNF-001| O sistema deve ser responsivo, adaptando-se a diferentes tamanhos de tela e dispositivos. | ALTO | 
-|RNF-002| O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD). |  ALTO |
+|RNF-001| O sistema deve ser responsivo, adaptando-se a diferentes tamanhos de tela e dispositivos. |ALTO| 
+|RNF-002| O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD). |ALTO|
 |RNF-003| O sistema deve utilizar criptografia HTTPS. |  ALTO |
-|RNF-004| As senhas devem ser amazenadas de forma criptografada no banco de dados. |  ALTO |
-|RNF-005| O sistema deve ser compatível com os principais navegadores web: Google Chrome, Microsoft Edge, Mozilla Firefox, Safari e Opera. |  MÉDIA |
-|RNF-006| O sistema deve ser compatível com os principais sistemas operacionais móveis, especificamente Android e iOS. |  MÉDIA |
+|RNF-004| As senhas devem ser amazenadas de forma criptografada no banco de dados. |ALTO|
+|RNF-005| O sistema deve ser compatível com os principais navegadores web: Google Chrome, Microsoft Edge, Mozilla Firefox, Safari e Opera. |MÉDIA|
+|RNF-006| O sistema deve ser compatível com os principais sistemas operacionais móveis, especificamente Android e iOS. |MÉDIA|
 
 
 
