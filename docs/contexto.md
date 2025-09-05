@@ -116,7 +116,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
-|------|-----------------------------------------|----|
+|------|-------------------------------|----|
 |RNF-001| O sistema deve ser responsivo, adaptando-se a diferentes tamanhos de tela e dispositivos. |ALTO| 
 |RNF-002| O sistema deve estar em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD). |ALTO|
 |RNF-003| O sistema deve utilizar criptografia HTTPS. |  ALTO |
