@@ -4,10 +4,12 @@ O Projeto Saber Mais consiste em uma aplicação Web que oferece uma plataforma 
 
 ## Objetivos da API
 
-O primeiro passo é definir os objetivos da sua API. O que você espera alcançar com ela? Você quer que ela seja usada por clientes externos ou apenas por aplicações internas? Quais são os recursos que a API deve fornecer?
+A API do Projeto Saber Mais foi desenvolvida para fornecer uma interface robusta e segura que permita o gerenciamento eficiente de usuários, professores, áreas de conhecimento, disponibilidades, agendamentos e avaliações. Os principais objetivos desta API são:
 
-[Inclua os objetivos da sua api.]
-
+- **Facilitar a integração** entre diferentes clientes (web, aplicativos móveis, etc.) eo backend da plataforma, garantindo comunicação consistente e eficiente.
+- **Garantir a segurança** dos dados dos usuários incluindo informações pessoais e agendamentos.
+- **Oferecer funcionalidades CRUD completas** para todos os recursos essenciais do sistema, como cadastro de usuários, professores, áreas de atuação, horários disponíveis, agendamentos e avaliações.
+- **Suportar futuros aprimoramentos e integrações**, como autenticação, autorização, notificações e relatórios.
 
 ## Modelagem da Aplicação
 A modelagem da aplicação "Saber+" foi concebida para estruturar um sistema de agendamento de aulas e avaliações entre alunos e professores. A representação visual dessa estrutura foi consolidada através de um Diagrama de Classes, que detalha as entidades centrais do sistema, seus atributos, comportamentos e as relações entre elas. Este diagrama é fundamental para compreender a organização dos dados e a lógica de negócio que governa a plataforma.
@@ -16,9 +18,15 @@ A modelagem da aplicação "Saber+" foi concebida para estruturar um sistema de 
 
 ## Tecnologias Utilizadas
 
-Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs Web. A tecnologia certa para o seu projeto dependerá dos seus objetivos, dos seus clientes e dos recursos que a API deve fornecer.
+Para o desenvolvimento da API do Projeto Saber Mais, foram escolhidas tecnologias modernas e consolidadas que garantem desempenho, segurança e facilidade de manutenção. As principais tecnologias utilizadas são:
 
-[Lista das tecnologias principais que serão utilizadas no projeto.]
+- **Entity Framework Core**: ORM (Object-Relational Mapper) utilizado para o mapeamento das entidades do sistema ao banco de dados, facilitando operações CRUD e consultas complexas.
+- **SQL Server**: Sistema gerenciador de banco de dados relacional usado para armazenar os dados da aplicação de forma segura e estruturada.
+- **ASP .NET Core Web API**: Framework para criação de APIs RESTful, com suporte nativo para rotas, controllers, validação, e segurança.
+- **Swagger/OpenAPI**: Ferramenta para documentação automática da API, permitindo que desenvolvedores conheçam os endpoints disponíveis, parâmetros e respostas.
+- **Insomnia**: Cliente REST utilizado para testar os endpoints da API durante o desenvolvimento, facilitando a simulação de requisições HTTP e análise de respostas.
+- **Visual Studio**: IDEs utilizadas para o desenvolvimento, debug e testes da aplicação.
+- **Git e GitHub**: Para controle de versão e colaboração entre desenvolvedores. 
 
 ## API Endpoints
 
