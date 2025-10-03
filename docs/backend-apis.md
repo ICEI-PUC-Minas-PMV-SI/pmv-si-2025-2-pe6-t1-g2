@@ -14,7 +14,7 @@ A API do Projeto Saber Mais foi desenvolvida para fornecer uma interface robusta
 ## Modelagem da Aplicação
 A modelagem da aplicação "Saber+" foi concebida para estruturar um sistema de agendamento de aulas e avaliações entre alunos e professores. A representação visual dessa estrutura foi consolidada através de um Diagrama de Classes, que detalha as entidades centrais do sistema, seus atributos, comportamentos e as relações entre elas. Este diagrama é fundamental para compreender a organização dos dados e a lógica de negócio que governa a plataforma.
 
-<img src="./img/Diagrama de Classes - Projeto Saber+ Atualizado.png" alt="Diagrama de Classes do projeto Saber+">
+<img src="./img/Diagrama de Classes - Projeto Saber+ (2).png" alt="Diagrama de Classes do projeto Saber+">
 
 ## Tecnologias Utilizadas
 
