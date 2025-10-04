@@ -56,6 +56,44 @@ Para o desenvolvimento da API do Projeto Saber Mais, foram escolhidas tecnologia
       }
     }
     ```
+  ### Criar Professor
+- **Método:** POST  
+- **URL:** /api/Professores  
+- **Parâmetros (body JSON):**
+  - `usuarioId`: ID do usuário que será professor (int)  
+  - `descricao`: Descrição ou especialidade do professor (string)  
+- **Resposta:**  
+  - **Sucesso (201 Created)**
+    ```json
+    {
+      "id": 1,
+      "usuarioId": 1,
+      "descricao": "Professor de Matemática",
+      "certificacoes": [],
+      "competencias": []
+    }
+
+  
+  ### Criar Agendamento
+- **Método:** POST  
+- **URL:** /api/Agendamentos  
+- **Parâmetros (body JSON):**
+  - `alunoId`: ID do aluno que está agendando (int)  
+  - `professorId`: ID do professor (int)  
+  - `data`: Data do agendamento (string, formato ISO 8601)  
+  - `horaInicio`: Hora de início (string, HH:mm)  
+  - `horaFim`: Hora de término (string, HH:mm)  
+- **Resposta:**  
+  - **Sucesso (201 Created)**
+    ```json
+    {
+      "id": 1,
+      "alunoId": 5,
+      "professorId": 1,
+      "data": "2025-10-05",
+      "horaInicio": "08:00",
+      "horaFim": "09:00"
+    }
 
 ## Considerações de Segurança
 
