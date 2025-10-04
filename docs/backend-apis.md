@@ -73,7 +73,7 @@ Para o desenvolvimento da API do Projeto Saber Mais, foram escolhidas tecnologia
 
 ## Testes
 
-# Casos de Testes
+## Casos de Testes - Requisitos Funcionais
 
 | **ID**     | **Requisito**                 | **Objetivo**                                                              | **Pré-condição** | **Passos** | **Resultado Esperado** | **Prioridade** |
 | :--------- | :---------------------------- | :------------------------------------------------------------------------ | :--------------- | :--------- | :-------------------- | :------------: |
@@ -83,6 +83,16 @@ Para o desenvolvimento da API do Projeto Saber Mais, foram escolhidas tecnologia
 | CT-RF-004  | RF-004 – Gerenciar agendamento | Garantir que usuários consigam criar, alterar e cancelar agendamentos      | Usuário autenticado | 1. `POST /agendamentos`<br>2. `PUT /agendamentos/{id}`<br>3. `DELETE /agendamentos/{id}` | Agendamento criado, alterado ou cancelado com sucesso; conflitos de horário são evitados | ALTA |
 | CT-RF-005  | RF-005 – Gerenciar avaliações | Garantir que usuários possam avaliar instrutores ou serem avaliados       | A DEFINIR        | A DEFINIR  | A DEFINIR             | MÉDIA          |
 
+## Casos de Testes - Requisitos Não Funcionais
+
+| **ID**         | **Requisito**                             | **Objetivo**                                               | **Pré-condição** | **Passos**   | **Resultado Esperado** | **Prioridade** |
+| :------------- | :--------------------------------------- | :--------------------------------------------------------- | :--------------- | :----------- | :-------------------- | :------------: |
+| CT-RNF-001     | RNF-001 – Responsividade                  | Garantir que a interface se adapte a diferentes dispositivos | Sistema iniciado  | 1. Abrir sistema em desktop, tablet e smartphone | Interface se adapta corretamente sem quebrar layout | ALTO           |
+| CT-RNF-002     | RNF-002 – LGPD                            | Garantir conformidade com LGPD                             | Usuário autenticado | 1. Criar usuário com dados pessoais<br>2. Solicitar exclusão de dados | Dados pessoais são tratados conforme LGPD e podem ser excluídos | ALTO           |
+| CT-RNF-003     | RNF-003 – HTTPS                           | Garantir comunicação segura                                | A DEFINIR         | A DEFINIR    | A DEFINIR             | ALTO           |
+| CT-RNF-004     | RNF-004 – Senhas criptografadas           | Garantir segurança das senhas                              | A DEFINIR         | A DEFINIR    | A DEFINIR             | ALTO           |
+| CT-RNF-005     | RNF-005 – Compatibilidade navegadores     | Garantir funcionamento nos principais navegadores         | Sistema publicado  | 1. Acessar sistema em Chrome, Edge, Firefox, Safari e Opera | Sistema funciona corretamente em todos os navegadores | MÉDIA          |
+| CT-RNF-006     | RNF-006 – Compatibilidade sistemas móveis | Garantir funcionamento em Android e iOS                    | A DEFINIR         | A DEFINIR    | A DEFINIR             | MÉDIA          |
 
 
 
