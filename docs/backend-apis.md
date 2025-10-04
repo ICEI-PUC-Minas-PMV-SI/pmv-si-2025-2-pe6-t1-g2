@@ -111,6 +111,16 @@ Atualizado em: 12/09/2025
 | Laís Lara, Beatriz Pereira e Sávio Sérgio | Elaboração do Diagrama de Classes do projeto | 10/09/2025 | 14/09/2025 | ✔️  |              12/09/2025 |
 | Laís Lara e Beatriz Pereira | Criação da API do projeto | 12/09/2025 | 16/09/2025 | 📝  |     |
 
+#### Semana 5
+
+Atualizado em 04/09/2025
+| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
+| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
+| Antônio Rubens  | Teste de API.  | 04/10/2025   | 05/10/2025 | 📝 | 05/10/2025  |
+
+
+
+
 Legenda:
 - ✔️: terminado
 - 📝: em execução
