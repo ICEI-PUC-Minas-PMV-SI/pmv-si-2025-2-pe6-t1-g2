@@ -76,10 +76,18 @@ Para o desenvolvimento da API do Projeto Saber Mais, foram escolhidas tecnologia
 [Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
 
 1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+   | ID        | Requisito                      | Objetivo                                                                   | Pré-condição                                      | Passos                                                                                     | Resultado Esperado                                                                       | Prioridade |
+| --------- | ------------------------------ | -------------------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- | ---------- |
+| CT-RF-001 | RF-001 – Gerenciar usuários    | Garantir que seja possível criar, editar, listar e excluir usuários        | >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> | 1. >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>         | >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                               | ALTA       |
+| CT-RF-002 | RF-002 – Gerenciar instrutor   | Garantir que seja possível criar, editar, listar e excluir instrutores     | Sistema iniciado e usuário autenticado como admin | 1. Criar instrutor<br>2. Editar instrutor<br>3. Listar instrutores<br>4. Excluir instrutor | Instrutor é criado, editado, listado e excluído com sucesso                              | ALTA       |
+| CT-RF-003 | RF-003 – Consultar instrutores | Garantir que usuários consigam buscar e visualizar detalhes de instrutores | Sistema iniciado                                  | 1. Acessar lista de instrutores<br>2. Pesquisar por nome ou área<br>3. Abrir detalhes      | Instrutores filtrados corretamente e detalhes exibidos                                   | ALTA       |
+| CT-RF-004 | RF-004 – Gerenciar agendamento | Garantir que usuários consigam criar, alterar e cancelar agendamentos      | Usuário autenticado                               | 1. Criar agendamento<br>2. Editar horário<br>3. Cancelar agendamento                       | Agendamento criado, alterado ou cancelado com sucesso; conflitos de horário são evitados | ALTA       |
+| CT-RF-005 | RF-005 – Gerenciar avaliações  | >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>        | >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>      | 1. >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                       | >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                                  | MÉDIA      |
+
+3. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
+4. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
+5. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
+6. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
 
 # Referências
 
