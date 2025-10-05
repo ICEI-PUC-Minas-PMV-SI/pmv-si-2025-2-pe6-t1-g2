@@ -146,7 +146,87 @@ Depois de disponibilizar a nova versão, realizamos testes práticos no próprio
 | CT-RNF-005     | RNF-005 – Compatibilidade navegadores     | Garantir funcionamento nos principais navegadores         | Sistema publicado  | 1. Acessar sistema em Chrome, Edge, Firefox, Safari e Opera | Sistema funciona corretamente em todos os navegadores | MÉDIA          |
 | CT-RNF-006     | RNF-006 – Compatibilidade sistemas móveis | Garantir funcionamento em Android e iOS                    | A DEFINIR         | A DEFINIR    | A DEFINIR             | MÉDIA          |
 
+# Casos de Teste - Insomnia
 
+## Professores
+
+- **GET /professores/**  
+  Lista todos os professores  
+  ✅ Teste: Válido
+  
+  <img width="1110" height="495" alt="get - professores - ok" src="https://github.com/user-attachments/assets/4d5adf77-6bfe-4eeb-84b9-63d907410133" />
+
+- **POST /professores/**  
+  Cria um novo professor  
+  ✅ Teste: Válido
+
+  <img width="1112" height="491" alt="post - professores - ok" src="https://github.com/user-attachments/assets/32b84c11-f64e-4c78-b730-1e06513c88d9" />
+
+- **PUT /professores/{id}**  
+  Atualiza um professor existente  
+  ✅ Teste: Válido
+
+  <img width="1112" height="280" alt="put - professores - ok" src="https://github.com/user-attachments/assets/c3dddd02-d37c-495f-9e4d-013cc7c09ade" />
+
+
+- **DELETE /professores/{id}**  
+  Remove um professor  
+  ✅ Teste: Válido
+
+  <img width="1115" height="262" alt="delete - professores - ok" src="https://github.com/user-attachments/assets/aa59b30b-6ca3-41a6-bfc1-415bf13275aa" />
+
+  ## Agendamentos
+
+- **GET /agendamentos/**  
+  Lista todos os agendamentos  
+  ✅ Teste: Válido
+
+  <img width="1110" height="743" alt="get - agendamentos - ok" src="https://github.com/user-attachments/assets/998c0872-79e7-4d1e-a08c-aed0c5a1fed0" />
+
+
+- **POST /agendamentos/**  
+  Cria um novo agendamento  
+  ✅ Teste: Válido
+
+  <img width="1110" height="334" alt="post - agendamentos - ok" src="https://github.com/user-attachments/assets/7dd0745c-4d42-4efb-bc23-7b3bb2cdf609" />
+
+- **PUT /agendamentos/{id}**  
+  Atualiza um agendamento existente  
+  ✅ Teste: Válido
+
+  <img width="1112" height="305" alt="put - agendamentos - ok" src="https://github.com/user-attachments/assets/28c6b318-2d82-4f9d-b58b-5ba5197d9747" />
+
+- **DELETE /agendamentos/{id}**  
+  Remove um agendamento  
+  ✅ Teste: Válido
+  
+  <img width="1111" height="265" alt="delete - agendamentod - ok" src="https://github.com/user-attachments/assets/c8c516ef-6bb3-4bba-8e5e-2895ac082ed1" />
+
+## Disponibilidades
+
+- **GET /disponibilidades/**  
+  Lista todas as disponibilidades  
+  ✅ Teste: Válido
+
+  <img width="1115" height="719" alt="get - disponibilidades - ok" src="https://github.com/user-attachments/assets/d8c01f2b-7c2d-43d8-98ce-40a806260f9e" />
+
+- **POST /disponibilidades/**  
+  Cria uma nova disponibilidade  
+  ✅ Teste: Válido
+  
+  <img width="1113" height="329" alt="post - disponibilidades - ok" src="https://github.com/user-attachments/assets/94d08110-dc30-4173-9df4-fc4d94d4fd08" />
+
+- **PUT /disponibilidades/{id}**  
+  Atualiza uma disponibilidade existente  
+  ✅ Teste: Válido
+
+  <img width="1114" height="292" alt="put - disponibilidades - ok" src="https://github.com/user-attachments/assets/ce4cae58-1f43-4b1d-9279-3cac72f11ace" />
+
+- **DELETE /disponibilidades/{id}**  
+  Remove uma disponibilidade  
+  ✅ Teste: Válido
+
+  <img width="1113" height="294" alt="delete - disponibilidades - ok" src="https://github.com/user-attachments/assets/43101bf1-7faf-4fd9-b74e-2524612515be" />
 
 3. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
 4. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
