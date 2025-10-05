@@ -104,6 +104,11 @@ Adicionalmente aos três endpoints detalhados, a API implementa um conjunto padr
 
 ## Considerações de Segurança
 
+A aplicação de agendamento de aulas funciona apenas com conexão segura (HTTPS). O acesso é feito por login em um serviço de identidade confiável; após entrar, o usuário recebe um “token” de acesso com validade curta. No app de celular, esse token é guardado em área segura do aparelho. Quando necessário, pode-se exigir confirmação em dois passos para ações sensíveis (por exemplo, alterar dados da conta).
+
+A autorização é baseada em perfis e regras claras. Existem perfis como Aluno, Professor e Administrador, cada um com permissões específicas. Em toda solicitação o sistema verifica se a pessoa tem permissão para aquela ação e se é a “dona” do recurso (ex.: só o professor pode confirmar/cancelar seus próprios horários). As telas e as respostas da API mostram apenas as informações estritamente necessárias a cada perfil.
+
+Para proteção contra ataques, aplicamos limites de uso por usuário e por endereço de rede, bloqueando tentativas repetidas e abusos (como criação massiva de agendamentos). Todas as entradas são validadas para evitar erros e fraudes; consultas ao banco usam parâmetros para impedir injeção de comandos. Se houver uso de cookies no site, eles são marcados como seguros e protegidos contra uso indevido. Envio de arquivos (como material de aula) passa por checagem de tipo e tamanho. O tráfego entre cliente e servidor é sempre criptografado e os dados sensíveis são armazenados de forma protegida. Por fim, eventos importantes (logins, tentativas negadas, criação/alteração/cancelamento de agendamentos) são registrados e monitorados para permitir detecção rápida e resposta a incidentes.
 [Discuta as considerações de segurança relevantes para a aplicação distribuída, como autenticação, autorização, proteção contra ataques, etc.]
 
 ## Implantação
