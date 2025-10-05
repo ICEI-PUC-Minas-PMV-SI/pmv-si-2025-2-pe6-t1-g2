@@ -291,6 +291,7 @@ Atualizado em 04/09/2025
 | Beatriz Pereira da Costa | Configuração da autorização do projeto | 29/09/2025   | 03/10/2025 | ✔️    | 03/10/2025    |
 | Beatriz Pereira da Costa | Descrição dos End-points e tabela de testes de requisitos do projeto | 03/10/2025   | 05/10/2025 | ✔️    | 04/10/2025    |
 | Antônio Rubens  | Teste de API. e apoio na elaboração da documentação  | 04/10/2025   | 05/10/2025 | 📝 | 05/10/2025  |
+| Denis Alves da Silva Leite  | Teste de API  | 04/10/2025   | 05/10/2025 | ✔️  | 05/10/2025  |
 
 
 
