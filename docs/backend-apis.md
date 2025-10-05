@@ -14,7 +14,7 @@ A API do Projeto Saber Mais foi desenvolvida para fornecer uma interface robusta
 ## Modelagem da Aplicação
 A modelagem da aplicação "Saber+" foi concebida para estruturar um sistema de agendamento de aulas e avaliações entre alunos e professores. A representação visual dessa estrutura foi consolidada através de um Diagrama de Classes, que detalha as entidades centrais do sistema, seus atributos, comportamentos e as relações entre elas. Este diagrama é fundamental para compreender a organização dos dados e a lógica de negócio que governa a plataforma.
 
-<img src="./img/Diagrama_de_Classe-Projeto_Saber+.png" alt="Diagrama de Classes do projeto Saber+">
+<img src="./img/Diagrama_de_Classe-Projeto_Saber+.png" width="600px" alt="Diagrama de Classes do projeto Saber+">
 
 ## Tecnologias Utilizadas
 
@@ -32,30 +32,28 @@ Para o desenvolvimento da API do Projeto Saber Mais, foram escolhidas tecnologia
 
 [Liste os principais endpoints da API, incluindo as operações disponíveis, os parâmetros esperados e as respostas retornadas.]
 
-### Endpoint 1
-- Método: GET
-- URL: /endpoint1
-- Parâmetros:
-  - param1: [descrição]
+### Autenticar Usuário
+- Método: POST
+- URL: /api/Usuarios/Authenticate
+- Parâmetros (body JSON):
+  - `id`: ID do usuário que deseja se autenticar (int)  
+  - `password`: senha feita em seu cadastro (string) 
 - Resposta:
   - Sucesso (200 OK)
     ```
     {
-      "message": "Success",
-      "data": {
-        ...
-      }
+      "jwtToken": "string" // Token JWT gerado
     }
     ```
-  - Erro (4XX, 5XX)
+  - Erro (401 Unauthorized)
     ```
     {
-      "message": "Error",
-      "error": {
-        ...
-      }
+      "message": "ID ou senha inválidos"
     }
     ```
+<img src="./img/EndPoints-POST-Authenticate-Usuários.png" alt="Endpoint de autenticação de Usuários">
+
+
   ### Criar Professor
 - **Método:** POST  
 - **URL:** /api/Professores  
@@ -72,7 +70,7 @@ Para o desenvolvimento da API do Projeto Saber Mais, foram escolhidas tecnologia
       "certificacoes": [],
       "competencias": []
     }
-
+<img src="./img/EndPoints-GET-Criar-Professor.png" alt="Endpoint de criação de professor">
   
   ### Criar Agendamento
 - **Método:** POST  
@@ -94,6 +92,15 @@ Para o desenvolvimento da API do Projeto Saber Mais, foram escolhidas tecnologia
       "horaInicio": "08:00",
       "horaFim": "09:00"
     }
+<img src="./img/EndPoints-GET-Criar-Agendamento.png" alt="Endpoint de criação de agendamento">
+
+Adicionalmente aos três endpoints detalhados, a API implementa um conjunto padrão de endpoints RESTful (GET, POST, PUT, DELETE) para o gerenciamento dos demais recursos. As imagens a seguir, extraídas da interface Swagger, ilustram a estrutura desses endpoints para `Agendamentos`, `Áreas`, `Avaliações`, `Disponibilidades`, `Professores` e `Usuários`.
+
+<img src="./img/Endpoints-Agendamentos-Áreas.png" alt="Endpoint de Agendamentos e Áreas">
+<img src="./img/Endpoints-Avaliações-Disponibilidades.png" alt="Endpoint de Avaliações e Disponibilidades">
+<img src="./img/Endpoints-Professores.png" alt="Endpoint de Professores">
+<img src="./img/Endpoints-Usuários.png" alt="Endpoint de Usuários">
+
 
 ## Considerações de Segurança
 
