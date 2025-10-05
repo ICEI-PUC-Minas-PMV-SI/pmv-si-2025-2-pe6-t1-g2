@@ -14,7 +14,7 @@ A API do Projeto Saber Mais foi desenvolvida para fornecer uma interface robusta
 ## Modelagem da Aplicação
 A modelagem da aplicação "Saber+" foi concebida para estruturar um sistema de agendamento de aulas e avaliações entre alunos e professores. A representação visual dessa estrutura foi consolidada através de um Diagrama de Classes, que detalha as entidades centrais do sistema, seus atributos, comportamentos e as relações entre elas. Este diagrama é fundamental para compreender a organização dos dados e a lógica de negócio que governa a plataforma.
 
-<img src="./img/Diagrama de Classes - Projeto Saber+ (2).png" alt="Diagrama de Classes do projeto Saber+">
+<img src="./img/Diagrama_de_Classe-Projeto_Saber+.png" alt="Diagrama de Classes do projeto Saber+">
 
 ## Tecnologias Utilizadas
 
@@ -147,8 +147,6 @@ Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvo
 
 ##  Quadro de tarefas
 
-> Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
-
 ### Semana 1
 
 Atualizado em: 12/09/2025
@@ -167,13 +165,37 @@ Atualizado em: 12/09/2025
 | Laís Lara, Antônio Rubens e Sávio Sérgio  | Criação, desenvolvimento e revisão da apresentação da etapa 1.  | 03/09/2025   | 08/09/2025 | ✔️ | 08/09/2025  |
 | Laís Lara e Antônio Rubens | Apresentação da etapa 1.  | 08/09/2025   | 08/09/2025 | ✔️ | 08/09/2025  |
 | Laís Lara, Beatriz Pereira e Sávio Sérgio | Elaboração do Diagrama de Classes do projeto | 10/09/2025 | 14/09/2025 | ✔️  |              12/09/2025 |
-| Laís Lara e Beatriz Pereira | Criação da API do projeto | 12/09/2025 | 16/09/2025 | 📝  |     |
+| Laís Lara e Beatriz Pereira | Início da Criação da API do projeto | 12/09/2025 | 16/09/2025 | ✔️  |  04/10/2025   |
+
+
+### Semana 3
+
+Atualizado em: 05/10/2025
+
+| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
+| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
+| Laís Lara Ferreira dos Santos | Criação e configuração das classes e controllers de "Usuário", "Avaliações" e "Áreas"| 15/09/2025   | 21/09/2025 | ✔️    | 21/09/2025    |
+| Beatriz Pereira da Costa | Criação e configuração das classes e controllers de "Professores", "Agendamentos" e "Disponibilidade"| 15/09/2025   | 21/09/2025 | ✔️    | 21/09/2025    |
+
+
+### Semana 4
+
+Atualizado em: 05/10/2025
+| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
+| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
+| Laís Lara Ferreira dos Santos | Configuração da relação muitos para muitos entre professor e área | 22/09/2025   | 28/09/2025 | ✔️    | 28/09/2025    |
+| Beatriz Pereira da Costa | Correções da classe "Professor" | 22/09/2025   | 28/09/2025 | ✔️    | 28/09/2025    |
+
+
 
 #### Semana 5
 
 Atualizado em 04/09/2025
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
+| Laís Lara Ferreira dos Santos | Configuração da autenticação do projeto | 29/09/2025   | 03/10/2025 | ✔️    | 03/10/2025    |
+| Beatriz Pereira da Costa | Configuração da autorização do projeto | 29/09/2025   | 03/10/2025 | ✔️    | 03/10/2025    |
+| Beatriz Pereira da Costa | Descrição dos End-points e tabela de testes de requisitos do projeto | 03/10/2025   | 05/10/2025 | ✔️    | 04/10/2025    |
 | Antônio Rubens  | Teste de API.  | 04/10/2025   | 05/10/2025 | 📝 | 05/10/2025  |
 
 
