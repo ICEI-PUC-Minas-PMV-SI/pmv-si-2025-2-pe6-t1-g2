@@ -109,7 +109,6 @@ A aplicação de agendamento de aulas funciona apenas com conexão segura (HTTPS
 A autorização é baseada em perfis e regras claras. Existem perfis como Aluno, Professor e Administrador, cada um com permissões específicas. Em toda solicitação o sistema verifica se a pessoa tem permissão para aquela ação e se é a “dona” do recurso (ex.: só o professor pode confirmar/cancelar seus próprios horários). As telas e as respostas da API mostram apenas as informações estritamente necessárias a cada perfil.
 
 Para proteção contra ataques, aplicamos limites de uso por usuário e por endereço de rede, bloqueando tentativas repetidas e abusos (como criação massiva de agendamentos). Todas as entradas são validadas para evitar erros e fraudes; consultas ao banco usam parâmetros para impedir injeção de comandos. Se houver uso de cookies no site, eles são marcados como seguros e protegidos contra uso indevido. Envio de arquivos (como material de aula) passa por checagem de tipo e tamanho. O tráfego entre cliente e servidor é sempre criptografado e os dados sensíveis são armazenados de forma protegida. Por fim, eventos importantes (logins, tentativas negadas, criação/alteração/cancelamento de agendamentos) são registrados e monitorados para permitir detecção rápida e resposta a incidentes.
-[Discuta as considerações de segurança relevantes para a aplicação distribuída, como autenticação, autorização, proteção contra ataques, etc.]
 
 ## Implantação
 A implantação em produção parte de uma base clara de requisitos. Para a aplicação, começamos com duas instâncias (ou tarefas) de API, cada uma com cerca de 1 vCPU e 2 GB de memória, garantindo alta disponibilidade e espaço para crescer conforme a demanda. O armazenamento efêmero de 20 GB por instância é suficiente para logs temporários e arquivos de trabalho. No banco de dados, utilizamos um SQL Server gerenciado com capacidade aproximada de 2 vCPUs e 8 GB de memória, já configurado com alta disponibilidade entre zonas e backups automáticos. Do lado do software, a aplicação é construída com .NET (8 ou 9), usa Entity Framework Core para acesso ao banco e publica artefatos prontos para execução; quando trabalhamos com contêineres, o Docker empacota a aplicação e a AWS CLI cuida das interações com a nuvem.
@@ -125,16 +124,6 @@ As mudanças do banco são aplicadas junto com o deploy. As migrações do Entit
 Depois de disponibilizar a nova versão, realizamos testes práticos no próprio ambiente de produção. Verificamos um endereço de saúde simples, acessamos a documentação dos endpoints e exercitamos os fluxos críticos: login no aplicativo, pesquisa de professores, criação de um agendamento pelo aluno, confirmação pelo professor e, quando aplicável, o envio e a recuperação de materiais. Conferimos se apenas HTTPS está ativo, se as origens do aplicativo têm permissão de acesso, se respostas sem autorização retornam os códigos adequados e se limites de requisição contêm acessos excessivos. Por fim, acompanhamos logs e métricas do balanceador e do serviço para garantir que erros e latência estão sob controle.
 
 Com esses cuidados — requisitos dimensionados, plataforma adequada, ambiente configurado com segurança, publicação automatizada com migrações e testes de verificação — a aplicação de agendamento chega à produção de forma previsível, segura e preparada para crescer junto com o uso real.
-
-
-
-[Instruções para implantar a aplicação distribuída em um ambiente de produção.]
-
-1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
-2. Escolha uma plataforma de hospedagem adequada, como um provedor de nuvem ou um servidor dedicado.
-3. Configure o ambiente de implantação, incluindo a instalação de dependências e configuração de variáveis de ambiente.
-4. Faça o deploy da aplicação no ambiente escolhido, seguindo as instruções específicas da plataforma de hospedagem.
-5. Realize testes para garantir que a aplicação esteja funcionando corretamente no ambiente de produção.
 
 ## Testes
 
