@@ -40,13 +40,13 @@ Para o desenvolvimento da API do Projeto Saber Mais, foram escolhidas tecnologia
   - `password`: senha feita em seu cadastro (string) 
 - Resposta:
   - Sucesso (200 OK)
-    ```
+    ```json
     {
       "jwtToken": "string" // Token JWT gerado
     }
     ```
   - Erro (401 Unauthorized)
-    ```
+    ```json
     {
       "message": "ID ou senha inválidos"
     }
