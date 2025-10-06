@@ -122,11 +122,11 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 
 | **ID**     | **Requisito**                 | **Objetivo**                                                              | **Pré-condição** | **Passos** | **Resultado Esperado** | **Prioridade** |
 | :--------- | :---------------------------- | :------------------------------------------------------------------------ | :--------------- | :--------- | :-------------------- | :------------: |
-| CT-RF-001  | RF-001 – Gerenciar usuários   | Garantir que seja possível listar todos os usuários cadastrados, criar, editar, listar determinados usuários e exclui-los   | Sistema iniciado e usuário autenticado como admin   | 1. `GET /api/Usuarios`<br>2. `POST /api/Usuarios`<br> 3. `GET /api/Usuarios/{id}`<br>4.`PUT /api/Usuarios/{id}`<br>5. `DELETE api/Usuarios/{id}`<br>6.`POST /api/Usuarios/Authenticate`  | Usuário é criado, editado, listado e excluído com sucesso    | ALTA           |
+| CT-RF-001  | RF-001 – Gerenciar usuários   | Garantir que seja possível listar todos os usuários cadastrados, criar, editar, listar determinados usuários e exclui-los   | Sistema iniciado e usuário autenticado como admin   | 1. `GET /Usuarios`<br>2. `POST /Usuarios`<br> 3. `GET /Usuarios/{id}`<br>4.`PUT /Usuarios/{id}`<br>5. `DELETE /Usuarios/{id}`<br>6.`POST /Usuarios/Authenticate`  | Usuário é criado, editado, listado e excluído com sucesso    | ALTA           |
 | CT-RF-002  | RF-002 – Gerenciar instrutor  | Garantir que seja possível criar, editar, listar e excluir instrutores    | Sistema iniciado e usuário autenticado como admin | 1. `POST /professores`<br>2. `PUT /professores/{id}`<br>3. `GET /professores`<br>4. `DELETE /professores/{id}` | Instrutor é criado, editado, listado e excluído com sucesso | ALTA |
 | CT-RF-003  | RF-003 – Consultar instrutores | Garantir que usuários consigam buscar e visualizar detalhes de instrutores | Sistema iniciado | 1. `GET /professores`<br><br>2. `GET /professores/{id}` | Os professores filtrados corretamente e detalhes exibidos | ALTA |
 | CT-RF-004  | RF-004 – Gerenciar agendamento | Garantir que usuários consigam criar, alterar e cancelar agendamentos      | Usuário autenticado | 1. `POST /agendamentos`<br>2. `PUT /agendamentos/{id}`<br>3. `DELETE /agendamentos/{id}` | Agendamento criado, alterado ou cancelado com sucesso; conflitos de horário são evitados | ALTA |
-| CT-RF-005  | RF-005 – Gerenciar avaliações | Garantir que usuários possam avaliar instrutores ou serem avaliados       | Sistema iniciado e usuário autenticado como admin | 1. `GET /api/Avaliacoes`<br>2. `POST /api/Avaliacoes`<br> 3. `GET /api/Avaliacoes/{id}`<br>4.`PUT /api/Avaliacoes/{id}`<br>5. `DELETE api/Avaliacoes/{id}` | Avaliação é criada, editada, listada e excluída com sucesso    | MÉDIA          |
+| CT-RF-005  | RF-005 – Gerenciar avaliações | Garantir que usuários possam avaliar instrutores ou serem avaliados       | Sistema iniciado e usuário autenticado como admin | 1. `GET /Avaliacoes`<br>2. `POST /Avaliacoes`<br> 3. `GET /Avaliacoes/{id}`<br>4.`PUT /Avaliacoes/{id}`<br>5. `DELETE /Avaliacoes/{id}` | Avaliação é criada, editada, listada e excluída com sucesso    | MÉDIA          |
 
 ## Casos de Testes - Requisitos Não Funcionais
 
@@ -154,7 +154,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 
 ❌ Teste: Login com credenciais inválidas
 * Entrada: Id ou senha incorretos
-* Resultado Esperado: `400 Bad Request` com mensagem de erro
+* Resultado Esperado: `401 Unauthorized` com mensagem de erro
 * Evidência: <img src="./img/1.autenticação-usuário-falha.png">
 
 
@@ -169,7 +169,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 
 ❌ Teste: Token inválido ou expirado
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 * Evidência: <img src="./img/2.getall-usuários-falha.png">
 
 ### **📒 Cadastro de novo Usuário**
@@ -184,9 +184,8 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 * Evidência: <img src="./img/3.create-usuário-ok.png">
 
 ❌ Teste: Token inválido ou expirado
-
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 * Evidência: <img src="./img/3.create-usuário-falha.png">
 
 ❌ Teste: Falta de dado
@@ -207,9 +206,8 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 * Evidência: <img src="./img/4-getbyid-usuário-ok.png">
 
 ❌ Teste: Token inválido ou expirado
-
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 * Evidência: <img src="./img/4-getbyid-usuário-falha.png">
 
 ❌ Teste: Usuário não encontrado
@@ -231,7 +229,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 ❌ Teste: Token inválido ou expirado
 
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 * Evidência: <img src="./img/5-update-usuários-falha.png">
 
 ❌ Teste: Usuário não corresponde
@@ -253,7 +251,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 ❌ Teste: Token inválido ou expirado
 
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 * Evidência: <img src="./img/6-delete-usuários-falha.png">
 
 ❌ Teste: Usuário não encontrado
@@ -358,7 +356,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 
 ❌ Teste: Token inválido ou expirado
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 * Evidência: <img src="./img/1.getall-avaliações-falha.png">
 
 ### **📒 Cadastro de nova Avaliação**
@@ -373,7 +371,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 
 ❌ Teste: Token inválido ou expirado
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 * Evidência: <img src="./img/2-create-avaliação-falha.png">
 
 ❌ Teste: Ids incorretos
@@ -399,7 +397,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 
 ❌ Teste: Token inválido ou expirado
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 * Evidência: <img src="./img/3.getbyId-avaliação-falha.png">
 
 ❌ Teste: Avaliação não encontrada
@@ -420,7 +418,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 
 ❌ Teste: Token inválido ou expirado
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 * Evidência: <img src="./img/4.update-avaliações-falha.png">
 
 ❌ Teste: Avaliação não corresponde
@@ -440,7 +438,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 
 ❌ Teste: Token inválido ou expirado
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 * Evidência: <img src="./img/5.delete-avaliação-falha.png">
 
 ❌ Teste: Avaliação não encontrada
@@ -461,7 +459,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 
 ❌ Teste: Token inválido ou expirado
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 * Evidência: <img src="./img/1.getallid-areas-falha.png">
 
 ### **📒 Cadastro de nova Área**
@@ -475,7 +473,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 
 ❌ Teste: Token inválido ou expirado
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 
 ### **📒 Busca por determinada Área**
 * **Método:** GET
@@ -488,7 +486,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 
 ❌ Teste: Token inválido ou expirado
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 
 ❌ Teste: Área não encontrada
 * Entrada: URL contendo um Id de área que ainda não existente
@@ -507,7 +505,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 
 ❌ Teste: Token inválido ou expirado
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 
 ❌ Teste: Área não corresponde
 * Entrada: URL com Id diferente do Id informado na descrição da área
@@ -525,7 +523,7 @@ O processo de publicação (Deployment) será repetível e suportará atualizaç
 
 ❌ Teste: Token inválido ou expirado
 * Entrada: Token incorreto ou gerado a mais de 8 horas
-* Resultado Esperado: `400 Bad Request`
+* Resultado Esperado: `401 Unauthorized`
 
 ❌ Teste: Área não encontrada
 * Entrada: URL com Id de Avaliação não existente
