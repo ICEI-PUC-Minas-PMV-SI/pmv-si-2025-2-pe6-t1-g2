@@ -1,36 +1,36 @@
 # APIs e Web Services
 
-O Projeto Saber Mais consiste em uma aplicação Web que oferece uma plataforma de conexão entre professores e alunos para agendamento de aulas particulares, avaliação de serviços e gerenciamento de disponibilidade. A API fornece endpoints para o gerenciamento de usuários, professores, áreas de atuação, disponibilidade, agendamentos e avaliações, permitindo a integração de múltiplos sistemas clientes (web, mobile, etc.).
+O projeto Saber+ consiste em uma aplicação Web que oferece uma plataforma de conexão entre professores e alunos para agendamento de aulas particulares, avaliação de serviços e gerenciamento de disponibilidade. A API fornece endpoints para o gerenciamento de usuários, professores, áreas de atuação, disponibilidade, agendamentos e avaliações, permitindo a integração de múltiplos sistemas clientes (web, mobile, etc.).
+
+Acesse a API Saber+ pelo link: [https://github.com/Lais-lfs/apis-web-services-projeto-saber-mais](https://github.com/Lais-lfs/apis-web-services-projeto-saber-mais).
 
 ## Objetivos da API
 
-A API do Projeto Saber Mais foi desenvolvida para fornecer uma interface robusta e segura que permita o gerenciamento eficiente de usuários, professores, áreas de conhecimento, disponibilidades, agendamentos e avaliações. Os principais objetivos desta API são:
+A API do projeto Saber+ foi desenvolvida para fornecer uma interface robusta e segura que permita o gerenciamento eficiente de usuários, professores, áreas de conhecimento, disponibilidades, agendamentos e avaliações. Os principais objetivos desta API são:
 
-- **Facilitar a integração** entre diferentes clientes (web, aplicativos móveis, etc.) eo backend da plataforma, garantindo comunicação consistente e eficiente.
+- **Facilitar a integração** entre diferentes clientes (web, aplicativos móveis, etc.) e o backend da plataforma, garantindo comunicação consistente e eficiente.
 - **Garantir a segurança** dos dados dos usuários incluindo informações pessoais e agendamentos.
 - **Oferecer funcionalidades CRUD completas** para todos os recursos essenciais do sistema, como cadastro de usuários, professores, áreas de atuação, horários disponíveis, agendamentos e avaliações.
 - **Suportar futuros aprimoramentos e integrações**, como autenticação, autorização, notificações e relatórios.
 
 ## Modelagem da Aplicação
-A modelagem da aplicação "Saber+" foi concebida para estruturar um sistema de agendamento de aulas e avaliações entre alunos e professores. A representação visual dessa estrutura foi consolidada através de um Diagrama de Classes, que detalha as entidades centrais do sistema, seus atributos, comportamentos e as relações entre elas. Este diagrama é fundamental para compreender a organização dos dados e a lógica de negócio que governa a plataforma.
+A modelagem da aplicação Saber+ foi concebida para estruturar um sistema de agendamento de aulas e avaliações entre alunos e professores. A representação visual dessa estrutura foi consolidada através de um Diagrama de Classes, que detalha as entidades centrais do sistema, seus atributos, comportamentos e as relações entre elas. Este diagrama é fundamental para compreender a organização dos dados e a lógica de negócio que governa a plataforma.
 
 <img src="./img/Diagrama_de_Classe-Projeto_Saber+.png" width="600px" alt="Diagrama de Classes do projeto Saber+">
 
 ## Tecnologias Utilizadas
 
-Para o desenvolvimento da API do Projeto Saber Mais, foram escolhidas tecnologias modernas e consolidadas que garantem desempenho, segurança e facilidade de manutenção. As principais tecnologias utilizadas são:
+Para o desenvolvimento da API do Projeto Saber+, foram escolhidas tecnologias modernas e consolidadas que garantem desempenho, segurança e facilidade de manutenção. As principais tecnologias utilizadas são:
 
 - **Entity Framework Core**: ORM (Object-Relational Mapper) utilizado para o mapeamento das entidades do sistema ao banco de dados, facilitando operações CRUD e consultas complexas.
 - **SQL Server**: Sistema gerenciador de banco de dados relacional usado para armazenar os dados da aplicação de forma segura e estruturada.
 - **ASP .NET Core Web API**: Framework para criação de APIs RESTful, com suporte nativo para rotas, controllers, validação, e segurança.
 - **Swagger/OpenAPI**: Ferramenta para documentação automática da API, permitindo que desenvolvedores conheçam os endpoints disponíveis, parâmetros e respostas.
 - **Insomnia**: Cliente REST utilizado para testar os endpoints da API durante o desenvolvimento, facilitando a simulação de requisições HTTP e análise de respostas.
-- **Visual Studio**: IDEs utilizadas para o desenvolvimento, debug e testes da aplicação.
+- **Visual Studio**: IDE utilizado para o desenvolvimento,depuração (debug) e testes da aplicação.
 - **Git e GitHub**: Para controle de versão e colaboração entre desenvolvedores. 
 
 ## API Endpoints
-
-[Liste os principais endpoints da API, incluindo as operações disponíveis, os parâmetros esperados e as respostas retornadas.]
 
 ### Autenticar Usuário
 - Método: POST
@@ -104,24 +104,17 @@ Adicionalmente aos três endpoints detalhados, a API implementa um conjunto padr
 
 ## Considerações de Segurança
 
-A aplicação de agendamento de aulas funciona apenas com conexão segura (HTTPS). O acesso é feito por login em um serviço de identidade confiável; após entrar, o usuário recebe um “token” de acesso com validade curta. No app de celular, esse token é guardado em área segura do aparelho. Quando necessário, pode-se exigir confirmação em dois passos para ações sensíveis (por exemplo, alterar dados da conta).
+A aplicação de agendamento de aulas funciona apenas com conexão segura (HTTPS). O acesso é feito por login em um serviço de identidade confiável. Após entrar, o usuário recebe um “token” de acesso com validade curta (geralmente um JWT). Quando necessário, pode-se exigir confirmação em dois passos (MFA) para ações sensíveis (por exemplo, alterar dados da conta). Todas as entradas são validadas para evitar erros e fraudes, e os dados são armazenados de forma protegida.
 
-A autorização é baseada em perfis e regras claras. Existem perfis como Aluno, Professor e Administrador, cada um com permissões específicas. Em toda solicitação o sistema verifica se a pessoa tem permissão para aquela ação e se é a “dona” do recurso (ex.: só o professor pode confirmar/cancelar seus próprios horários). As telas e as respostas da API mostram apenas as informações estritamente necessárias a cada perfil.
-
-Para proteção contra ataques, aplicamos limites de uso por usuário e por endereço de rede, bloqueando tentativas repetidas e abusos (como criação massiva de agendamentos). Todas as entradas são validadas para evitar erros e fraudes; consultas ao banco usam parâmetros para impedir injeção de comandos. Se houver uso de cookies no site, eles são marcados como seguros e protegidos contra uso indevido. Envio de arquivos (como material de aula) passa por checagem de tipo e tamanho. O tráfego entre cliente e servidor é sempre criptografado e os dados sensíveis são armazenados de forma protegida. Por fim, eventos importantes (logins, tentativas negadas, criação/alteração/cancelamento de agendamentos) são registrados e monitorados para permitir detecção rápida e resposta a incidentes.
+A autorização é baseada em perfis e regras claras. Existem perfis como Aluno e Professor, cada um com permissões específicas. Em toda solicitação o sistema verifica se a pessoa tem permissão para aquela ação e se é a “dona” do recurso (ex.: só o professor pode confirmar/cancelar seus próprios horários). As telas e as respostas da API mostram apenas as informações estritamente necessárias a cada perfil (Princípio do Menor Privilégio).
 
 ## Implantação
-A implantação em produção parte de uma base clara de requisitos. Para a aplicação, começamos com duas instâncias de API, cada uma com cerca de 1 vCPU e 2 GB de memória, garantindo alta disponibilidade e espaço para crescer conforme a demanda. O armazenamento de 20 GB por instância é suficiente para logs temporários e arquivos de trabalho. No banco de dados SQL Server gerenciado com capacidade aproximada de 2 vCPUs e 8 GB de memória, já configurado com alta disponibilidade entre zonas e backups automáticos. Do lado do software, a aplicação é construída com .NET (9), usa Entity Framework Core para acesso ao banco e publica artefatos prontos para execução; quando trabalhamos com contêineres, o Docker empacota a aplicação e a AWS CLI cuida das interações com a nuvem.
+A estratégia de deployment garantirá alta disponibilidade e escalabilidade, baseando-se na AWS com a seguinte arquitetura:
+A infraestrutura de produção será construída em uma VPC (Rede Privada), separando o tráfego público do privado. O tráfego externo será recebido por um Application Load Balancer (ALB), que encerrará o HTTPS. A API será executada em contêineres gerenciados por Amazon ECS com AWS Fargate, uma solução serverless que facilitará a escalabilidade. O banco de dados será um SQL Server gerenciado (Amazon RDS), configurado com alta disponibilidade.
 
-A plataforma escolhida é a AWS, combinando um balanceador de carga para receber o tráfego HTTPS com a execução da API em contêineres sem servidor e um SQL Server gerenciado (Amazon RDS). Essa composição reduz a sobrecarga operacional  cuida do sistemas operacional ou patches de banco — e facilita a escalabilidade conforme as rotas de busca de professores e os picos de agendamento crescem. O tráfego de entrada é encerrado em HTTPS no balanceador, usando certificados emitidos e renovados automaticamente, e segue por uma rede privada até as tarefas da API ao banco.
+Para a segurança da rede, o Amazon RDS será protegido por Security Groups restritivos, permitindo acesso ao banco apenas pela API. Segredos sensíveis (como credenciais do banco) serão armazenados em um cofre de segredos e serão injetados na aplicação via variáveis de ambiente, jamais ficarão no código.
 
-Antes do primeiro deploy, o ambiente é preparado com redes separando o que é público (balanceador) do que é privado (API e banco). As regras de segurança permitem que a internet acesse apenas a porta segura do balanceador; a API responde somente a esse balanceador; e o banco aceita conexões apenas da API, na porta específica do SQL Server. Segredos como a senha do banco e chaves de serviço não ficam no código: são guardados em um cofre de segredos e injetados na aplicação por variáveis de ambiente. A própria aplicação lê a cadeia de conexão do banco a partir desses segredos e publica, quando necessário, endereços temporários para upload de materiais por professores, mantendo os arquivos em um armazenamento de objetos privado.
-
-O processo de publicação é simples e repetível. Em projetos sem contêiner, a aplicação é compilada em modo de release e os artefatos resultantes são levados ao serviço de aplicação, que é registrado atrás do balanceador. Em projetos com contêiner à imagem da API é construída localmente, enviada a um registro de imagens e referenciada por uma definição de tarefa. O serviço de execução é então atualizado para apontar para a nova versão, mantendo instâncias antigas até que as verificações de saúde confirmem que a nova versão está pronta. Esse fluxo permite trocas graduais ou até abordagens blue/green, nas quais a nova versão é validada antes de receber todo o tráfego.
-
-As mudanças do banco são aplicadas junto com o deploy. As migrações do Entity Framework garantem que a estrutura do SQL Server acompanhe a evolução do código sem intervenções manuais arriscadas. É recomendável executar essas migrações como um passo dedicado da publicação, usando as mesmas credenciais que a aplicação usará em produção, e sempre registrar o resultado para auditoria. Caso haja necessidade de voltar atrás, mantemos a imagem estável anterior à mão e contamos com backups e pontos de restauração do banco.
-
-Depois de disponibilizar a nova versão, realizamos testes práticos no próprio ambiente de produção. Verificamos um endereço de saúde simples, acessamos a documentação dos endpoints e exercitamos os fluxos críticos: login no aplicativo, pesquisa de professores, criação de um agendamento pelo aluno, confirmação pelo professor e, quando aplicável, o envio e a recuperação de materiais. Conferimos se apenas HTTPS está ativo, se as origens do aplicativo têm permissão de acesso, se respostas sem autorização retornam os códigos adequados e se limites de requisição contêm acessos excessivos. Por fim, acompanhamos logs e métricas do balanceador e do serviço para garantir que erros e latência estão sob controle.
+O processo de publicação (Deployment) será repetível e suportará atualizações graduais (blue/green), garantindo que a nova versão será validada antes de receber todo o tráfego. As migrações do Entity Framework para o banco serão aplicadas automaticamente junto com o deploy. Após a disponibilização, a equipe realizará testes práticos em produção e monitorará logs e métricas para garantir que a aplicação estará funcionando corretamente, com a segurança de HTTPS e limites de requisição ativos.
 
 ## Testes
 
@@ -129,9 +122,9 @@ Depois de disponibilizar a nova versão, realizamos testes práticos no próprio
 
 | **ID**     | **Requisito**                 | **Objetivo**                                                              | **Pré-condição** | **Passos** | **Resultado Esperado** | **Prioridade** |
 | :--------- | :---------------------------- | :------------------------------------------------------------------------ | :--------------- | :--------- | :-------------------- | :------------: |
-| CT-RF-001  | RF-001 – Gerenciar usuários   | Garantir que seja possível listar todos os usuários cadastrados, criar, editar, listar determinado usuários e exclui-los   | Sistema iniciado e usuário autenticado como admin   | 1. `GET /api/Usuarios`<br>2. `POST /api/Usuarios`<br> 3. `GET /api/Usuarios/{id}`<br>4.`PUT /api/Usuarios/{id}`<br>5. `DELETE api/Usuarios/{id}`<br>6.`POST /api/Usuarios/Authenticate`  | Usuário é criado, editado, listado e excluído com sucesso    | ALTA           |
+| CT-RF-001  | RF-001 – Gerenciar usuários   | Garantir que seja possível listar todos os usuários cadastrados, criar, editar, listar determinados usuários e exclui-los   | Sistema iniciado e usuário autenticado como admin   | 1. `GET /api/Usuarios`<br>2. `POST /api/Usuarios`<br> 3. `GET /api/Usuarios/{id}`<br>4.`PUT /api/Usuarios/{id}`<br>5. `DELETE api/Usuarios/{id}`<br>6.`POST /api/Usuarios/Authenticate`  | Usuário é criado, editado, listado e excluído com sucesso    | ALTA           |
 | CT-RF-002  | RF-002 – Gerenciar instrutor  | Garantir que seja possível criar, editar, listar e excluir instrutores    | Sistema iniciado e usuário autenticado como admin | 1. `POST /professores`<br>2. `PUT /professores/{id}`<br>3. `GET /professores`<br>4. `DELETE /professores/{id}` | Instrutor é criado, editado, listado e excluído com sucesso | ALTA |
-| CT-RF-003  | RF-003 – Consultar instrutores | Garantir que usuários consigam buscar e visualizar detalhes de instrutores | Sistema iniciado | 1. `GET /professores`<br><br>2. `GET /professores/{id}` | professores filtrados corretamente e detalhes exibidos | ALTA |
+| CT-RF-003  | RF-003 – Consultar instrutores | Garantir que usuários consigam buscar e visualizar detalhes de instrutores | Sistema iniciado | 1. `GET /professores`<br><br>2. `GET /professores/{id}` | Os professores filtrados corretamente e detalhes exibidos | ALTA |
 | CT-RF-004  | RF-004 – Gerenciar agendamento | Garantir que usuários consigam criar, alterar e cancelar agendamentos      | Usuário autenticado | 1. `POST /agendamentos`<br>2. `PUT /agendamentos/{id}`<br>3. `DELETE /agendamentos/{id}` | Agendamento criado, alterado ou cancelado com sucesso; conflitos de horário são evitados | ALTA |
 | CT-RF-005  | RF-005 – Gerenciar avaliações | Garantir que usuários possam avaliar instrutores ou serem avaliados       | Sistema iniciado e usuário autenticado como admin | 1. `GET /api/Avaliacoes`<br>2. `POST /api/Avaliacoes`<br> 3. `GET /api/Avaliacoes/{id}`<br>4.`PUT /api/Avaliacoes/{id}`<br>5. `DELETE api/Avaliacoes/{id}` | Avaliação é criada, editada, listada e excluída com sucesso    | MÉDIA          |
 
@@ -607,6 +600,7 @@ Atualizado em 04/09/2025
 | Antônio Rubens  | Apoio com a elaboração  da documentação  | 04/10/2025   | 05/10/2025 | 📝 | 05/10/2025  |
 | Denis Alves da Silva Leite  | Teste de API  | 04/10/2025   | 05/10/2025 | ✔️  | 05/10/2025  |
 | Arthur Neves da Silveira  | Testes de API  | 04/10/2025   | 05/10/2025 | ✔️  | 05/10/2025  |
+| Sávio Sérgio Pereira da Silva | Revisão da documentação | 05/10/2025 | 05/10/2025 |✔️  | 05/10/2025  |
 
 
 
