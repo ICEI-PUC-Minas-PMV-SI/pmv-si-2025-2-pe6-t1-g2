@@ -599,6 +599,9 @@ Atualizado em 04/09/2025
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | Laís Lara Ferreira dos Santos | Configuração da autenticação do projeto | 29/09/2025   | 03/10/2025 | ✔️    | 03/10/2025    |
+| Laís Lara Ferreira dos Santos | Descrição do Endpoint de Usuário | 04/10/2025   | 05/10/2025 | ✔️    | 05/10/2025    |
+| Laís Lara Ferreira dos Santos | Realização e documentação dos testes de "Usuários", "Avaliações" e "Áreas" | 04/10/2025   | 05/10/2025 | ✔️    | 05/10/2025    |
+| Laís Lara Ferreira dos Santos | Revisão geral na documentação | 05/10/2025   | 05/10/2025 | ✔️    | 05/10/2025    |
 | Beatriz Pereira da Costa | Configuração da autorização do projeto | 29/09/2025   | 03/10/2025 | ✔️    | 03/10/2025    |
 | Beatriz Pereira da Costa | Descrição dos End-points e tabela de testes de requisitos do projeto | 03/10/2025   | 05/10/2025 | ✔️    | 04/10/2025    |
 | Antônio Rubens  | Apoio com a elaboração  da documentação  | 04/10/2025   | 05/10/2025 | 📝 | 05/10/2025  |
