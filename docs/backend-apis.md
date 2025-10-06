@@ -148,6 +148,129 @@ Depois de disponibilizar a nova versão, realizamos testes práticos no próprio
 
 # Casos de Teste - Insomnia
 
+## Usuários
+### **📒 Autenticação de Usuários**
+* **Método:** POST
+* **URL:** /Usuarios/Authenticate
+
+✅ Teste: Login com credenciais válidas
+
+* Entrada: Id e senha corretos
+* Resultado Esperado: `200 OK` e `"jwtToken": "string"`
+* Evidência: <img src="./img/1.autenticação-usuário-ok.png">
+
+❌ Teste: Login com credenciais inválidas
+* Entrada: Id ou senha incorretos
+* Resultado Esperado: `400 Bad Request` com mensagem de erro
+* Evidência: <img src="./img/1.autenticação-usuário-falha.png">
+
+
+### **📒 Listagem de todos os Usuários cadastrados**
+* **Método:** GET
+* **URL:** /Usuarios/
+
+✅ Teste: Token válido
+* Entrada: Token de autenticação válido
+* Resultado Esperado: `200 OK` e lista de usuários cadastrados
+* Evidência: <img src="./img/2.getall-usuários-ok.png">
+
+❌ Teste: Token inválido ou expirado
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+* Evidência: <img src="./img/2.getall-usuários-falha.png">
+
+### **📒 Cadastro de novo Usuário**
+
+* **Método:** POST
+* **URL:** /Usuarios/
+
+✅ Teste: Todos os dados válidos e preenchidos e token de autenticação válido
+
+* Entrada: JSON com todos os dados obrigatórios preenchidos
+* Resultado Esperado: `201 Created` e lista de usuários cadastrados
+* Evidência: <img src="./img/3.create-usuário-ok.png">
+
+❌ Teste: Token inválido ou expirado
+
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+* Evidência: <img src="./img/3.create-usuário-falha.png">
+
+❌ Teste: Falta de dado
+
+* Entrada: Falta de algum dado obrigatório no cadastro
+* Resultado Esperado: `400 Bad Request` e mensagem de erro informando qual é o dado que falta
+* Evidência: <img src="./img/3.create-usuário-falha2.png">
+
+### **📒 Busca por determinado Usuário**
+
+* **Método:** GET
+* **URL:** /Usuarios/{id}
+
+✅ Teste: Busca por usuário existente e token de autenticação válido
+
+* Entrada: URL com Id de Usuário válido e existente
+* Resultado Esperado: `200 OK` e descrição dos dados do usuário encontrado
+* Evidência: <img src="./img/4-getbyid-usuário-ok.png">
+
+❌ Teste: Token inválido ou expirado
+
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+* Evidência: <img src="./img/4-getbyid-usuário-falha.png">
+
+❌ Teste: Usuário não encontrado
+
+* Entrada: Id da URL de usuário ainda não existente
+* Resultado Esperado: `404 Not Found` e descrição do erro
+* Evidência: <img src="./img/4-getbyid-usuário-falha2.png">
+
+### **📒 Editar determinado Usuário**
+* **Método:** PUT
+* **URL:** /Usuarios/{id}
+
+✅ Teste: Editar dados de usuário existente e token de autenticação válido
+
+* Entrada: URL com Id de Usuário válido e existente
+* Resultado Esperado: `204 No Content`
+* Evidência: <img src="./img/5-update-usuários-ok.png">
+
+❌ Teste: Token inválido ou expirado
+
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+* Evidência: <img src="./img/5-update-usuários-falha.png">
+
+❌ Teste: Usuário não corresponde
+
+* Entrada: Id informado na URL diferente do Id informado na descrição do usuário
+* Resultado Esperado: `400 Bad Request` e descrição do erro
+* Evidência: <img src="./img/5-update-usuários-falha2.png">
+
+### **📒 Excluir determinado Usuário**
+* **Método:** DELETE
+* **URL:** /Usuarios/{id}
+
+✅ Teste: Excluir usuário existente e token de autenticação válido
+
+* Entrada: URL com Id de Usuário existente
+* Resultado Esperado: `204 No Content`
+* Evidência: <img src="./img/6-delete-usuários-ok.png">
+
+❌ Teste: Token inválido ou expirado
+
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+* Evidência: <img src="./img/6-delete-usuários-falha.png">
+
+❌ Teste: Usuário não encontrado
+
+* Entrada: Id da URL de usuário não existente
+* Resultado Esperado: `404 Not Found` e descrição do erro
+* Evidência: <img src="./img/6-delete-usuários-falha2.png">
+
+---
+
 ## Professores
 
 - **GET /professores/**  
@@ -174,7 +297,7 @@ Depois de disponibilizar a nova versão, realizamos testes práticos no próprio
   ✅ Teste: Válido
 
   <img width="1115" height="262" alt="delete - professores - ok" src="https://github.com/user-attachments/assets/aa59b30b-6ca3-41a6-bfc1-415bf13275aa" />
-
+---
   ## Agendamentos
 
 - **GET /agendamentos/**  
@@ -201,7 +324,7 @@ Depois de disponibilizar a nova versão, realizamos testes práticos no próprio
   ✅ Teste: Válido
   
   <img width="1111" height="265" alt="delete - agendamentod - ok" src="https://github.com/user-attachments/assets/c8c516ef-6bb3-4bba-8e5e-2895ac082ed1" />
-
+---
 ## Disponibilidades
 
 - **GET /disponibilidades/**  
@@ -227,15 +350,203 @@ Depois de disponibilizar a nova versão, realizamos testes práticos no próprio
   ✅ Teste: Válido
 
   <img width="1113" height="294" alt="delete - disponibilidades - ok" src="https://github.com/user-attachments/assets/43101bf1-7faf-4fd9-b74e-2524612515be" />
+---
 
-3. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-4. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-5. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-6. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+## Avaliações
+### **📒 Listagem de todas as Avaliações cadastradas**
+
+* **Método:** GET
+* **URL:** /Avaliacoes/
+
+✅ Teste: Token válido
+* Entrada: Token de autenticação válido
+* Resultado Esperado: `200 OK` e lista de avaliações cadastradas
+* Evidência: <img src="./img/1.getall-avaliações-ok.png">
+
+❌ Teste: Token inválido ou expirado
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+* Evidência: <img src="./img/1.getall-avaliações-falha.png">
+
+### **📒 Cadastro de nova Avaliação**
+
+* **Método:** POST
+* **URL:** /Avaliacoes/
+
+✅ Teste: Todos os dados válidos e preenchidos e token de autenticação válido
+* Entrada: JSON com todos os dados obrigatórios preenchidos
+* Resultado Esperado: `201 Created` e lista de usuários cadastrados
+* Evidência: <img src="./img/2-create-avaliação-ok.png">
+
+❌ Teste: Token inválido ou expirado
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+* Evidência: <img src="./img/2-create-avaliação-falha.png">
+
+❌ Teste: Ids incorretos
+* Entrada: Id de agendamento inexistente ou Id de aluno ou professor que não correspondem aos registrados no agendamento
+* Resultado Esperado: `400 Bad Request` e mensagem informando o erro
+* Evidência: <img src="./img/2-create-avaliação-falha2.png"> <img src="./img/2-create-avaliação-falha3.png">
+
+❌ Teste: Falta de dado ou dado incorreto
+* Entrada: Falta de algum dado obrigatório no cadastro ou informados de forma incorreta
+* Resultado Esperado: `400 Bad Request` e mensagem de erro
+* Evidência:  <img src="./img/2-create-avaliação-falha4.png"> <img src="./img/2-create-avaliação-falha5.png">
+
+
+### **📒 Busca por determinada Avaliação**
+
+* **Método:** GET
+* **URL:** /Avaliacoes/{id}
+
+✅ Teste: Busca por avaliação existente e token de autenticação válido
+* Entrada: URL contendo Id de Avaliação válida e existente
+* Resultado Esperado: `200 OK` e descrição dos dados da avaliação encontrada
+* Evidência: <img src="./img/3.getbyId-avaliação-ok.png">
+
+❌ Teste: Token inválido ou expirado
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+* Evidência: <img src="./img/3.getbyId-avaliação-falha.png">
+
+❌ Teste: Avaliação não encontrada
+* Entrada: URL contendo um Id de avaliação ainda não existente
+* Resultado Esperado: `404 Not Found` e descrição do erro
+* Evidência: <img src="./img/3.getbyId-avaliação-falha2.png">
+
+
+### **📒 Editar Avaliação**
+
+* **Método:** PUT
+* **URL:** /Avaliacoes/{id}
+
+✅ Teste: Editar dados de avaliação existente e token de autenticação válido
+* Entrada: URL com Id de Avaliação válida e existente
+* Resultado Esperado: `204 No Content`
+* Evidência: <img src="./img/4.update-avaliações-ok.png">
+
+❌ Teste: Token inválido ou expirado
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+* Evidência: <img src="./img/4.update-avaliações-falha.png">
+
+❌ Teste: Avaliação não corresponde
+* Entrada: URL com Id diferente do Id informado na descrição da avaliação
+* Resultado Esperado: `400 Bad Request` e descrição do erro
+* Evidência: <img src="./img/4.update-avaliações-falha2.png">
+
+
+### **📒 Excluir Avaliação**
+* **Método:** DELETE
+* **URL:** /Avaliacoes/{id}
+
+✅ Teste: Excluir avaliação existente e token de autenticação válido
+* Entrada: URL com Id de Avaliação existente
+* Resultado Esperado: `204 No Content`
+* Evidência: <img src="./img/5.delete-avaliação-ok.png">
+
+❌ Teste: Token inválido ou expirado
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+* Evidência: <img src="./img/5.delete-avaliação-falha.png">
+
+❌ Teste: Avaliação não encontrada
+* Entrada: URL com Id de Avaliação não existente
+* Resultado Esperado: `404 Not Found` e descrição do erro
+* Evidência: <img src="./img/5.delete-avaliação-falha2.png">
+---
+
+## Áreas
+### **📒 Listagem de todas as Áreas cadastradas**
+* **Método:** GET
+* **URL:** /Areas/
+
+✅ Teste: Token válido
+* Entrada: Token de autenticação válido
+* Resultado Esperado: `200 OK` e lista de áreas cadastradas
+* Evidência: <img src="./img/1.getallid-areas-ok.png">
+
+❌ Teste: Token inválido ou expirado
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+* Evidência: <img src="./img/1.getallid-areas-falha.png">
+
+### **📒 Cadastro de nova Área**
+* **Método:** POST
+* **URL:** /Areas/
+
+✅ Teste: Todos os dados válidos e preenchidos e token de autenticação válido
+* Entrada: JSON com o dado de "nome" obrigatório devidamente preenchido
+* Resultado Esperado: `201 Created` e exibe a nova área cadastrada
+* Evidência: <img src="./img/2.create-área-ok.png">
+
+❌ Teste: Token inválido ou expirado
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+
+### **📒 Busca por determinada Área**
+* **Método:** GET
+* **URL:** /Areas/{id}
+
+✅ Teste: Busca por área existente e token de autenticação válido
+* Entrada: URL contendo Id de Área válida e existente
+* Resultado Esperado: `200 OK` e descrição dos dados da área encontrada
+* Evidência: <img src="./img/3.getById-area-ok.png">
+
+❌ Teste: Token inválido ou expirado
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+
+❌ Teste: Área não encontrada
+* Entrada: URL contendo um Id de área que ainda não existente
+* Resultado Esperado: `404 Not Found` e descrição do erro
+* Evidência: <img src="./img/3.getById-area-falha.png">
+
+### **📒 Editar Área**
+
+* **Método:** PUT
+* **URL:** /Areas/{id}
+
+✅ Teste: Editar nome de Área existente e token de autenticação válido
+* Entrada: URL com Id de Área válida e existente
+* Resultado Esperado: `204 No Content`
+* Evidência: <img src="./img/4.update-área-ok.png">
+
+❌ Teste: Token inválido ou expirado
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+
+❌ Teste: Área não corresponde
+* Entrada: URL com Id diferente do Id informado na descrição da área
+* Resultado Esperado: `400 Bad Request` e descrição do erro
+* Evidência: <img src="./img/4.update-área-falha.png">
+
+### **📒 Excluir Área**
+* **Método:** DELETE
+* **URL:** /Areas/{id}
+
+✅ Teste: Excluir área existente e token de autenticação válido
+* Entrada: URL com Id de Área existente
+* Resultado Esperado: `204 No Content`
+* Evidência: <img src="./img/5.delete-área-ok.png">
+
+❌ Teste: Token inválido ou expirado
+* Entrada: Token incorreto ou gerado a mais de 8 horas
+* Resultado Esperado: `400 Bad Request`
+
+❌ Teste: Área não encontrada
+* Entrada: URL com Id de Avaliação não existente
+* Resultado Esperado: `404 Not Found` e descrição do erro
+* Evidência: <img src="./img/5.delete-área-falha.png">
 
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
+Para o desenvolvimento deste projeto, as seguintes ferramentas e documentações foram utilizadas como referência:
+* Visual Studio Community: https://visualstudio.microsoft.com/pt-br/vs/community/
+* Insomnia REST Client: https://insomnia.rest/
+* Visão Geral do ASP.NET Core: https://learn.microsoft.com/pt-br/aspnet/core/overview?view=aspnetcore-6.0
+* Microsoft SQL Server 2022: https://www.microsoft.com/pt-br/sql-server/sql-server-2022
+* Entity Framework Tutorial - DevMedia: https://www.devmedia.com.br/entity-framework-tutorial/27764
 
 # Planejamento
 
