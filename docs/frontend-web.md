@@ -181,6 +181,13 @@ Atualizado em: 13/10/2025
 | Sávio Sérgio        | CSS unificado - criando links para estilos   | -     | - | 📝    |                 |
 | Sávio Sérgio        | Página de login  | 13/10/2025     | - | ⌛     |                 |
 | Sávio Sérgio        | Script de login  |  01/01/2024    | 12/03/2025 | ❌    |       |
+| Antonio Rubens       | Pagina Busca professor  |  13/09/2025    | 05/10/2025 | ✔️    |       |
+
+
+
+
+
+
 
 #### Semana 3
 
