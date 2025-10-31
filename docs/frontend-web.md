@@ -37,13 +37,56 @@
 
 ## Testes
 
-[Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
+### Caso de teste: Cadastrar Aluno
+* Entrada:
+* Resposta esperada:
+* Evidência:
 
-1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+### Caso de teste: Cadastrar Professor
+* Entrada:
+* Resposta esperada:
+* Evidência:
+
+### Caso de teste: Login Usuário
+* Entrada:
+* Resposta esperada:
+* Evidência:
+
+### Caso de teste: Editar Perfil de Usuário Professor
+* Entrada:
+* Resposta esperada:
+* Evidência:
+
+### Caso de teste: Buscar por Professor
+* Entrada:
+* Resposta esperada:
+* Evidência:
+
+### Caso de teste: Filtrar Professor por Área durante a busca
+* Entrada:
+* Resposta esperada:
+* Evidência:
+
+### Caso de teste: Registrar Agendamento
+* Entrada:
+* Resposta esperada:
+* Evidência:
+
+### Caso de teste: Aluno Editar Agendamento
+* Entrada:
+* Resposta esperada:
+* Evidência: 
+
+### Caso de teste: Professor Aceitar/Recusar Agendamento
+* Entrada: 
+* Resposta esperada: 
+* Evidência: 
+
+### Caso de teste: Registrar Avaliação de Agendamento
+* Entrada:
+* Resposta esperada:
+* Evidência:
+
 
 # Referências
 
@@ -53,7 +96,7 @@ Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvo
 
 ##  Quadro de tarefas
 
-> Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
+> Divisão de tarefas entre os membros do grupo e o acompanhamento da execução.
 
 ### Semana 1
 
