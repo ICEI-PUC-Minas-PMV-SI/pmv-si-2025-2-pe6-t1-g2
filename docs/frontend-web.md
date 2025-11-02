@@ -181,12 +181,12 @@ Atualizado em: 13/10/2025
 | Sávio Sérgio        | Página inicial   | 13/10/2025     | - | ✔️    | -     |
 | Sávio Sérgio        | CSS unificado - criando links para estilos   | -     | - | 📝    |                 |
 | Sávio Sérgio        | Página de login  | 13/10/2025     | - | ⌛     |                 |
-| Sávio Sérgio        | Script de login  |  01/01/2024    | 12/03/2025 | ❌    |       |
-| Antonio Rubens       | Pagina Busca professor  |  13/09/2025    | 05/10/2025 | ✔️    |       |
-| Antonio Rubens       | Pagina Contratar professor  |  13/09/2025    | 05/10/2025 | ✔️    |       |
-| Antonio Rubens       | Pagina Agendar  |  13/09/2025    | 05/10/2025 | ✔️    |       |
-| Antonio Rubens       | Pagina Perfil Professor  |  13/09/2025    | 05/10/2025 | ✔️    |       |
-
+| Sávio Sérgio        | Script de login  |  13/09/2025    | 02/11/2025 | ❌    |       |
+| Antonio Rubens       | Pagina Busca professor  |  13/09/2025    | 05/10/2025 | 📝    |       |
+| Antonio Rubens       | Pagina Contratar professor  |  13/09/2025    | 05/10/2025 | 📝    |       |
+| Antonio Rubens       | Pagina Agendar  |  13/09/2025    | 05/10/2025 | 📝    |       |
+| Antonio Rubens       | Pagina Perfil Professor  |  13/09/2025    | 05/10/2025 | 📝    |       |
+| Antonio Rubens       | Elaboração de documentação  |  13/09/2025    | 05/10/2025 | 📝    |       |
 
 #### Semana 3
 
@@ -195,16 +195,24 @@ Atualizado em: 20/10/2025
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | Lais Lara        | Inicio da ligação com a API   | 24/10/2025     | - | ✔️    | -      |
-
+| Antonio Rubens       | Pagina Busca professor  |  06/10/2025    | 20/10/2025 | 📝    |       |
+| Antonio Rubens       | Pagina Contratar professor  |  06/10/2025    | 20/10/2025 | 📝    |       |
+| Antonio Rubens       | Pagina Agendar  |  06/10/2025    | 20/10/2025 | 📝    |       |
+| Antonio Rubens       | Pagina Perfil Professor  |  06/10/2025    | 20/10/2025 | 📝    |       |
+| Antonio Rubens       | Elaboração de documentação  |  06/10/2025    | 20/10/2025 | 📝    |       |
 
 #### Semana 4
 
-Atualizado em: 27/04/2025
+Atualizado em: 27/10/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 |      -   | -   | -     | - | -    | -      |
-
+| Antonio Rubens       | Pagina Busca professor  |  21/10/2025    | 02/11/2025 | 📝    |       |
+| Antonio Rubens       | Pagina Contratar professor  |  21/10/2025    | 02/11/2025 | 📝    |       |
+| Antonio Rubens       | Pagina Agendar  |  21/10/2025    | 02/11/2025 | 📝    |       |
+| Antonio Rubens       | Pagina Perfil Professor  |  21/10/2025    | 02/11/2025 | 📝    |       |
+| Antonio Rubens       | Elaboração de documentação  |  21/10/2025    | 02/11/2025 | 📝    |       |
 Legenda:
 - ✔️: terminado
 - 📝: em execução
