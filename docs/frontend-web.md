@@ -34,9 +34,7 @@ O sistema visa facilitar a gestão de agendamentos, permitindo que os alunos age
 - Wireframe da tela edição de perfil aluno
 
 - Wireframe da tela edição de perfil professor
-![Login](https://github.com/pmv-si-2025-2-pe6-t1-g2/docs/img
-/agendamento.png
-)
+![Login](img/agendamento.png)
 
 ### Design Visual
 
