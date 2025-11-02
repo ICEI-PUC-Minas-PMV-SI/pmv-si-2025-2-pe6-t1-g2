@@ -113,7 +113,8 @@ A aparência dos componentes é padronizada através de variáveis de forma e es
     <img width="1920" height="967" alt="Captura de tela 2025-11-02 202249" src="https://github.com/user-attachments/assets/d4cc2322-a28b-4050-9754-1295ff7b63c9" />
 
   - Entrada no Banco de Dados com criptografia de senha:
-    <img width="1920" height="1029" alt="Captura de tela 2025-11-02 202453" src="https://github.com/user-attachments/assets/525ed275-f55f-4516-ace6-3590e93b961e" />
+    <img width="1920" height="989" alt="Captura de tela 2025-11-02 202453" src="https://github.com/user-attachments/assets/2ba3050b-0d43-42cc-8dce-d00ffe7e99b4" />
+
 
   - Verificar CPF válido:
     <img width="1920" height="967" alt="Captura de tela 2025-11-02 204303" src="https://github.com/user-attachments/assets/f2d3b677-824f-4e41-8d5c-d65dce891c89" />
@@ -234,6 +235,7 @@ Atualizado em: 27/10/2025
 | Antonio Rubens       | Pagina Agendar  |  21/10/2025    | 02/11/2025 | 📝    |       |
 | Antonio Rubens       | Pagina Perfil Professor  |  21/10/2025    | 02/11/2025 | 📝    |       |
 | Antonio Rubens       | Elaboração de documentação  |  21/10/2025    | 02/11/2025 | 📝    |       |
+| Beatriz Pereira da Costa      | Execução de Casos de Testes |  21/10/2025    | 02/11/2025 | 📝    |       |
 Legenda:
 - ✔️: terminado
 - 📝: em execução
