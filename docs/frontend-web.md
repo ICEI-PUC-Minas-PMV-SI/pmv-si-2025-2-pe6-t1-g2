@@ -1,19 +1,18 @@
 # Front-end Web
 
-[Inclua uma breve descrição do projeto e seus objetivos.]
+
 
 O projeto Saber+ consiste em uma aplicação Web que oferece uma plataforma de conexão entre professores e alunos para agendamento de aulas particulares, avaliação de serviços e gerenciamento de disponibilidade. Esta etapa consiste no desenvolvimento de uma interface web interativa para uma aplicação distribuída, cujo objetivo é permitir que usuários consultem, interajam e realizem operações em um sistema com backend. A interface será responsiva, acessível e intuitiva, visando atender tanto usuários em desktop quanto em dispositivos móveis.
 
 
 ## Projeto da Interface Web
 
-[Descreva o projeto da interface Web da aplicação, incluindo o design visual, layout das páginas, interações do usuário e outros aspectos relevantes.]
+
 
 Este projeto de front-end tem como objetivo desenvolver uma interface web com foco em Usabilidade e um design moderno e minimalista.
 O sistema visa facilitar a gestão de agendamentos, permitindo que os alunos agendem atendimentos de forma rápida e prática, enquanto os profissionais podem visualizar e organizar seus horários de maneira eficiente.
 
 ### Wireframes
-[Inclua os wireframes das páginas principais da interface, mostrando a disposição dos elementos na página.]
 
 - Wireframe da tela Home Page
 ![Homepage](https://github.com/user-attachments/assets/5b4f8766-7394-4dfd-ab31-1316031bbe71)
@@ -29,8 +28,6 @@ O sistema visa facilitar a gestão de agendamentos, permitindo que os alunos age
 ![Cadastro - aluno - etapa 1](https://github.com/user-attachments/assets/7c5afd7a-544f-43c8-a581-48f3c45b68f0)
 ![Cadastro - aluno - etapa 2](https://github.com/user-attachments/assets/f30081a0-869b-4185-a9cf-511f97e8c514)
 
-- Wireframe da tela finalização de cadastro do professor
-
 - Wireframe da tela edição de perfil aluno
   <p align="center"><img src="img/perfilusuario.png" width="450" alt="perfilususario"></p>
 - Wireframe da tela edição de busca por professor  
@@ -43,8 +40,6 @@ O sistema visa facilitar a gestão de agendamentos, permitindo que os alunos age
   <p align="center"><img src="img/agendamento.png" width="450" alt="Agendamento"></p>
 
 ### Design Visual
-
-[Descreva o estilo visual da interface, incluindo paleta de cores, tipografia, ícones e outros elementos gráficos.]
 
 O design visual da aplicação Saber+ foi desenvolvido com base nos princípios de design para garantir consistência, escalabilidade e acessibilidade em toda a interface, utilizando um sistema robusto de variáveis de design.
 
