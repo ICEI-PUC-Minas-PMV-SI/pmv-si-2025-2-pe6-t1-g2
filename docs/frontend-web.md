@@ -32,7 +32,7 @@ O sistema visa facilitar a gestão de agendamentos, permitindo que os alunos age
 - Wireframe da tela finalização de cadastro do professor
 
 - Wireframe da tela edição de perfil aluno
-
+  <p align="center"><img src="img/perfilusuario.png" width="450" alt="perfilususario"></p>
 - Wireframe da tela edição de busca por professor  
   <p align="center"><img src="img/buscar.png" width="450" alt="Buscar"></p>
 
