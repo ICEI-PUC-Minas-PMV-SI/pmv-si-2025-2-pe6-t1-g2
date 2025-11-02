@@ -103,9 +103,27 @@ A aparência dos componentes é padronizada através de variáveis de forma e es
 ## Testes
 
 ### Caso de teste: Cadastrar Aluno
-* Entrada:
-* Resposta esperada:
+* Entrada: Nome, E-mail, Senha, Confirmar senha, CPF e descrição
+* Resposta esperada: Cadastro realizado com sucesso!
 * Evidência:
+  - Cadastro realizado com sucesso:
+    <img width="1920" height="965" alt="Captura de tela 2025-11-02 202327" src="https://github.com/user-attachments/assets/01c4183c-55c1-4858-b4b4-bdef2190f8b0" />
+
+  - Verificação de Senha:
+    <img width="1920" height="967" alt="Captura de tela 2025-11-02 202249" src="https://github.com/user-attachments/assets/d4cc2322-a28b-4050-9754-1295ff7b63c9" />
+
+  - Entrada no Banco de Dados com criptografia de senha:
+    <img width="1920" height="1029" alt="Captura de tela 2025-11-02 202453" src="https://github.com/user-attachments/assets/525ed275-f55f-4516-ace6-3590e93b961e" />
+
+  - Verificar CPF válido:
+    <img width="1920" height="967" alt="Captura de tela 2025-11-02 204303" src="https://github.com/user-attachments/assets/f2d3b677-824f-4e41-8d5c-d65dce891c89" />
+
+  - Verificar preenchimento de campos obrigatórios:
+    <img width="1920" height="967" alt="Captura de tela 2025-11-02 204318" src="https://github.com/user-attachments/assets/341a8646-fd87-4df6-a712-3c39e160b6d8" />
+
+
+
+
 
 ### Caso de teste: Cadastrar Professor
 * Entrada:
