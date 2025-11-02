@@ -34,6 +34,7 @@ O sistema visa facilitar a gestão de agendamentos, permitindo que os alunos age
 - Wireframe da tela edição de perfil aluno
 
 - Wireframe da tela edição de perfil professor
+
 ![Login](img/agendamento.png)
 
 ### Design Visual
