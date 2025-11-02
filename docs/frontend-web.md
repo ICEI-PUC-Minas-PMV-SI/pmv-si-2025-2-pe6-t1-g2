@@ -155,7 +155,10 @@ A aparência dos componentes é padronizada através de variáveis de forma e es
 
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
+ - https://preply.com/
+ - https://remotar.com.br/
+ - https://www.devmedia.com.br/html-basico-codigos-html/16596
+ - https://pucminas.instructure.com/courses/48970 Eixo 1 - Microfundamento: Desenvolvimento Web Front-End
 
 # Planejamento
 
