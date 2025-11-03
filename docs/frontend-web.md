@@ -98,7 +98,16 @@ O desenvolvimento do projeto envolveu diversas tecnologias que, em conjunto, per
 
 ## Considerações de Segurança
 
-[Discuta as considerações de segurança relevantes para a aplicação distribuída, como autenticação, autorização, proteção contra ataques, etc.]
+Em aplicações distribuídas, a segurança é um aspecto fundamental para garantir a integridade, confidencialidade e disponibilidade das informações. Dessa forma, diversas medidas preventivas e corretivas são fundamentais para proteger o sistema contra vulnerabilidades e acessos indevidos.
+
+* **Autenticação:** Implementação de mecanismos para garantir que apenas usuários registrados possam acessar as funcionalidades restritas do sistema.
+* **Autorização:** Definição de níveis de acesso com base nas permissões do usuário, evitando o uso indevido de recursos por perfis não autorizados.
+* **Proteção contra Injeção de SQL:** Utilização do Entity Framework para prevenir ataques de injeção de código nas consultas ao banco de dados.
+* **Validação de Entrada:** Verificação dos dados recebidos pelo sistema para evitar a execução de scripts maliciosos e inconsistências nos cadastros.
+* **Criptografia de Dados Sensíveis:** Aplicação de técnicas de criptografia para proteger informações confidenciais, como senhas e dados pessoais.
+* **Controle de Sessão:** Monitoramento e expiração automática de sessões inativas, reduzindo o risco de acesso não autorizado.
+* **Uso de HTTPS:** Configuração do protocolo HTTPS para garantir a comunicação segura entre cliente e servidor, protegendo os dados transmitidos.
+* **Monitoramento e Logs:** Registro de atividades do sistema para detecção de comportamentos suspeitos e auditoria de segurança.
 
 ## Implantação
 
