@@ -84,7 +84,17 @@ A aparência dos componentes é padronizada através de variáveis de forma e es
  <p align="center"><img src="img/Diagrama.jpg" width="900" alt="Diagrama"></p>
 
 ## Tecnologias Utilizadas
-[Lista das tecnologias principais que serão utilizadas no projeto.]
+O desenvolvimento do projeto envolveu diversas tecnologias que, em conjunto, permitiram a construção de uma aplicação web funcional, organizada e de fácil manutenção. A seguir, são descritas as principais ferramentas e linguagens utilizadas:
+
+* **HTML:** Responsável pela estruturação das páginas web, ele foi utilizado para definir a disposição dos elementos na interface.
+* **CSS:** Empregado para a estilização das páginas, contribuindo para uma melhor experiência do usuário.
+* **JavaScript:** Utilizado para adicionar interatividade e dinamismo às páginas, permitindo a manipulação de elementos da interface e a comunicação com a API de forma assíncrona, sem a necessidade de recarregar a página.
+* **Visual Studio Code:** Este ambiente de desenvolvimentofoi utilizado para a criação e organização dos arquivos do frontend.
+* **ASP.NET Core:** Foi utilizado para o desenvolvimento da API responsável pela lógica de negócio e comunicação entre o frontend e o banco de dados.
+* **C#:** Esta linguagem foi utilizada na implementação da API, oferecendo recursos robustos de orientação a objetos e integração nativa com o framework ASP.NET Core.
+* **Entity Framework:** Foi adotado como ORM (Object-Relational Mapping) para gerenciar o acesso e a persistência de dados no banco de dados. 
+* **SQL Server:** Foi utilizado como sistema gerenciador de banco de dados relacional (SGBD), armazenando e organizando as informações utilizadas pela aplicação. Sua integração com o Entity Framework garantiu maior eficiência nas operações de leitura e escrita de dados.
+* **Visual Studio:** Foi empregado como ambiente de desenvolvimento integrado (IDE) para a construção e execução da API.
 
 ## Considerações de Segurança
 
