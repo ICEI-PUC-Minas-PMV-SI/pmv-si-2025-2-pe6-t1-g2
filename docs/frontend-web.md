@@ -228,6 +228,7 @@ Atualizado em: 13/10/2025
 | Antonio Rubens       | Pagina Agendar  |  13/09/2025    | 05/10/2025 | 📝    |       |
 | Antonio Rubens       | Pagina Perfil Professor  |  13/09/2025    | 05/10/2025 | 📝    |       |
 | Antonio Rubens       | Elaboração de documentação  |  13/09/2025    | 05/10/2025 | 📝    |       |
+| Laís Lara F. dos Santos  | Adição da flag de Usuários e configuração do novo Usuário Aluno na API |  18/10/2025 | 15/10/2025 | ✔️  | 15/10/2025   |
 
 #### Semana 3
 
@@ -235,7 +236,7 @@ Atualizado em: 20/10/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Lais Lara        | Inicio da ligação com a API   | 24/10/2025     | - | ✔️    | -      |
+| Laís Lara F. dos Santos    | Início da ligação com a API com o Frontend  | 20/10/2025     | 26/10/2025 | ✔️    | 24/10/2025   |
 | Antonio Rubens       | Pagina Busca professor  |  06/10/2025    | 20/10/2025 | 📝    |       |
 | Antonio Rubens       | Pagina Contratar professor  |  06/10/2025    | 20/10/2025 | 📝    |       |
 | Antonio Rubens       | Pagina Agendar  |  06/10/2025    | 20/10/2025 | 📝    |       |
@@ -248,13 +249,18 @@ Atualizado em: 27/10/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-|      -   | -   | -     | - | -    | -      |
 | Antonio Rubens       | Pagina Busca professor  |  21/10/2025    | 02/11/2025 | 📝    |       |
 | Antonio Rubens       | Pagina Contratar professor  |  21/10/2025    | 02/11/2025 | 📝    |       |
 | Antonio Rubens       | Pagina Agendar  |  21/10/2025    | 02/11/2025 | 📝    |       |
 | Antonio Rubens       | Pagina Perfil Professor  |  21/10/2025    | 02/11/2025 | 📝    |       |
 | Antonio Rubens       | Elaboração de documentação  |  21/10/2025    | 02/11/2025 | 📝    |       |
 | Beatriz Pereira da Costa      | Execução de Casos de Testes |  21/10/2025    | 02/11/2025 | 📝    |       |
+| Laís Lara F. dos Santos  | Configuração das requisições POST para cadastro de usuários no frontend |  25/10/2025 | 02/11/2025 | ✔️  | 28/10/2025  |
+| Laís Lara F. dos Santos  | Configuração da autenticação no login do frontend |  25/10/2025 | 02/11/2025 | ✔️  | 30/10/2025  |
+| Laís Lara F. dos Santos  | Configuração das requisições na tela de Dashboard no frontend |  30/10/2025 | 04/11/2025 | 📝  |   |
+| Laís Lara F. dos Santos  | Elaboração no documento dos tópicos de Casos de Testes necessários |  30/10/2025 | 30/10/2025 | ✔️  | 30/10/2025  |
+| Laís Lara F. dos Santos  | Descrição das tecnologias e segurança no documento |  02/11/2025 | 02/11/2025 | ✔️  | 02/11/2025  |
+
 Legenda:
 - ✔️: terminado
 - 📝: em execução
