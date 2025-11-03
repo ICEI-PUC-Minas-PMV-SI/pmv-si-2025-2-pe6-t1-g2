@@ -81,7 +81,6 @@ A aparência dos componentes é padronizada através de variáveis de forma e es
     
 ## Fluxo de Dados
 
-[Diagrama ou descrição do fluxo de dados na aplicação.]
  <p align="center"><img src="img/Diagrama.jpg" width="450" alt="Diagrama"></p>
 
 ## Tecnologias Utilizadas
