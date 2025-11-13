@@ -143,8 +143,6 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 
 
 
-
-
 ### Caso de teste: Cadastrar Professor
 * Entrada:
 * Resposta esperada:
@@ -155,7 +153,7 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 * Resposta esperada:
 * Evidência:
 
-### Caso de teste: Editar Perfil de Usuário Professor
+### Caso de teste: Editar Perfil de Usuário do tipo Professor
 * Entrada:
 * Resposta esperada:
 * Evidência:
@@ -165,7 +163,7 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 * Resposta esperada:
 * Evidência:
 
-### Caso de teste: Filtrar Professor por Área durante a busca
+### Caso de teste: Filtrar Professor por Área ou Nome durante a busca
 * Entrada:
 * Resposta esperada:
 * Evidência:
@@ -174,11 +172,6 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 * Entrada:
 * Resposta esperada:
 * Evidência:
-
-### Caso de teste: Aluno Editar Agendamento
-* Entrada:
-* Resposta esperada:
-* Evidência: 
 
 ### Caso de teste: Professor Aceitar/Recusar Agendamento
 * Entrada: 
