@@ -160,18 +160,19 @@ Para executar o projeto Saber+, siga estes passos de configuração do ambiente:
 * Entrada: E-mail e senha de usuário já cadastrado na plataforma.
 * Resposta esperada: Mensagem de login realizado com sucesso e direcionamento para a homepage.
 * Evidência:
-<img width="1920" height="967" src="./img/Testes-Front-Web/login-sucesso.png‎" />
-<img width="1920" height="967" src="./img/Testes-Front-Web/pos-login-sucesso.png‎" />
+<img width="1920" height="967" src="./img/Testes-Front-Web/login-sucesso.png" />
+<img width="1920" height="967" src="./img/Testes-Front-Web/pos-login-sucesso.png" />
 
 ### Caso de teste: Editar Perfil de Usuário do tipo Professor
 * Entrada: Inserir os dados que deseja alterar, como nome, e-mail, descrição, certificações, competências, valor da hora-aula, áreas de atuação ou horários disponíveis e senha (para confirmação).
 * Resposta esperada: Mensagem de sucesso e dados alterados no banco de dados.
-* Evidência:  <img width="1920" height="967" src="./img/Testes-Front-Web/editar-dados-sucesso.png‎‎" />
+* Evidência:  <img width="1920" height="967" src="./img/Testes-Front-Web/editar-dados-sucesso.png" />
 
 ### Caso de teste: Filtrar Professor por Área ou Nome durante a busca
 * Entrada: Acessar "buscar-professor.html" e inserir nome, disciplina ou habilidade esperada.
 * Resposta esperada: Aplicação do filtro na listagem e atualizar lista com professores que atendam o requisito.
 * Evidência: <img width="1920" height="967" src="./img/Testes-Front-Web/busca-prof.png" />
+<img width="1920" height="967" src="./img/Testes-Front-Web/busca-prof-sucesso.png" />
 
 ### Caso de teste: Registrar Agendamento
 * Entrada: Escolher professor da listagem, clicar em "agendar", inserir data, horário e conteúdo da aula e clicar em "Confirmar Agendamento".
