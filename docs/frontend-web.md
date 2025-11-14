@@ -111,13 +111,19 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 
 ## Implantação
 
-[Instruções para implantar a aplicação distribuída em um ambiente de produção.]
+Para executar o projeto Saber+, siga estes passos de configuração do ambiente:
 
-1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
-2. Escolha uma plataforma de hospedagem adequada, como um provedor de nuvem ou um servidor dedicado.
-3. Configure o ambiente de implantação, incluindo a instalação de dependências e configuração de variáveis de ambiente.
-4. Faça o deploy da aplicação no ambiente escolhido, seguindo as instruções específicas da plataforma de hospedagem.
-5. Realize testes para garantir que a aplicação esteja funcionando corretamente no ambiente de produção.
+* Pré-requisitos: Certifique-se de ter o Visual Studio 2022 (com a carga de trabalho ASP.NET) e o SQL Server (Express ou Developer) instalados.
+
+* Código Fonte: Clone o repositório do projeto via Git: git clone [URL_DO_REPOSITÓRIO].
+
+* Banco de Dados: Abra o SQL Server Management Studio (SSMS) e execute os scripts SQL (ou restaure o backup .bak) para criar o banco de dados "SaberMais".
+
+* Back-end (API): Abra a solução (.sln) da API no Visual Studio 2022. Certifique-se que a connection string (string de conexão) no arquivo appsettings.json aponta para o seu SQL Server local. Pressione "Play" (IIS Express) para executar a API.
+
+* Front-end: http://127.0.0.1:5501/index.html . Abra a pasta do front-end e edite o arquivo JavaScript (ex: api.js) para que a variável de URL corresponda à API em execução.
+
+* Execução: Abra o arquivo index.html no seu navegador.
 
 ## Testes
 
@@ -144,45 +150,42 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 
 
 ### Caso de teste: Cadastrar Professor
-* Entrada:
-* Resposta esperada:
+* Entrada: Nome completo, E-mail, Senha, CPF, Descrição, Certificações, Competências e Valor da hora-aula.
+* Resposta esperada: Cadastro criado com suvesso e direcionamento para o login.
 * Evidência:
+<img width="1920" height="967" src="./img/Testes-Front-Web/cadastro-professor.png" />
+
 
 ### Caso de teste: Login Usuário
-* Entrada:
-* Resposta esperada:
+* Entrada: E-mail e senha de usuário já cadastrado na plataforma.
+* Resposta esperada: Mensagem de login realizado com sucesso e direcionamento para a homepage.
 * Evidência:
+<img width="1920" height="967" src="./img/Testes-Front-Web/login-sucesso.png‎" />
+<img width="1920" height="967" src="./img/Testes-Front-Web/pos-login-sucesso.png‎" />
 
 ### Caso de teste: Editar Perfil de Usuário do tipo Professor
-* Entrada:
-* Resposta esperada:
-* Evidência:
-
-### Caso de teste: Buscar por Professor
-* Entrada:
-* Resposta esperada:
-* Evidência:
+* Entrada: Inserir os dados que deseja alterar, como nome, e-mail, descrição, certificações, competências, valor da hora-aula, áreas de atuação ou horários disponíveis e senha (para confirmação).
+* Resposta esperada: Mensagem de sucesso e dados alterados no banco de dados.
+* Evidência:  <img width="1920" height="967" src="./img/Testes-Front-Web/editar-dados-sucesso.png‎‎" />
 
 ### Caso de teste: Filtrar Professor por Área ou Nome durante a busca
-* Entrada:
-* Resposta esperada:
-* Evidência:
+* Entrada: Acessar "buscar-professor.html" e inserir nome, disciplina ou habilidade esperada.
+* Resposta esperada: Aplicação do filtro na listagem e atualizar lista com professores que atendam o requisito.
+* Evidência: <img width="1920" height="967" src="./img/Testes-Front-Web/busca-prof.png" />
 
 ### Caso de teste: Registrar Agendamento
-* Entrada:
-* Resposta esperada:
-* Evidência:
+* Entrada: Escolher professor da listagem, clicar em "agendar", inserir data, horário e conteúdo da aula e clicar em "Confirmar Agendamento".
+* Resposta esperada: Mensagem de sucesso e agendamento registrado no banco de dados.
+* Evidência: <img width="1920" height="967" src="./img/Testes-Front-Web/agendamento-sucesso.png" />
 
 ### Caso de teste: Professor Aceitar/Recusar Agendamento
-* Entrada: 
-* Resposta esperada: 
-* Evidência: 
-
-### Caso de teste: Registrar Avaliação de Agendamento
-* Entrada:
-* Resposta esperada:
+* Entrada: Acessar dashboard do professor, visualizar a lista de "Próximas Aulas" e clicar no botão de "Confirmar" ou "Negar".
+* Resposta esperada: Se "Confirmar", o status do agendamento passa a ser "confirmado" e se "Negar", o status do agendamento passa a ser "Cancelado" e é omitido da lista de "Próximas Aulas.
 * Evidência:
-
+Aula Confirmada:
+<img width="1920" height="967" src="./img/Testes-Front-Web/confirmado-sucesso.png" />
+Aula Cancelada:
+<img width="1920" height="967" src="./img/Testes-Front-Web/aula-cancelada.png" />
 
 # Referências
 
