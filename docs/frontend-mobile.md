@@ -4,7 +4,9 @@ O projeto Saber+ é uma plataforma de conexão para aulas particulares, engloban
 A prioridade é entregar uma experiência de usuário intuitiva, performática e acessível para dispositivos móveis, garantindo a portabilidade e a otimização para telas menores.
 
 ## Projeto da Interface
-[Descreva o projeto da interface móvel da aplicação, incluindo o design visual, layout das páginas, interações do usuário e outros aspectos relevantes.]
+
+Este projeto tem como objetivo desenvolver uma interface mobile com foco em Usabilidade e um design moderno e minimalista.
+O sistema visa facilitar a gestão de agendamentos, permitindo que os alunos agendem atendimentos de forma rápida e prática, enquanto os profissionais podem visualizar e organizar seus horários de maneira eficiente.
 
 ### Wireframes
 
@@ -33,7 +35,11 @@ A prioridade é entregar uma experiência de usuário intuitiva, performática e
 
 ### Design Visual
 
-[Descreva o estilo visual da interface, incluindo paleta de cores, tipografia, ícones e outros elementos gráficos.]
+O design visual da aplicação _Saber+_ foi desenvolvido com base em princípios de consistência, acessibilidade e escalabilidade. 
+
+No restante da aplicação, adotamos uma **paleta predominante de tons azuis**, proporcionando uma experiência visual agradável e confiável, já que o azul está associado à tranquilidade e estabilidade.
+
+A tipografia principal do projeto é Lato, escolhida por sua estética moderna e alta legibilidade em diferentes tamanhos e contextos de tela.
 
 ## Fluxo de Dados
 
@@ -85,7 +91,7 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 
 ### Caso de teste: Cadastrar Professor
 * Entrada: Nome completo, E-mail, Senha, CPF, Descrição, Certificações, Competências e Valor da hora-aula.
-* Resposta esperada: Cadastro criado com suvesso e direcionamento para o login.
+* Resposta esperada: Cadastro criado com sucesso e direcionamento para o login.
 * Evidência:
 
 ### Caso de teste: Login Usuário
