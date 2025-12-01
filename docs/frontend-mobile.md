@@ -1,6 +1,7 @@
 # Front-end Móvel
 
-[Inclua uma breve descrição do projeto e seus objetivos.]
+O projeto Saber+ é uma plataforma de conexão para aulas particulares, englobando busca filtrada por professores, agendamento e gestão de disponibilidade entre professores e alunos. Esta fase é dedicada ao desenvolvimento do Frontend Mobile. O objetivo é construir uma interface multiplataforma que permita aos usuários consultar, interagir e executar operações essenciais no sistema distribuído, consumindo dados do backend principal.
+A prioridade é entregar uma experiência de usuário intuitiva, performática e acessível para dispositivos móveis, garantindo a portabilidade e a otimização para telas menores.
 
 ## Projeto da Interface
 [Descreva o projeto da interface móvel da aplicação, incluindo o design visual, layout das páginas, interações do usuário e outros aspectos relevantes.]
@@ -23,7 +24,14 @@
 
 ## Considerações de Segurança
 
-[Discuta as considerações de segurança relevantes para a aplicação distribuída, como autenticação, autorização, proteção contra ataques, etc.]
+Em aplicações distribuídas, a segurança é um aspecto fundamental para garantir a integridade, confidencialidade e disponibilidade das informações. No contexto de um Frontend Mobile Nativo com React Native, diversas medidas são cruciais para proteger o aplicativo contra vulnerabilidades e acessos indevidos.
+
+* **Autenticação:** Implementação de fluxos de autenticação com JWT Token através de APIs do backend. O token de acesso deve ser armazenado de forma segura no dispositivo.
+* **Autorização:** O frontend deve respeitar as permissões do usuário para exibir ou ocultar elementos/funcionalidades, mas a autorização final e crítica deve sempre ser validada pelo backend antes de processar qualquer requisição.
+* **Validação de Entrada:** Validação rigorosa dos dados inseridos pelo usuário no aplicativo antes de serem enviados ao backend.
+* **Criptografia de Dados Sensíveis:** Uso de módulos nativos ou bibliotecas confiáveis de React Native (ex: react-native-keychain ou Secure Storage APIs) para armazenar tokens, senhas e chaves localmente.
+* **Controle de Sessão:** Monitoramento da validade dos JWTs tokens. Implementar a expiração automática e a funcionalidade de revalidação de token para manter a sessão ativa de forma segura, exigindo um novo login após a expiração.
+* **Uso de HTTPS:** Garantir que todas as comunicações com o backend sejam feitas exclusivamente via HTTPS. Considerar a implementação de SSL Pinning para mitigar ataques Man-in-the-Middle (MITM), garantindo que o app só se comunique com o servidor esperado.
 
 ## Implantação
 
@@ -62,9 +70,6 @@ Atualizado em: 21/04/2024
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | AlunaX        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | Objetivos    | 03/02/2024     | 10/02/2024 | 📝    |                 |
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
-| AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
 
 #### Semana 2
 
@@ -73,9 +78,23 @@ Atualizado em: 21/04/2024
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | CSS unificado    | 03/02/2024     | 10/03/2024 | 📝    |                 |
-| AlunoY        | Página de login  | 01/02/2024     | 07/03/2024 | ⌛     |                 |
-| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       |
+
+#### Semana 3
+
+Atualizado em: 21/04/2024
+
+| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
+| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
+| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
+
+#### Semana 4
+
+Atualizado em: 21/04/2024
+
+| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
+| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
+| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
+
 
 Legenda:
 - ✔️: terminado
