@@ -160,7 +160,8 @@ Atualizado em: 01/12/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Laís Lara F. dos Santos  | Descrição dos tópicos de Tecnologias Utilizadas, Segurança, Implantação e Casos de Teste da documentação.  | 30/11/2025  | 01/12/2025 | 📝  | 01/12/2025    |
+| Laís Lara F. dos Santos  | Descrição dos tópicos de Tecnologias Utilizadas, Segurança, Implantação e Casos de Teste da documentação.  | 30/11/2025  | 01/12/2025 | ✔️  | 01/12/2025    |
+| Sávio Sérgio Pereira da Silva  | Trabalhei na elaborado do documento: Projeto de interface  | 01/12/2025  | 01/12/2025 | ✔️  | 01/12/2025    |
 
 
 Legenda:
