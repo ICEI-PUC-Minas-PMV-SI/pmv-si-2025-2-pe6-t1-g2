@@ -16,7 +16,7 @@ A prioridade é entregar uma experiência de usuário intuitiva, performática e
 
 ## Fluxo de Dados
 
-[Diagrama ou descrição do fluxo de dados na aplicação.]
+ <p align="center"><img src="img/Diagrama.jpg" width="900" alt="Diagrama"></p>
 
 ## Tecnologias Utilizadas
 
@@ -45,17 +45,45 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 
 ## Testes
 
-[Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
+### Caso de teste: Cadastrar Aluno
+* Entrada: Nome, E-mail, Senha, Confirmar senha, CPF e descrição
+* Resposta esperada: Cadastro realizado com sucesso!
+* Evidência:
 
-1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+### Caso de teste: Cadastrar Professor
+* Entrada: Nome completo, E-mail, Senha, CPF, Descrição, Certificações, Competências e Valor da hora-aula.
+* Resposta esperada: Cadastro criado com suvesso e direcionamento para o login.
+* Evidência:
 
+### Caso de teste: Login Usuário
+* Entrada: E-mail e senha de usuário já cadastrado na plataforma.
+* Resposta esperada: Mensagem de login realizado com sucesso e direcionamento para a homepage.
+* Evidência:
+
+### Caso de teste: Editar Perfil de Usuário do tipo Professor
+* Entrada: Inserir os dados que deseja alterar, como nome, e-mail, descrição, certificações, competências, valor da hora-aula, áreas de atuação ou horários disponíveis e senha (para confirmação).
+* Resposta esperada: Mensagem de sucesso e dados alterados no banco de dados.
+
+### Caso de teste: Editar Perfil de Usuário do tipo Aluno
+* Entrada: Inserir os dados que deseja alterar, como nome, e-mail, descrição e senha (para confirmação).
+* Resposta esperada: Mensagem de sucesso e dados alterados no banco de dados.
+
+### Caso de teste: Filtrar Professor por Área ou Nome durante a busca
+* Entrada: Acessar a tela de "Buscar Professor" e inserir nome, disciplina ou habilidade esperada.
+* Resposta esperada: Aplicação do filtro na listagem e atualizar lista com professores que atendam o requisito.
+* Evidência:
+
+### Caso de teste: Registrar Agendamento
+* Entrada: Escolher professor da listagem, clicar em "agendar", inserir data, horário e conteúdo da aula e clicar em "Confirmar Agendamento".
+* Resposta esperada: Mensagem de sucesso e agendamento registrado no banco de dados.
+* Evidência:
+  
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
+- https://reactnative.dev/
+- https://pt-br.legacy.reactjs.org/
+- https://pucminas.instructure.com/courses/155666 - Eixo 6 - Microfundamento: Desenvolvimento de Aplicações Móveis
+- https://dashboard.ngrok.com/get-started/setup/windows
 
 # Planejamento
 
