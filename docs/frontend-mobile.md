@@ -74,13 +74,53 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 
 ## Implantação
 A implantação da aplicação mobile em um ambiente de produção exige a definição clara dos requisitos, a preparação da infraestrutura e a garantia de segurança em todo o processo.
-[Instruções para implantar a aplicação distribuída em um ambiente de produção.]
+###1. Requisitos de Hardware e Software
+Para a etapa mobile, o ambiente de produção deve contar no mínimo com as seguintes configurações:
+•	Node.js 20+ para execução de scripts, build e gerenciamento de dependências.
+•	Java 17+, Android SDK e Xcode (macOS) para geração das builds Android e iOS.
+•	Gerenciador de pacotes (npm ou Yarn).
+•	Ambiente CI/CD opcional (GitHub Actions, GitLab CI, Bitrise ou App Center).
+•	Servidor para backend (nuvem, on-premise ou dedicado) com API acessível via HTTPS.
 
-1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
-2. Escolha uma plataforma de hospedagem adequada, como um provedor de nuvem ou um servidor dedicado.
-3. Configure o ambiente de implantação, incluindo a instalação de dependências e configuração de variáveis de ambiente.
-4. Faça o deploy da aplicação no ambiente escolhido, seguindo as instruções específicas da plataforma de hospedagem.
-5. Realize testes para garantir que a aplicação esteja funcionando corretamente no ambiente de produção.
+###2. Plataforma de Hospedagem
+•	A escolha da plataforma depende do tipo de entrega:
+•	Android: Publicação no Google Play Console.
+•	iOS: Publicação via App Store Connect (exige macOS).
+•	Backend/API: Pode ser hospedado em AWS, Azure, Render, Railway, Digital Ocean ou servidor dedicado.
+•	Arquivos estáticos e assets: Podem ser entregues via CDN.
+
+###3. Configuração do Ambiente de Implantação
+•	Antes de gerar as builds, é necessário:
+•	Instalar dependências via npm install ou yarn.
+•	Configurar variáveis de ambiente (URLs da API, chaves, tokens).
+•	Definir versões de build, ícones, splash e permissões.
+•	Ajustar arquivos nativos de cada plataforma (AndroidManifest.xml, Info.plist).
+•	Executar otimizações do Metro + Babel para bundle final.
+•	Validar a estrutura de navegação com React Navigation e persistência com AsyncStorage.
+
+###4. Deploy da Aplicação Mobile
+•	Após a preparação do ambiente:
+•	Para Android
+•	Gerar o APK/AAB usando gradlew bundleRelease.
+•	Assinar digitalmente a build.
+•	Enviar para o Google Play Console.
+•	Para iOS
+•	Gerar o build release pelo Xcode.
+•	Assinar utilizando certificados da Apple.
+•	Enviar via Transporter ou diretamente pelo Xcode para o App Store Connect.
+•	Backend
+•	Hospedar a API em ambiente seguro (cloud ou dedicado).
+•	Ajustar endpoints públicos.
+•	Se necessário, usar Ngrok temporariamente durante homologação.
+
+###5. Testes em Produção
+•	Depois do deploy, devem ser realizados:
+•	Testes funcionais gerais.
+•	Testes de navegação e fluxo de telas.
+•	Validação da comunicação backend via HTTPS.
+•	Verificação do armazenamento local via AsyncStorage.
+•	Execução dos testes unitários com Jest.
+•	Testes em dispositivos reais Android e iOS.
 
 ## Testes
 
