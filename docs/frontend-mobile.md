@@ -74,7 +74,7 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 
 ## Implantação
 A implantação da aplicação mobile em um ambiente de produção exige a definição clara dos requisitos, a preparação da infraestrutura e a garantia de segurança em todo o processo.
-###1. Requisitos de Hardware e Software
+### 1. Requisitos de Hardware e Software
 Para a etapa mobile, o ambiente de produção deve contar no mínimo com as seguintes configurações:
 •	Node.js 20+ para execução de scripts, build e gerenciamento de dependências.
 •	Java 17+, Android SDK e Xcode (macOS) para geração das builds Android e iOS.
@@ -82,7 +82,7 @@ Para a etapa mobile, o ambiente de produção deve contar no mínimo com as segu
 •	Ambiente CI/CD opcional (GitHub Actions, GitLab CI, Bitrise ou App Center).
 •	Servidor para backend (nuvem, on-premise ou dedicado) com API acessível via HTTPS.
 
-###2. Plataforma de Hospedagem
+### 2. Plataforma de Hospedagem
 •	A escolha da plataforma depende do tipo de entrega:
 •	Android: Publicação no Google Play Console.
 •	iOS: Publicação via App Store Connect (exige macOS).
@@ -98,7 +98,7 @@ Para a etapa mobile, o ambiente de produção deve contar no mínimo com as segu
 •	Executar otimizações do Metro + Babel para bundle final.
 •	Validar a estrutura de navegação com React Navigation e persistência com AsyncStorage.
 
-###4. Deploy da Aplicação Mobile
+### 4. Deploy da Aplicação Mobile
 •	Após a preparação do ambiente:
 •	Para Android
 •	Gerar o APK/AAB usando gradlew bundleRelease.
@@ -113,7 +113,7 @@ Para a etapa mobile, o ambiente de produção deve contar no mínimo com as segu
 •	Ajustar endpoints públicos.
 •	Se necessário, usar Ngrok temporariamente durante homologação.
 
-###5. Testes em Produção
+### 5. Testes em Produção
 •	Depois do deploy, devem ser realizados:
 •	Testes funcionais gerais.
 •	Testes de navegação e fluxo de telas.
