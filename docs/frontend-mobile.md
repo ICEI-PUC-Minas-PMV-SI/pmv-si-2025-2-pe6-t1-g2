@@ -73,7 +73,7 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 * **Uso de HTTPS:** Garantir que todas as comunicações com o backend sejam feitas exclusivamente via HTTPS. Considerar a implementação de SSL Pinning para mitigar ataques Man-in-the-Middle (MITM), garantindo que o app só se comunique com o servidor esperado.
 
 ## Implantação
-
+A implantação da aplicação mobile em um ambiente de produção exige a definição clara dos requisitos, a preparação da infraestrutura e a garantia de segurança em todo o processo.
 [Instruções para implantar a aplicação distribuída em um ambiente de produção.]
 
 1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
