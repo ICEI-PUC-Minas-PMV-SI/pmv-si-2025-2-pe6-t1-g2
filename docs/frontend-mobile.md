@@ -76,8 +76,8 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 A implantação da aplicação mobile em um ambiente de produção exige a definição clara dos requisitos, a preparação da infraestrutura e a garantia de segurança em todo o processo.
 ### 1. Requisitos de Hardware e Software
 Para a etapa mobile, o ambiente de produção deve contar no mínimo com as seguintes configurações:
-•	Node.js 20+ para execução de scripts, build e gerenciamento de dependências.
-•	Java 17+, Android SDK e Xcode (macOS) para geração das builds Android e iOS.
+* •	Node.js 20+ para execução de scripts, build e gerenciamento de dependências.
+* •	Java 17+, Android SDK e Xcode (macOS) para geração das builds Android e iOS.
 •	Gerenciador de pacotes (npm ou Yarn).
 •	Ambiente CI/CD opcional (GitHub Actions, GitLab CI, Bitrise ou App Center).
 •	Servidor para backend (nuvem, on-premise ou dedicado) com API acessível via HTTPS.
