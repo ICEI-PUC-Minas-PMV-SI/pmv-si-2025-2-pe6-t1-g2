@@ -58,7 +58,7 @@ O desenvolvimento do projeto envolveu diversas tecnologias que, em conjunto, per
 * **ESLint + Prettier:** Conjunto de ferramentas de linting e formatação automática para padronizar o código e prevenir erros comuns.
 * **Jest:** Framework de testes utilizado para escrever e executar testes unitários garantindo confiabilidade dos componentes e funções.
 * **CLI oficial Android/iOS:** Ferramentas nativas das plataformas utilizadas para compilar, rodar e depurar o aplicativo nos emuladores e dispositivos físicos.
-* **Ngrok:** Serviço de tunelamento utilizado para expor temporariamente a API backend em uma URL pública, permitindo que o app mobile acesse endpoints hospedados localmente durante o desenvolvimento.
+* **Ngrok:** Serviço de tunelamento utilizado para expor temporariamente a API backend em uma URL pública, permitindo que o app mobile acesse endpoints hospedados localmente durante o desenvolvimento (link: 
 
 
 ## Considerações de Segurança
@@ -153,6 +153,8 @@ Atualizado em: 01/12/2025
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | Laís Lara F. dos Santos | Configuração do tunelamento da API local.  | 26/11/2025   | 30/11/2025 | ✔️    | 29/11/2025  |
+| Beatriz Pereira da Costa| Tunelamento da API local via Ngrok  | 26/11/2025   | 30/11/2025 | ✔️    | 30/11/2025  |
+| Beatriz Pereira da Costa| Ajustes de Endpoints da API via Banco de Dados  | 26/11/2025   | 30/11/2025 | ✔️    | 30/11/2025  |
 
 #### Semana 4
 
