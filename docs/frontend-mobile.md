@@ -9,26 +9,26 @@ A prioridade é entregar uma experiência de usuário intuitiva, performática e
 ### Wireframes
 
 ## Homepage
-![Homepage](https://github.com/user-attachments/assets/52f61199-a6db-4b55-9aa5-436d4e76a653)
+<img src="https://github.com/user-attachments/assets/52f61199-a6db-4b55-9aa5-436d4e76a653" width="300" />
+
 ---
 
 ## Login
-![Login](https://github.com/user-attachments/assets/46a5b113-2d98-4a49-b719-a7de8add6ce3)
+<img src="https://github.com/user-attachments/assets/46a5b113-2d98-4a49-b719-a7de8add6ce3" width="300" />
 
 ---
 
 ## Cadastro
 ### Etapa 1
-![Cadastro - Etapa 1](https://github.com/user-attachments/assets/8c45027a-ed72-454d-8c75-32f89a5b8687)
+<img src="https://github.com/user-attachments/assets/8c45027a-ed72-454d-8c75-32f89a5b8687" width="300" />
 
 ### Etapa 2
-![Cadastro - Etapa 2](https://github.com/user-attachments/assets/2270e4b6-8d24-4a89-8213-0f08d2d78876)
+<img src="https://github.com/user-attachments/assets/2270e4b6-8d24-4a89-8213-0f08d2d78876" width="300" />
+
 ---
 
 ## Buscar
-![Buscar](https://github.com/user-attachments/assets/f94f955f-6f82-499e-a51a-7dded6cadeef)
-
-[Inclua os wireframes das páginas principais da interface, mostrando a disposição dos elementos na página.]
+<img src="https://github.com/user-attachments/assets/f94f955f-6f82-499e-a51a-7dded6cadeef" width="300" />
 
 
 ### Design Visual
@@ -40,8 +40,20 @@ A prioridade é entregar uma experiência de usuário intuitiva, performática e
  <p align="center"><img src="img/Diagrama.jpg" width="900" alt="Diagrama"></p>
 
 ## Tecnologias Utilizadas
+O desenvolvimento do projeto envolveu diversas tecnologias que, em conjunto, permitiram a construção de uma aplicação mobile funcional, organizada e de fácil manutenção. A seguir, são descritas as principais ferramentas e linguagens utilizadas:
 
-[Lista das tecnologias principais que serão utilizadas no projeto.]
+* **React Native 0.82:** Framework mobile responsável por renderizar componentes nativos em Android e iOS, permitindo desenvolvimento multiplataforma com JavaScript/TypeScript.
+* **React 19:** Biblioteca base para construção dos componentes e gerenciamento do ciclo de vida e estado da interface.
+* **TypeScript 5.8:** Camada de tipagem estática utilizada para aumentar a segurança, previsibilidade e robustez do código durante o desenvolvimento.
+* **Node.js 20+:** Ambiente de execução JavaScript utilizado para gerenciamento de dependências, scripts de build e execução das ferramentas do ecossistema React Native.
+* **React Navigation:** Biblioteca de navegação usada para estruturar o fluxo da aplicação através de tabs e stacks, garantindo transições e gerenciamento de rotas.
+* **AsyncStorage:** Mecanismo de armazenamento local assíncrono utilizado para persistir dados simples no dispositivo (tokens, preferências, cache leve).
+* **Metro + Babel:** Ferramentas responsáveis pela transpilação e empacotamento do código, garantindo compatibilidade, otimização e hot reload durante o desenvolvimento.
+* **ESLint + Prettier:** Conjunto de ferramentas de linting e formatação automática para padronizar o código e prevenir erros comuns.
+* **Jest:** Framework de testes utilizado para escrever e executar testes unitários garantindo confiabilidade dos componentes e funções.
+* **CLI oficial Android/iOS:** Ferramentas nativas das plataformas utilizadas para compilar, rodar e depurar o aplicativo nos emuladores e dispositivos físicos.
+* **Ngrok:** Serviço de tunelamento utilizado para expor temporariamente a API backend em uma URL pública, permitindo que o app mobile acesse endpoints hospedados localmente durante o desenvolvimento.
+
 
 ## Considerações de Segurança
 
@@ -84,10 +96,12 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 ### Caso de teste: Editar Perfil de Usuário do tipo Professor
 * Entrada: Inserir os dados que deseja alterar, como nome, e-mail, descrição, certificações, competências, valor da hora-aula, áreas de atuação ou horários disponíveis e senha (para confirmação).
 * Resposta esperada: Mensagem de sucesso e dados alterados no banco de dados.
+* Evidência:
 
 ### Caso de teste: Editar Perfil de Usuário do tipo Aluno
 * Entrada: Inserir os dados que deseja alterar, como nome, e-mail, descrição e senha (para confirmação).
 * Resposta esperada: Mensagem de sucesso e dados alterados no banco de dados.
+* Evidência:
 
 ### Caso de teste: Filtrar Professor por Área ou Nome durante a busca
 * Entrada: Acessar a tela de "Buscar Professor" e inserir nome, disciplina ou habilidade esperada.
@@ -110,8 +124,6 @@ Em aplicações distribuídas, a segurança é um aspecto fundamental para garan
 
 ##  Quadro de tarefas
 
-> Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
-
 ### Semana 1
 
 Atualizado em: 21/04/2024
@@ -130,19 +142,19 @@ Atualizado em: 21/04/2024
 
 #### Semana 3
 
-Atualizado em: 21/04/2024
+Atualizado em: 01/12/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
+| Laís Lara F. dos Santos | Configuração do tunelamento da API local.  | 26/11/2025   | 30/11/2025 | ✔️    | 29/11/2025  |
 
 #### Semana 4
 
-Atualizado em: 21/04/2024
+Atualizado em: 01/12/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
+| Laís Lara F. dos Santos  | Descrição dos tópicos de Tecnologias Utilizadas, Segurança, Implantação e Casos de Teste da documentação.  | 30/11/2025  | 01/12/2025 | 📝  | 01/12/2025    |
 
 
 Legenda:
