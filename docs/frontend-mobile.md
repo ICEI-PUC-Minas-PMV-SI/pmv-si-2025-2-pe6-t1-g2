@@ -89,7 +89,7 @@ Para a etapa mobile, o ambiente de produção deve contar no mínimo com as segu
 •	Backend/API: Pode ser hospedado em AWS, Azure, Render, Railway, Digital Ocean ou servidor dedicado.
 •	Arquivos estáticos e assets: Podem ser entregues via CDN.
 
-###3. Configuração do Ambiente de Implantação
+### 3. Configuração do Ambiente de Implantação
 •	Antes de gerar as builds, é necessário:
 •	Instalar dependências via npm install ou yarn.
 •	Configurar variáveis de ambiente (URLs da API, chaves, tokens).
