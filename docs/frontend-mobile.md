@@ -8,7 +8,28 @@ A prioridade é entregar uma experiência de usuário intuitiva, performática e
 
 ### Wireframes
 
+## Homepage
+![Homepage](https://github.com/user-attachments/assets/52f61199-a6db-4b55-9aa5-436d4e76a653)
+---
+
+## Login
+![Login](https://github.com/user-attachments/assets/46a5b113-2d98-4a49-b719-a7de8add6ce3)
+
+---
+
+## Cadastro
+### Etapa 1
+![Cadastro - Etapa 1](https://github.com/user-attachments/assets/8c45027a-ed72-454d-8c75-32f89a5b8687)
+
+### Etapa 2
+![Cadastro - Etapa 2](https://github.com/user-attachments/assets/2270e4b6-8d24-4a89-8213-0f08d2d78876)
+---
+
+## Buscar
+![Buscar](https://github.com/user-attachments/assets/f94f955f-6f82-499e-a51a-7dded6cadeef)
+
 [Inclua os wireframes das páginas principais da interface, mostrando a disposição dos elementos na página.]
+
 
 ### Design Visual
 
