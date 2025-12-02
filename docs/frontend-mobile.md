@@ -127,12 +127,24 @@ Depois do deploy, devem ser realizados:
 ### Caso de teste: Cadastrar Aluno
 * Entrada: Nome, E-mail, Senha, Confirmar senha, CPF e descrição
 * Resposta esperada: Cadastro realizado com sucesso!
-* Evidência:
+* Evidências:
+
+
 
 ### Caso de teste: Cadastrar Professor
 * Entrada: Nome completo, E-mail, Senha, CPF, Descrição, Certificações, Competências e Valor da hora-aula.
 * Resposta esperada: Cadastro criado com sucesso e direcionamento para o login.
 * Evidência:
+<div align="center">
+ <table >
+   <tbody>
+     <tr>
+       <td><img src="./img/Testes-Front-Mobile/cadastro-prof-mobile.jpg" width="300px"> <p>Inserir dados de cadastro.</p></td>
+       <td><img src="./img/Testes-Front-Mobile/cadastro-prof-mobile-ok.jpg" width="300px"><p>Mensagem de sucesso ao cadastrar professor.</p></td>
+     </tr>
+   </tbody>
+ </table>
+</div>
 
 ### Caso de teste: Login Usuário
 * Entrada: E-mail e senha de usuário já cadastrado na plataforma.
