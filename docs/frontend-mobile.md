@@ -217,7 +217,7 @@ Atualizado em: 01/12/2025
 | Laís Lara F. dos Santos  | Descrição dos tópicos de Tecnologias Utilizadas, Segurança, Implantação e Casos de Teste da documentação.  | 30/11/2025  | 01/12/2025 | ✔️  | 01/12/2025    |
 | Sávio Sérgio Pereira da Silva  | Trabalhei na elaborado do documento: Projeto de interface  | 01/12/2025  | 01/12/2025 | ✔️  | 01/12/2025    |
 | Antonio Rubens Oliveira Junqueira  | Trabalhei na elaborado do documento.  | 01/12/2025  | 01/12/2025 | ✔️  | 01/12/2025    |
-
+| Antonio Rubens Oliveira Junqueira  | Trabalhei na elaborado do documento e estudos de caso.  | 05/12/2025  | 05/12/2025 | ✔️  | 01/12/2025    |
 Legenda:
 - ✔️: terminado
 - 📝: em execução
