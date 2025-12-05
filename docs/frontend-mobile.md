@@ -100,11 +100,11 @@ Antes de gerar as builds, é necessário:
 
 ### 4. Deploy da Aplicação Mobile
 Após a preparação do ambiente:
-* **Para Android
+**Para Android**
 * Gerar o APK/AAB usando gradlew bundleRelease.
 * Assinar digitalmente a build.
 * Enviar para o Google Play Console.
-* **Para iOS
+**Para iOS**
 * Gerar o build release pelo Xcode.
 * Assinar utilizando certificados da Apple.
 * Enviar via Transporter ou diretamente pelo Xcode para o App Store Connect.
