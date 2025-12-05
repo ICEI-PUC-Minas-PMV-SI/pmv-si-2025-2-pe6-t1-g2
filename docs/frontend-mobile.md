@@ -188,7 +188,7 @@ Atualizado em: 21/04/2024
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 05/02/2024      |
+| Arthur Neves da Silveria        | Criação dos Wireframes do App mobile via Figma | 03/02/2025     | 12/02/2025 | ✔️    | 06/02/2025      |
 
 #### Semana 2
 
@@ -196,7 +196,7 @@ Atualizado em: 21/04/2024
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
+| Arthur Neves da Silveria        | Elaboração do Protótipo pela plataforma da Expo | 13/02/2025     | 19/02/2025 | ✔️    | 18/02/2025      |
 
 #### Semana 3
 
