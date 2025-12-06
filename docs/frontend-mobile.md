@@ -125,10 +125,19 @@ Depois do deploy, devem ser realizados:
 ## Testes
 
 ### Caso de teste: Cadastrar Aluno
-* Entrada: Nome, E-mail, Senha, Confirmar senha, CPF e descrição
-* Resposta esperada: Cadastro realizado com sucesso!
+* Entrada: Nome, E-mail, Senha, Confirmar senha, CPF e descrição.
+* Resposta esperada: Mensagem de cadastro realizado com sucesso e solicitando login.
 * Evidências:
-
+<div align="center">
+ <table >
+   <tbody>
+     <tr>
+       <td><img src="./img/Testes-Front-Mobile/1.png" width="300px"> <p>Inserir dados de cadastro.</p></td>
+       <td><img src="./img/Testes-Front-Mobile/2.png" width="300px"><p>Mensagem de sucesso.</p></td>
+     </tr>
+   </tbody>
+ </table>
+</div>
 
 
 ### Caso de teste: Cadastrar Professor
@@ -139,8 +148,8 @@ Depois do deploy, devem ser realizados:
  <table >
    <tbody>
      <tr>
-       <td><img src="./img/Testes-Front-Mobile/cadastro-prof-mobile.jpg" width="300px"> <p>Inserir dados de cadastro.</p></td>
-       <td><img src="./img/Testes-Front-Mobile/cadastro-prof-mobile-ok.jpg" width="300px"><p>Mensagem de sucesso ao cadastrar professor.</p></td>
+       <td><img src="./img/Testes-Front-Mobile/7.png" width="300px"> <p>Inserir dados de cadastro.</p></td>
+       <td><img src="./img/Testes-Front-Mobile/8.png" width="300px"><p>Mensagem de sucesso.</p></td>
      </tr>
    </tbody>
  </table>
@@ -148,18 +157,48 @@ Depois do deploy, devem ser realizados:
 
 ### Caso de teste: Login Usuário
 * Entrada: E-mail e senha de usuário já cadastrado na plataforma.
-* Resposta esperada: Mensagem de login realizado com sucesso e direcionamento para a homepage.
+* Resposta esperada: Login realizado com sucesso e direcionamento para a tela de perfil do usuário.
 * Evidência:
-
-### Caso de teste: Editar Perfil de Usuário do tipo Professor
-* Entrada: Inserir os dados que deseja alterar, como nome, e-mail, descrição, certificações, competências, valor da hora-aula, áreas de atuação ou horários disponíveis e senha (para confirmação).
-* Resposta esperada: Mensagem de sucesso e dados alterados no banco de dados.
-* Evidência:
+<div align="center">
+ <table >
+   <tbody>
+     <tr>
+       <td><img src="./img/Testes-Front-Mobile/3.png" width="300px"> <p>Inserir dados de entrada.</p></td>
+       <td><img src="./img/Testes-Front-Mobile/4.png" width="300px"><p>Usuário é direcionado para seu perfil.</p></td>
+     </tr>
+   </tbody>
+ </table>
+</div>
 
 ### Caso de teste: Editar Perfil de Usuário do tipo Aluno
-* Entrada: Inserir os dados que deseja alterar, como nome, e-mail, descrição e senha (para confirmação).
+* Entrada: Inserir os dados que deseja alterar, como nome, e-mail ou descrição e inserir a senha para confirmar a ação.
 * Resposta esperada: Mensagem de sucesso e dados alterados no banco de dados.
 * Evidência:
+<div align="center">
+ <table >
+   <tbody>
+     <tr>
+       <td><img src="./img/Testes-Front-Mobile/5.png" width="300px"> <p>Alterar dados.</p></td>
+       <td><img src="./img/Testes-Front-Mobile/6.png" width="300px"><p>Mensagem de sucesso.</p></td>
+     </tr>
+   </tbody>
+ </table>
+</div>
+
+### Caso de teste: Editar Perfil de Usuário do tipo Professor
+* Entrada: Inserir os dados que deseja alterar, como nome, e-mail, descrição, certificações, competências ou valor da hora-aula e inserir a senha para confirmar a ação.
+* Resposta esperada: Mensagem de sucesso e dados alterados no banco de dados.
+* Evidência:
+<div align="center">
+ <table >
+   <tbody>
+     <tr>
+       <td><img src="./img/Testes-Front-Mobile/9.png" width="300px"> <p>Alterar dados.</p></td>
+       <td><img src="./img/Testes-Front-Mobile/10.png" width="300px"><p>Mensagem de sucesso.</p></td>
+     </tr>
+   </tbody>
+ </table>
+</div>
 
 ### Caso de teste: Filtrar Professor por Área ou Nome durante a busca
 * Entrada: Acessar a tela de "Buscar Professor" e inserir nome, disciplina ou habilidade esperada.
@@ -167,10 +206,22 @@ Depois do deploy, devem ser realizados:
 * Evidência:
 
 ### Caso de teste: Registrar Agendamento
-* Entrada: Escolher professor da listagem, clicar em "agendar", inserir data, horário e conteúdo da aula e clicar em "Confirmar Agendamento".
-* Resposta esperada: Mensagem de sucesso e agendamento registrado no banco de dados.
+* Entrada: Escolher professor da listagem, clicar em "Ver opções de aula", escolher um dos horários disponíveis do professor clicando no botão "Escolher este horário" e na tela seguinte confirmar as informações do professor e da aula clicando em "Agendar neste horário".
+* Resposta esperada: Mensagem de sucesso, agendamento registrado no banco de dados e disponível para verificação no dashboard do professor e do aluno.
 * Evidência:
-  
+<div align="center">
+ <table >
+   <tbody>
+     <tr>
+       <td><img src="./img/Testes-Front-Mobile/11.png" width="300px"> <p>Confirmar dados do professor e da aula.</p></td>
+       <td><img src="./img/Testes-Front-Mobile/12.png" width="300px"><p>Mensagem de sucesso.</p></td>
+       <td><img src="./img/Testes-Front-Mobile/13.png" width="300px"><p>Agendamento no dashboard do professor.</p></td>
+     </tr>
+   </tbody>
+ </table>
+</div>
+
+
 # Referências
 
 - https://reactnative.dev/
