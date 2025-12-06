@@ -201,7 +201,7 @@ Depois do deploy, devem ser realizados:
 </div>
 
 ### Caso de teste: Filtrar Professor por Nome, Competências ou Certificações durante a busca
-* Entrada: Acessar a opção de "Buscar" e inserir nome, disciplina ou certificação do professor.
+* Entrada: Acessar a opção de "Buscar" e inserir nome, competência ou certificação do professor.
 * Resposta esperada: Aplicação do filtro na listagem e atualização da lista com professores que atendam o requisito.
 * Evidência:
 <div align="center">
