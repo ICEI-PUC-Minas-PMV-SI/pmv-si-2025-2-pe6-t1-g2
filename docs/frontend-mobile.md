@@ -58,7 +58,7 @@ O desenvolvimento do projeto envolveu diversas tecnologias que, em conjunto, per
 * **ESLint + Prettier:** Conjunto de ferramentas de linting e formatação automática para padronizar o código e prevenir erros comuns.
 * **Jest:** Framework de testes utilizado para escrever e executar testes unitários garantindo confiabilidade dos componentes e funções.
 * **CLI oficial Android/iOS:** Ferramentas nativas das plataformas utilizadas para compilar, rodar e depurar o aplicativo nos emuladores e dispositivos físicos.
-* **Ngrok:** Serviço de tunelamento utilizado para expor temporariamente a API backend em uma URL pública, permitindo que o app mobile acesse endpoints hospedados localmente durante o desenvolvimento (link: 
+* **Ngrok:** Serviço de tunelamento utilizado para expor temporariamente a API backend em uma URL pública, permitindo que o app mobile acesse endpoints hospedados localmente durante o desenvolvimento (Evidência 1: https://drive.google.com/file/d/1LVE3IZa9Lxt6Q57511bvMqNhSTpMNZlw/view?usp=sharing; Evidência 2: https://drive.google.com/file/d/1m7Kqyrr4fCSZ7JcUuZ_bMwOpI7pgMNN0/view?usp=sharing) 
 
 
 ## Considerações de Segurança
