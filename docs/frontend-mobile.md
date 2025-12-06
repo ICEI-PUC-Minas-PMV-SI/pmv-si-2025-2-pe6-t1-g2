@@ -200,10 +200,21 @@ Depois do deploy, devem ser realizados:
  </table>
 </div>
 
-### Caso de teste: Filtrar Professor por Área ou Nome durante a busca
-* Entrada: Acessar a tela de "Buscar Professor" e inserir nome, disciplina ou habilidade esperada.
-* Resposta esperada: Aplicação do filtro na listagem e atualizar lista com professores que atendam o requisito.
+### Caso de teste: Filtrar Professor por Nome, Competências ou Certificações durante a busca
+* Entrada: Acessar a opção de "Buscar" e inserir nome, disciplina ou certificação do professor.
+* Resposta esperada: Aplicação do filtro na listagem e atualização da lista com professores que atendam o requisito.
 * Evidência:
+<div align="center">
+ <table >
+   <tbody>
+     <tr>
+       <td><img src="./img/Testes-Front-Mobile/14.png" width="300px"><p>Filtro por nome.</p></td>
+       <td><img src="./img/Testes-Front-Mobile/15.png" width="300px"><p>Filtro por competências.</p></td>
+       <td><img src="./img/Testes-Front-Mobile/16.png" width="300px"><p>Filtro por certificações.</p></td>
+     </tr>
+   </tbody>
+ </table>
+</div>
 
 ### Caso de teste: Registrar Agendamento
 * Entrada: Escolher professor da listagem, clicar em "Ver opções de aula", escolher um dos horários disponíveis do professor clicando no botão "Escolher este horário" e na tela seguinte confirmar as informações do professor e da aula clicando em "Agendar neste horário".
@@ -265,10 +276,13 @@ Atualizado em: 01/12/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Laís Lara F. dos Santos  | Descrição dos tópicos de Tecnologias Utilizadas, Segurança, Implantação e Casos de Teste da documentação.  | 30/11/2025  | 01/12/2025 | ✔️  | 01/12/2025    |
+| Laís Lara F. dos Santos  | Descrição dos tópicos de Tecnologias Utilizadas, Segurança e listagem dos Casos de Teste necessários na documentação.  | 30/11/2025  | 01/12/2025 | ✔️  | 01/12/2025    |
 | Sávio Sérgio Pereira da Silva  | Trabalhei na elaborado do documento: Projeto de interface  | 01/12/2025  | 01/12/2025 | ✔️  | 01/12/2025    |
 | Antonio Rubens Oliveira Junqueira  | Trabalhei na elaborado do documento.  | 01/12/2025  | 01/12/2025 | ✔️  | 01/12/2025    |
 | Antonio Rubens Oliveira Junqueira  | Trabalhei na elaborado do documento e estudos de caso.  | 05/12/2025  | 05/12/2025 | ✔️  | 01/12/2025    |
+| Laís Lara F. dos Santos  | Realização dos testes da aplicação mobile e descrição deles no documento.  | 06/12/2025  | 07/12/2025 | ✔️  | 06/12/2025    |
+
+
 Legenda:
 - ✔️: terminado
 - 📝: em execução
