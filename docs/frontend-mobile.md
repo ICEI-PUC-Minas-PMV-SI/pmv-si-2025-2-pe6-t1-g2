@@ -261,6 +261,7 @@ Atualizado em: 21/04/2024
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | Arthur Neves da Silveria        | Criação dos Wireframes do App mobile via Figma | 03/02/2025     | 12/02/2025 | ✔️    | 06/02/2025      |
+| Denis Alves da Silva Leite| Desenho das interfaces no Figma | 03/11/2025     | 10/11/2025 | ✔️    | 30/11/2025      |
 
 #### Semana 2
 
@@ -269,6 +270,7 @@ Atualizado em: 21/04/2024
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | Arthur Neves da Silveria        | Elaboração do Protótipo pela plataforma da Expo | 13/02/2025     | 19/02/2025 | ✔️    | 18/02/2025      |
+| Denis Alves da Silva Leite| Criação das páginas em React Native | 06/11/2025     | 10/11/2025 | ✔️    | 30/11/2025      |
 
 #### Semana 3
 
@@ -279,6 +281,7 @@ Atualizado em: 01/12/2025
 | Laís Lara F. dos Santos | Configuração do tunelamento da API local.  | 26/11/2025   | 30/11/2025 | ✔️    | 29/11/2025  |
 | Beatriz Pereira da Costa| Tunelamento da API local via Ngrok  | 26/11/2025   | 30/11/2025 | ✔️    | 30/11/2025  |
 | Beatriz Pereira da Costa| Ajustes de Endpoints da API via Banco de Dados  | 26/11/2025   | 30/11/2025 | ✔️    | 30/11/2025  |
+| Denis Alves da Silva Leite| Contribui para o mobile funcionar com API via tunelamento| 29/11/2025     | 30/11/2025 | ✔️    | 30/11/2025      |
 
 #### Semana 4
 
@@ -291,7 +294,7 @@ Atualizado em: 01/12/2025
 | Antonio Rubens Oliveira Junqueira  | Trabalhei na elaborado do documento.  | 01/12/2025  | 01/12/2025 | ✔️  | 01/12/2025    |
 | Antonio Rubens Oliveira Junqueira  | Trabalhei na elaborado do documento e estudos de caso.  | 05/12/2025  | 07/12/2025 | ✔️  | 07/12/2025    |
 | Laís Lara F. dos Santos  | Realização dos testes da aplicação mobile e descrição deles no documento.  | 06/12/2025  | 07/12/2025 | ✔️  | 06/12/2025    |
-
+| Denis Alves da Silva Leite| Contribui para que o projeto mobile ficasse online via Expo para outros fazerem os testes | 28/11/2025     | 29/11/2025 | ✔️    | 30/11/2025      |
 
 Legenda:
 - ✔️: terminado
