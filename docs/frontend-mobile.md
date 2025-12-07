@@ -189,7 +189,7 @@ Depois do deploy, devem ser realizados:
  <table >
    <tbody>
      <tr>
-       <td><img src="./img/Editar Perfil AROJ.png" width="300px"> <p>Alterar dados.</p></td>
+       <td><img src="./img/Aditar Perfil AROJ.png" width="300px"> <p>Alterar dados.</p></td>
        </tr>
    </tbody>
  </table>
