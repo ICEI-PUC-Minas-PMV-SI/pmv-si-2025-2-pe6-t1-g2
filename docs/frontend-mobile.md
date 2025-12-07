@@ -289,7 +289,7 @@ Atualizado em: 01/12/2025
 | Laís Lara F. dos Santos  | Descrição dos tópicos de Tecnologias Utilizadas, Segurança e listagem dos Casos de Teste necessários na documentação.  | 30/11/2025  | 01/12/2025 | ✔️  | 01/12/2025    |
 | Sávio Sérgio Pereira da Silva  | Trabalhei na elaborado do documento: Projeto de interface  | 01/12/2025  | 01/12/2025 | ✔️  | 01/12/2025    |
 | Antonio Rubens Oliveira Junqueira  | Trabalhei na elaborado do documento.  | 01/12/2025  | 01/12/2025 | ✔️  | 01/12/2025    |
-| Antonio Rubens Oliveira Junqueira  | Trabalhei na elaborado do documento e estudos de caso.  | 05/12/2025  | 07/12/2025 | ✔️  | 01/12/2025    |
+| Antonio Rubens Oliveira Junqueira  | Trabalhei na elaborado do documento e estudos de caso.  | 05/12/2025  | 07/12/2025 | ✔️  | 07/12/2025    |
 | Laís Lara F. dos Santos  | Realização dos testes da aplicação mobile e descrição deles no documento.  | 06/12/2025  | 07/12/2025 | ✔️  | 06/12/2025    |
 
 
