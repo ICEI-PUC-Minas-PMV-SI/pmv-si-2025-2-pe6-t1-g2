@@ -185,6 +185,16 @@ Depois do deploy, devem ser realizados:
  </table>
 </div>
 
+<div align="center">
+ <table >
+   <tbody>
+     <tr>
+       <td><img src="./img/Editar perfil AROJ/5.png" width="300px"> <p>Alterar dados.</p></td>
+       </tr>
+   </tbody>
+ </table>
+</div>
+
 ### Caso de teste: Editar Perfil de Usuário do tipo Professor
 * Entrada: Inserir os dados que deseja alterar, como nome, e-mail, descrição, certificações, competências ou valor da hora-aula e inserir a senha para confirmar a ação.
 * Resposta esperada: Mensagem de sucesso e dados alterados no banco de dados.
