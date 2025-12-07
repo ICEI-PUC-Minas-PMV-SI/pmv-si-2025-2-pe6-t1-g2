@@ -221,11 +221,11 @@ Atualizado em: 13/10/2025
 | Sávio Sérgio Pereira da Silva         | Página de login - HTML e CSS | 13/10/2025     | 17/10/2025 | ✔️    | 15/10/2025   |
 | Sávio Sérgio Pereira da Silva        | Página de cadastro - HTML e CSS | 13/10/2025     | 17/10/2025 | ✔️    | 15/10/2025   |
 | Sávio Sérgio Pereira da Silva         | Script de login  | 13/10/2025     | 17/10/2025 | ✔️    | 16/10/2025   |
-| Antonio Rubens      | Pagina Busca professor  |  13/09/2025    | 05/10/2025 | 📝    |       |
-| Antonio Rubens      | Pagina Contratar professor  |  13/09/2025    | 05/10/2025 | 📝    |       |
-| Antonio Rubens      | Pagina Agendar  |  13/09/2025    | 05/10/2025 | 📝    |       |
-| Antonio Rubens      | Pagina Perfil Professor  |  13/09/2025    | 05/10/2025 | 📝    |       |
-| Antonio Rubens      | Elaboração de documentação  |  13/09/2025    | 05/10/2025 | 📝    |       |
+| Antonio Rubens      | Pagina Busca professor  |  13/09/2025    | 05/10/2025 | ✔️    |       |
+| Antonio Rubens      | Pagina Contratar professor  |  13/09/2025    | 05/10/2025 | ✔️    |       |
+| Antonio Rubens      | Pagina Agendar  |  13/09/2025    | 05/10/2025 | ✔️    |       |
+| Antonio Rubens      | Pagina Perfil Professor  |  13/09/2025    | 05/10/2025 | ✔️    |       |
+| Antonio Rubens      | Elaboração de documentação  |  13/09/2025    | 05/10/2025 | ✔️    |       |
 | Laís Lara F. dos Santos  | Adição da flag de Usuários e configuração do novo Usuário Aluno na API |  18/10/2025 | 15/10/2025 | ✔️  | 15/10/2025   |
 
 #### Semana 3
@@ -238,11 +238,11 @@ Atualizado em: 20/10/2025
 | Sávio Sérgio Pereira da Silva   | Página de painel de controle - Dashboard | 20/10/2025     | 23/10/2025 | ✔️    | 24/10/2025   |
 | Sávio Sérgio Pereira da Silva   | Construção do modal de cadastro | 20/10/2025     | 23/10/2025 | ✔️    | 24/10/2025   |
 | Sávio Sérgio Pereira da Silva   | Ligação dos links e verificação das páginas | 20/10/2025     | 23/10/2025 | ✔️    | 24/10/2025   |
-| Antonio Rubens       | Pagina Busca professor  |  06/10/2025    | 20/10/2025 | 📝    |       |
-| Antonio Rubens       | Pagina Contratar professor  |  06/10/2025    | 20/10/2025 | 📝    |       |
-| Antonio Rubens       | Pagina Agendar  |  06/10/2025    | 20/10/2025 | 📝    |       |
-| Antonio Rubens       | Pagina Perfil Professor  |  06/10/2025    | 20/10/2025 | 📝    |       |
-| Antonio Rubens       | Elaboração de documentação  |  06/10/2025    | 20/10/2025 | 📝    |       |
+| Antonio Rubens       | Pagina Busca professor  |  06/10/2025    | 20/10/2025 | ✔️    |       |
+| Antonio Rubens       | Pagina Contratar professor  |  06/10/2025    | 20/10/2025 | ✔️    |       |
+| Antonio Rubens       | Pagina Agendar  |  06/10/2025    | 20/10/2025 | ✔️    |       |
+| Antonio Rubens       | Pagina Perfil Professor  |  06/10/2025    | 20/10/2025 | ✔️    |       |
+| Antonio Rubens       | Elaboração de documentação  |  06/10/2025    | 20/10/2025 | ✔️    |       |
 
 #### Semana 4
 
@@ -251,17 +251,17 @@ Atualizado em: 27/10/2025
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | Sávio Sérgio Pereira da Silva   | Ajustes na telas de buscar, agendamento, perfil professor | 27/10/2025     | 02/11/2025 | ✔️   |   30/10/2025    |
-| Sávio Sérgio Pereira da Silva   | Página de finalização de cadastro do professor - Disponibilidade e Area | 27/10/2025     | 02/11/2025 | 📝    |       |
-| Sávio Sérgio Pereira da Silva   | Página de edição de perfil | 27/10/2025     | 02/11/2025 | 📝    |       |
-| Antonio Rubens       | Pagina Busca professor  |  21/10/2025    | 02/11/2025 | 📝    |       |
-| Antonio Rubens       | Pagina Contratar professor  |  21/10/2025    | 02/11/2025 | 📝    |       |
-| Antonio Rubens       | Pagina Agendar  |  21/10/2025    | 02/11/2025 | 📝    |       |
-| Antonio Rubens       | Pagina Perfil Professor  |  21/10/2025    | 02/11/2025 | 📝    |       |
-| Antonio Rubens       | Elaboração de documentação  |  21/10/2025    | 02/11/2025 | 📝    |       |
-| Beatriz Pereira da Costa      | Execução de Casos de Testes |  21/10/2025    | 02/11/2025 | 📝    |       |
+| Sávio Sérgio Pereira da Silva   | Página de finalização de cadastro do professor - Disponibilidade e Area | 27/10/2025     | 02/11/2025 | ✔️    |       |
+| Sávio Sérgio Pereira da Silva   | Página de edição de perfil | 27/10/2025     | 02/11/2025 | ✔️    |       |
+| Antonio Rubens       | Pagina Busca professor  |  21/10/2025    | 02/11/2025 | ✔️    |       |
+| Antonio Rubens       | Pagina Contratar professor  |  21/10/2025    | 02/11/2025 | ✔️    |       |
+| Antonio Rubens       | Pagina Agendar  |  21/10/2025    | 02/11/2025 | ✔️    |       |
+| Antonio Rubens       | Pagina Perfil Professor  |  21/10/2025    | 02/11/2025 | ✔️    |       |
+| Antonio Rubens       | Elaboração de documentação  |  21/10/2025    | 02/11/2025 | ✔️    |       |
+| Beatriz Pereira da Costa      | Execução de Casos de Testes |  21/10/2025    | 02/11/2025 | ✔️    |       |
 | Laís Lara F. dos Santos  | Configuração das requisições POST para cadastro de usuários no frontend |  25/10/2025 | 02/11/2025 | ✔️  | 28/10/2025  |
 | Laís Lara F. dos Santos  | Configuração da autenticação no login do frontend |  25/10/2025 | 02/11/2025 | ✔️  | 30/10/2025  |
-| Laís Lara F. dos Santos  | Configuração das requisições na tela de Dashboard no frontend |  30/10/2025 | 04/11/2025 | 📝  |   |
+| Laís Lara F. dos Santos  | Configuração das requisições na tela de Dashboard no frontend |  30/10/2025 | 04/11/2025 | ✔️  |   |
 | Laís Lara F. dos Santos  | Elaboração no documento dos tópicos de Casos de Testes necessários |  30/10/2025 | 30/10/2025 | ✔️  | 30/10/2025  |
 | Laís Lara F. dos Santos  | Descrição das tecnologias e segurança no documento |  02/11/2025 | 02/11/2025 | ✔️  | 02/11/2025  |
 
