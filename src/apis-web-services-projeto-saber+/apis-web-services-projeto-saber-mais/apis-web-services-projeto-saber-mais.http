@@ -1,0 +1,6 @@
+@apis_web_services_projeto_saber_mais_HostAddress = http://localhost:5277
+
+GET {{apis_web_services_projeto_saber_mais_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
