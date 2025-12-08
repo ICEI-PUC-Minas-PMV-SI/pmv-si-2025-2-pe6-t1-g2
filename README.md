@@ -36,11 +36,11 @@ Saber+ é uma plataforma web e mobile que conecta alunos a professores particula
 | ETAPA 5         | [Apresentação](presentation/README.md) |
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+<li><a href="src/README.md"> Instruções de como instalar as dependências e como executar a aplicação. </a></li>
 
 # Código
 
-<li><a href="src/README.md"> Código Fonte</a></li>
+<li><a href="src/"> Código Fonte</a></li>
 
 # Apresentação
 
