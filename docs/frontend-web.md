@@ -252,7 +252,7 @@ Atualizado em: 27/10/2025
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | Sávio Sérgio Pereira da Silva   | Ajustes na telas de buscar, agendamento, perfil professor | 27/10/2025     | 02/11/2025 | ✔️   |   30/10/2025    |
 | Sávio Sérgio Pereira da Silva   | Página de finalização de cadastro do professor - Disponibilidade e Area | 27/10/2025     | 02/11/2025 | ✔️    |       |
-| Sávio Sérgio Pereira da Silva   | Página de edição de perfil | 27/10/2025     | 02/11/2025 | ✔️    |       |
+| Sávio Sérgio Pereira da Silva   | Página de edição de perfil | 27/10/2025     | 02/11/2025 | ✔️    |   30/10/2025    |
 | Antonio Rubens       | Pagina Busca professor  |  21/10/2025    | 02/11/2025 | ✔️    |       |
 | Antonio Rubens       | Pagina Contratar professor  |  21/10/2025    | 02/11/2025 | ✔️    |       |
 | Antonio Rubens       | Pagina Agendar  |  21/10/2025    | 02/11/2025 | ✔️    |       |
