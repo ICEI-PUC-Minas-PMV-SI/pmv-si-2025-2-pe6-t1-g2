@@ -1,29 +1,27 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title:
+title: Sistema Distribuído para Conectar Alunos a Professores Particulares (Saber+)
 authors:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - name-suffix: Professor XXXX
+  - family-names: Oliveira Junqueira
+    given-names: Antônio Rubens
+  - family-names: da Silveira
+    given-names: Arthur Neves
+  - family-names: da Costa
+    given-names: Beatriz Pereira
+  - family-names: da Silva Leite
+    given-names: Denis Alves
+  - family-names: Ferreira dos Santos
+    given-names: Laís Lara
+  - family-names: Pereira da Silva
+    given-names: Sávio Sérgio
+  - name-suffix: Professor
     affiliation: PUC Minas
-    family-names:
-    given-names:
+    family-names: Ferreira de Souza
+    given-names: Kleber Jacques
 keywords:
-  -
-  -
-repository-code:
+  - Sistema Distribuído
+  - Alunos e Professores
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe6-t1-g2
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2023-06-30
+date-released: 2025-12-07
