@@ -1,0 +1,180 @@
+    :root {
+      --bg: #f6f7fb;
+      --card: #f0f2f5;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --danger: #dc2626;
+      --success: #16a34a;
+    }
+
+    .controls {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+      justify-content: flex-end;
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid #dbeafe;
+    }
+
+    .rows {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 190px 110px 110px 120px 44px;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+      background: var(--card);
+      border-radius: 8px;
+      border: 1px solid transparent;
+    }
+
+    .row.conflict {
+      border-color: rgba(220, 38, 38, 0.18);
+      background: #fff5f5;
+    }
+
+    select.day,
+    input[type="time"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      background: white;
+    }
+
+    .meta {
+      font-size: var(--font-size-sm);
+      color: var(--muted);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .delete-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+    }
+
+    .delete-btn:hover {
+      background: rgba(0, 0, 0, 0.03);
+    }
+
+    .summary {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* Área de especialidades */
+    .areas-section {
+      margin-top: 24px;
+      position: relative;
+    }
+
+    .areas-input-wrap {
+      display: flex;
+      /* gap: 10px; */
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .areas-input {
+      flex: 1;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    /* Autocomplete */
+    .suggestions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 110px;
+      /* deixa espaço pro botão "Adicionar" */
+      background: #fff;
+      border: 1px solid #ddd;
+      border-top: none;
+      border-radius: 0 0 6px 6px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-height: 180px;
+      overflow-y: auto;
+      z-index: 999;
+    }
+
+    .suggestion-item {
+      padding: 8px 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .suggestion-item:hover {
+      background: #f0f0f0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .actions-disponibilidade {
+      display: flex;
+      gap: var(--spacing-6);
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .tag {
+      background: #e0ebff;
+      color: #1e40af;
+      padding: 6px 10px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+    }
+
+    .tag button {
+      background: transparent;
+      border: none;
+      color: #1e40af;
+      cursor: pointer;
+    }
+
+    @media (max-width:700px) {
+      .row {
+        grid-template-columns: 1fr 1fr 1fr auto;
+        grid-template-rows: auto auto;
+        gap: 8px;
+      }
+
+      .row>.meta {
+        grid-column: 1/4;
+      }
+    }

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação - Home</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container-header header-inner">
+            <a href="../index.html">
+                <picture>
+                    <source srcset="assets/images/logo-120.png" media="(min-width: 1000px)">
+                    <source srcset="assets/images/logo-100.png" media="(min-width: 600px)">
+                    <img src="assets/images/logo-80.png" alt="Exemplo responsivo">
+                </picture>
+            </a>
+
+            <div class="user-menu">
+                <button class="user-avatar btn-primary" onclick="toggleUserMenu()">A</button>
+                <div class="user-dropdown" id="userDropdown">
+                    <a href="./perfil.html">Meu Perfil</a>
+                    <a href="./dashboard.html">Dashboard</a>
+                    <a href="#" class="nav-link" onclick="logout()">Sair</a>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+    <main class="main">
+        <section class="profile-header-section">
+            <header class="profile-header">
+                <div class="profile-info-header container">
+                    <div class="profile-basic-info">
+                        <h1 id="profileName">Ana Silva</h1>
+                        <p id="profileType" class="profile-type">Estudante</p>
+                        <p class="profile-join-date">
+                            Membro desde <time datetime="2023-06">Junho 2023</time>
+                        </p>
+
+                        <ul class="profile-stats">
+                            <li class="stat-item">
+                                <strong id="totalLessons">45</strong> <span>Aulas</span>
+                            </li>
+                            <li class="stat-item">
+                                <strong id="totalTeachers">8</strong> <span>Professores</span>
+                            </li>
+                            <li class="stat-item">
+                                <strong id="totalHours">67h</strong> <span>Estudadas</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <nav class="profile-actions">
+                        <button class="btn-outline" style="gap: 0.3rem;" onclick="toggleEditMode()">
+                            <i class="fas fa-edit"></i> Editar Perfil
+                        </button>
+                        <button class="btn btn-primary" style="gap: 0.3rem;" onclick="shareProfile()">
+                            <i class="fas fa-share"></i> Compartilhar
+                        </button>
+                    </nav>
+                </div>
+            </header>
+        </section>
+
+        <!-- Conteúdo principal do perfil -->
+        <section class="profile-content container">
+            <div class="profile-columns">
+                <!-- Coluna Esquerda -->
+                <aside class="profile-left">
+
+                    <article class="profile-card">
+                        <header class="card-header">
+                            <h2>Sobre</h2>
+                        </header>
+                        <p class="card-content" id="profileBio" class="profile-bio">Fale um pouco sobre você...</p>
+                        <!-- <ul class="card-content goals-list" id="goalsList">
+                            <li><i class="fas fa-target"></i> Passar no vestibular de Engenharia</li>
+                            <li><i class="fas fa-target"></i> Melhorar fluência em inglês</li>
+                            <li><i class="fas fa-target"></i> Aprender programação web</li>
+                        </ul> -->
+                    </article>
+
+                    <article class="profile-card">
+                        <header class="card-header">
+                            <h2>Atividade Recente</h2>
+                            <a href="dashboard.html" class="view-all-link">Ver todas</a>
+                        </header>
+                        <div class="card-content" id="activityTimeline"></div>
+                    </article>
+                </aside>
+
+                <!-- Coluna Direita -->
+                <section class="profile-right">
+                    <article class="profile-card">
+                        <header class="card-header">
+                            <h2>Conquistas</h2>
+                        </header>
+                        <ul class="card-content achievements-grid" id="achievementsGrid">
+                            <li class="achievement-item earned">
+                                <i class="fas fa-medal"></i>
+                                <div>
+                                    <h3>Primeira Aula</h3>
+                                    <p>Completou sua primeira aula</p>
+                                </div>
+                            </li>
+                            <li class="achievement-item earned">
+                                <i class="fas fa-fire"></i>
+                                <div>
+                                    <h3>Sequência de 7 dias</h3>
+                                    <p>Estudou por 7 dias seguidos</p>
+                                </div>
+                            </li>
+                            <li class="achievement-item earned">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <h3>Aluno 5 Estrelas</h3>
+                                    <p>Recebeu avaliação 5⭐ de um professor</p>
+                                </div>
+                            </li>
+                            <li class="achievement-item">
+                                <i class="fas fa-trophy"></i>
+                                <div>
+                                    <h3>Mestre do Conhecimento</h3>
+                                    <p>Complete 100 aulas</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Edição de Perfil -->
+    <div id="overlay" class="modal-overlay" hidden></div>
+    <dialog id="editProfileModal" class="modal--perfil">
+        <form id="editProfileForm" class="edit-profile-form" method="dialog">
+            <header class="modal-header--perfil">
+                <h2 class="title">Editar Perfil</h2>
+                <button type="button" class="close--perfil" id="closeEditProfileModal">&times;</button>
+            </header>
+
+            <section class="modal-body--perfil">
+
+                <!-- Nome -->
+                <div class="form-group--perfil">
+                    <label class="field-label" for="profileNameInput">Nome</label>
+                    <input type="text" id="profileNameInput" class="org-input input-field" value="Ana Silva" required>
+                </div>
+
+                <!-- Descrição -->
+                <div class="form-group--perfil">
+                    <label class="field-label" for="profileBioInput">Descrição</label>
+                    <textarea id="profileBioInput" class="org-input input-field" rows="3"
+                        placeholder="Fale um pouco sobre você..."></textarea>
+                </div>
+
+                <!-- Interesses / Objetivos -->
+                <!-- <div class="form-group">
+                    <label class="field-label" for="profileGoalsInput">Interesses / Objetivos</label>
+                    <textarea id="profileGoalsInput" class="org-input input-field" rows="3"
+                        placeholder="Ex: Melhorar inglês, aprender programação"></textarea>
+                </div> -->
+
+            </section>
+
+            <footer class="form-actions--perfil">
+                <button type="button" class="btn-outline" onclick="closeModal('editProfileModal')">Cancelar</button>
+                <button type="submit" class="btn btn-primary" style="gap: 0.35rem;">
+                    <i class="fas fa-save"></i> Salvar Alterações
+                </button>
+            </footer>
+        </form>
+    </dialog>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <picture>
+                    <source srcset="assets/images/logo-200.png" media="(min-width: 1000px)">
+                    <source srcset="assets/images/logo-150.png" media="(min-width: 600px)">
+                    <img src="assets/images/logo-100.png" alt="Logo do site">
+                </picture>
+                <p>O conhecimento que você procura, a um clique de distância</p>
+            </div>
+
+            <nav class="footer-col">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Grupo 2. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="scripts/components/modal.js"></script>
+    <script src="../scripts/perfil-aluno.js"></script>
+    <script type="module" src="../scripts/main.js"></script>
+</body>
+
+</html>

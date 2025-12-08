@@ -1,0 +1,50 @@
+:root {
+    --cor-primaria: #F2C016;
+    --cor-secundaria: #1B8EF2;
+    --cor-1: #1BA0F2;
+    --cor-2: #38BDF2;
+    --cor-3: #38D0F2;
+    --cor-4: #F2A516;
+
+    --cor-texto: #37474F;
+    --cor-fundo: #F7F9F9;
+    --cor-borda-suave: #ECEFF1;
+    --cor-sucesso: #4CAF50;
+    --cor-alerta: #FF9800;
+    --white: #FFF;
+    --black: #000;
+
+    --fonte-titulo: 'Poppins', Sans-serif;
+    --fonte-texto: 'Lato', serif;
+    --tamanho-base: 16px;
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+
+    /* Espaçamentos */
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+    --spacing-10: 2.5rem;
+    --spacing-12: 3rem;
+    --spacing-16: 4rem;
+    --spacing-20: 5rem;
+
+    --largura-maxima-conteudo: 1200px;
+    --raio-borda: 8px;
+
+    --transition-normal: transform 0.3s, background 0.3s;
+
+    --sombra-card: 0 4px 8px rgba(0, 0, 0, 0.05);
+}

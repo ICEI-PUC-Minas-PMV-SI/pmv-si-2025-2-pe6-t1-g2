@@ -1,0 +1,71 @@
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2, 12px);
+}
+
+/* Card base */
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3, 16px);
+  padding: var(--spacing-3, 16px);
+  background: var(--card-bg, #fff);
+  border-radius: var(--raio-borda, 10px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activity-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Ícones */
+.activity-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.activity-icon.pending { background: var(--pending, #b700ff); }   /* Roxo - Pendente */
+.activity-icon.success { background: var(--success, #28a745); }   /* Verde - Concluída */
+.activity-icon.confirm { background: var(--confirm, #007bff); }   /* Azul - Confirmada */
+.activity-icon.cancel  { background: var(--cancel, #dc3545); }    /* Vermelho - Cancelada */
+.activity-icon.review  { background: var(--review, #ffc107); color: #333; } /* Amarelo - Avaliada */
+
+/* Informações */
+.activity-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.activity-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-color, #333);
+  margin: 0;
+}
+
+.activity-status {
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+.activity-student {
+  font-size: 0.9rem;
+  color: var(--text-muted, #666);
+  margin: 2px 0;
+}
+
+.activity-time {
+  font-size: 0.8rem;
+  color: var(--text-light, #999);
+}

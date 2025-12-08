@@ -1,0 +1,213 @@
+    /* ===== Fundo do Modal (overlay) ===== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      /* top/right/bottom/left: 0 */
+      background: rgba(0, 0, 0, 0.45);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 1rem;
+      /* evita corte em telas pequenas */
+    }
+
+    /* ===== Modal Base - aceita diferentes nomes usados ===== */
+    .modal-content--buscar,
+    .modal-content.modal-large {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      max-width: 600px;
+      width: 100%;
+      max-height: 85vh;
+      /* limita a altura total do modal */
+      display: flex;
+      /* ESSENCIAL: habilita controle de espaço interno */
+      flex-direction: column;
+      overflow: hidden;
+      /* mantém bordas arredondadas limpas */
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* ===== Header (fixo) ===== */
+
+    .modal-header--buscar .close {
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.16s ease;
+    }
+
+    .modal-header--buscar .close:hover {
+      transform: scale(1.15);
+    }
+
+    /* ===== Corpo (rolagem interna) ===== */
+    /* flex: 1 1 auto faz o corpo ocupar o espaço restante dentro do modal */
+    .modal-body--buscar {
+      flex: 1;
+      overflow-y: auto;
+      /* 🔹 rolagem garantida */
+      padding: 1.8rem;
+      -webkit-overflow-scrolling: touch;
+      /* melhora rolagem em dispositivos móveis */
+      scrollbar-width: thin;
+      scrollbar-color: #1b8ef2 #f1f1f1;
+    }
+
+    /* Scrollbar estilizada (opcional) */
+    .modal-body--buscar::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .modal-body--buscar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .modal-body--buscar::-webkit-scrollbar-thumb {
+      background: #1b8ef2;
+      border-radius: 10px;
+    }
+
+    .modal-body--buscar::-webkit-scrollbar-thumb:hover {
+      background: #1678cf;
+    }
+
+    .modal-body--buscar {
+      scrollbar-width: thin;
+      scrollbar-color: #1b8ef2 #f1f1f1;
+    }
+
+    /* ===== Conteúdo interno ===== */
+    .teacher-profile {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .profile-header--buscar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .profile-info {
+      font-size: 1.25rem;
+      margin: 0;
+      color: #222;
+    }
+
+    .profile-price {
+      font-size: 1.05rem;
+      color: #1b8ef2;
+      font-weight: 600;
+    }
+
+    /* ===== Seções ===== */
+    .profile-section--buscar h3 {
+      margin-bottom: 0.45rem;
+      font-size: 1.02rem;
+      color: #1b8ef2;
+    }
+
+    .profile-section--buscar p {
+      color: #444;
+      line-height: 1.55;
+    }
+
+    .profile-section--buscar ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: grid;
+      gap: .45rem;
+    }
+
+    /* itens */
+    .profile-section--buscar li {
+      background: #f4f8fc;
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+      color: #222;
+    }
+
+    /* ===== Ações (fixas na base do modal) ===== */
+    .profile-actions--buscar {
+      display: flex;
+      justify-content: flex-end;
+      gap: .8rem;
+      padding: 0.9rem 1.2rem;
+      /* espaçamento consistente */
+      border-top: 1px solid rgba(0, 0, 0, 0.04);
+      flex-shrink: 0;
+      /* impede que as ações sejam roladas para fora */
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6));
+      /* sutil */
+    }
+
+    /* ===== Botões ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      border: none;
+      border-radius: 8px;
+      padding: .6rem 1rem;
+      cursor: pointer;
+      font-size: .95rem;
+    }
+
+    .btn-primary {
+      background: #1b8ef2;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #1678cf;
+    }
+
+    /* ===== Animações (opcionais) ===== */
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    /* ===== Responsividade ===== */
+    @media (max-width: 600px) {
+
+      .modal-content,
+      .modal-content--buscar {
+        width: 95%;
+        max-height: 90vh;
+      }
+
+      .profile-actions--buscar {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: .5rem;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }

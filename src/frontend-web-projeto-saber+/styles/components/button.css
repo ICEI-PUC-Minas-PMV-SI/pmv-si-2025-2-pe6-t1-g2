@@ -1,0 +1,85 @@
+.form-actions, .actions {
+    display: flex;
+    gap: var(--spacing-6);
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    line-height: 1.2;
+    border-radius: var(--raio-borda);
+    padding: 0.6rem 1.4rem;
+    font-size: var(--font-size-sm);
+    border: 0;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    box-shadow: none;
+    will-change: transform;
+}
+
+/* submit button */
+.btn-submit {
+    display: block;
+    width: 100%;
+    background: var(--black);
+    color: var(--white);
+}
+
+
+.btn-icon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: var(--espacamento-pequeno);
+
+}
+
+/* .btn:focus {
+    outline: 3px solid rgba(0, 0, 0, 0.08);
+    outline-offset: 3px;
+} */
+
+ /* a.btn {
+    text-decoration: none;
+    background: var(--cor-secundaria);
+    color: var(--white);
+} */
+
+.btn > a {
+    text-decoration: none;
+    background: var(--cor-secundaria);
+    color: var(--white);
+}
+
+.btn-primary {
+    background: var(--cor-secundaria);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background: var(--cor-primaria);
+    color: var(--black);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+    transform: translateY(0);
+}
+
+.btn-ghost {
+    background: var(--cor-primaria);
+    color: var(--black);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.btn-ghost:hover {
+    transform: translateY(-2px);
+}

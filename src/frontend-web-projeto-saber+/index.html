@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação - Home</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html">
+                <picture>
+                    <source srcset="assets/images/logo-120.png" media="(min-width: 1000px)">
+                    <img src="assets/images/logo-100.png" alt="Exemplo responsivo">
+                </picture>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#principal" class="nav-link">Início</a>
+                <a href="#categoria" class="nav-link">Categorias</a>
+                <a href="#funcionamento" class="nav-link">Como funciona?</a>
+                <div class="actions">
+                    <a href="login.html" class="btn btn-primary">Entrar</a>
+                    <button id="openModalCadastro" class="btn btn-secondary" type="button ">Cadastrar</button>
+                </div>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section id="principal" class="section-size section-texture">
+            <div class="container hero-setion">
+                <h1 class="hero-title">
+                    Encontre o<br />professor perfeito
+                </h1>
+                <p class="hero-sub">
+                    Explore milhares de especialistas em diversas áreas, prontos para oferecer aulas personalizadas e
+                    ajudar você a alcançar seus objetivos. Encontre o professor particular ideal de forma simples,
+                    rápida e segura.
+                </p>
+                <div class="hero-cta">
+
+                    </button>
+                    <div class="hero-cta">
+                        <a href="buscar.html" class="btn-icon btn btn-primary">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Encontrar<br> professor
+                        </a>
+
+                        <a href="teachers/cadastrar.html" class="btn-icon btn btn-secondary">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            Seja um<br> professor
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categoria" class="categoria-cards">
+            <div class="container">
+                <div class="content-text">
+                    <h2 class="title">Categorias Populares</h2>
+                    <p class="descricao-categoria">
+                        Do reforço escolar ao seu novo hobby, temos especialistas prontos para ensinar.
+                        Encontre a categoria que mais inspira você ou explore todas as nossas áreas de conhecimento.
+                    </p>
+                </div>
+
+                <div class="grid-categorias--home">
+                    <div class="card--home">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Programação</h3>
+                        <p>450+ professores</p>
+                        <span class="category-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="card--home">
+                        <div class="category-icon icon-idiomas">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>Idiomas</h3>
+                        <p>320+ professores</p>
+                        <span class="category-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+
+                    <div class="card--home">
+                        <div class="category-icon icon-matematica">
+                            <i class="fas fa-square-root-alt"></i>
+                        </div>
+                        <h3>Matemática</h3>
+                        <p>210+ professores</p>
+                        <span class="category-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+
+                    <div class="card--home">
+                        <div class="category-icon icon-portugues">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Português</h3>
+                        <p>190+ professores</p>
+                        <span class="category-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+
+                    <div class="card--home">
+                        <div class="category-icon icon-esportes">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <h3>Esportes</h3>
+                        <p>150+ professores</p>
+                        <span class="category-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+
+                    <div class="card--home">
+                        <div class="category-icon icon-ciencias">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3>Ciências</h3>
+                        <p>275+ professores</p>
+                        <span class="category-arrow"><i class="fas fa-arrow-right"></i></span>
+                    </div>
+
+                </div>
+            </div>
+            <a class="btn btn-secondary" id="btn-categoria" href="buscar.html">🔍 Buscar outras categorias</a>
+        </section>
+
+        <section id="funcionamento" class="secao-funcionamento">
+            <div class="container">
+                <h2 class="title">Como Funciona?</h2>
+
+                <p>Em apenas 3 passos simples, você encontra e agenda sua aula ideal.</p>
+
+                <div class="passos">
+                    <!-- Passo 1 -->
+                    <div class="card-funcionamento">
+                        <div class="numero">1</div>
+                        <h3>Busque e Descubra</h3>
+                        <p>
+                            Utilize nossa busca para encontrar especialistas na área que você
+                            deseja. Para buscar o perfil perfeito, filtre por preço, modalidade (online ou presencial),
+                            avaliações e disponibilidade.
+                        </p>
+                    </div>
+
+                    <!-- Passo 2 -->
+                    <div class="card-funcionamento">
+                        <div class="numero">2</div>
+                        <h3>Agende com Facilidade</h3>
+                        <p>
+                            Encontrou o professor ideal? Verifique a agenda de horários
+                            disponíveis e envie uma solicitação de aula com apenas alguns
+                            cliques. A comunicação é direta e segura dentro da plataforma.
+                        </p>
+                    </div>
+
+                    <!-- Passo 3 -->
+                    <div class="card-funcionamento">
+                        <div class="numero">3</div>
+                        <h3>Aprenda e Evolua</h3>
+                        <p>
+                            Realize sua aula e dê o próximo passo na sua jornada de conhecimento.
+                            Ao final, não se esqueça de avaliar a experiência para fortalecer
+                            nossa comunidade e ajudar outros alunos!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-texture-2">
+            <div class="container secao-anuncio">
+                <h2 class="title">Pronto para começar sua jornada de aprendizado?</h2>
+                <p>Junte-se a milhares de alunos que já transformaram suas vidas através da educação.</p>
+                <div class="actions">
+                    <a class="btn btn-primary" href="login.html">Começar agora</a>
+                    <a class="btn btn-secondary" href="buscar.html">Ver professores</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <picture>
+                    <source srcset="assets/images/logo-200.png" media="(min-width: 1000px)">
+                    <source srcset="assets/images/logo-150.png" media="(min-width: 600px)">
+                    <img src="assets/images/logo-100.png" alt="Logo do site">
+                </picture>
+                <p>O conhecimento que você procura, a um clique de distância.</p>
+            </div>
+
+            <nav class="footer-col">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Grupo 2. Todos os direitos reservados.
+        </div>
+    </footer>
+
+
+    <!-- MODAL 2 -->
+    <div id="modalCadastro" class="modal">
+        <div class="modal-content">
+            <span id="closeModalCadastro" class="close">&times;</span>
+            <h2>Cadastro</h2>
+
+            <div class="actions">
+                <!-- Login para estudante -->
+                <div class="login-option">
+                    <img src="assets/images/student.jpg" alt="Estudante" class="login-img">
+                    <a class="btn btn-primary" href="./student/cadastrar.html">Cadastro para estudante</a>
+                </div>
+
+                <!-- Login para instrutor -->
+                <div class="login-option">
+                    <img src="assets/images/teacher.png" alt="Instrutor" class="login-img">
+                    <a class="btn btn-primary" href="./teachers/cadastrar.html">Cadastro para instrutor</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html>

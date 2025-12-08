@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <title>Editar o perfil</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body class="body-flex">
+  <header class="header">
+    <div class="container-header header-inner">
+      <a href="../home.html">
+        <picture>
+          <source srcset="../assets/images/logo-120.png" media="(min-width: 1000px)">
+          <img src="../assets/images/logo-100.png" alt="Exemplo responsivo">
+        </picture>
+      </a>
+
+      <div class="user-menu">
+        <button class="user-avatar btn-primary" onclick="toggleUserMenu()">A</button>
+        <div class="user-dropdown" id="userDropdown">
+          <a href="./editar-perfil.html">Editar Dados</a>
+          <a href="./dashboard.html" class="hidden" id="buttonDashboard">Dashboard</a>
+          <a href="#" class="nav-link" onclick="logout()">Sair</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <form id="editForm" class="container">
+      <h2 class="title">Editar Dados do Professor</h2>
+
+      <label class="field-label">Nome</label>
+      <input class="org-input" type="text" id="nome">
+
+      <label class="field-label">Email</label>
+      <input class="org-input" type="email" id="email">
+
+      <label class="field-label">CPF</label>
+      <input class="org-input input-field" type="text" id="cpf" disabled>
+
+      <label class="field-label">Tipo</label>
+      <input class="org-input input-field" type="text" id="tipo" disabled>
+
+      <label class="field-label">Descrição</label>
+      <textarea id="descricao" class="org-input input-field" rows="3"></textarea>
+
+      <label class="field-label">Certificações <span>(Separe por vírgula)*</span></label>
+      <textarea id="certificacoes" class="org-input input-field" rows="2"></textarea>
+
+      <label class="field-label">Competências <span>(Separe por vírgula)*</span></label>
+      <textarea id="competencias" class="org-input input-field" rows="2"></textarea>
+
+      <label class="field-label">Valor Hora (R$)</label>
+      <input class="org-input input-field" type="number" id="valorHora" step="0.01">
+
+      <label class="field-label">Senha <span>(Informe sua senha para salvar os dados)*</span></label>
+      <div class="password-wrapper org-input">
+        <input id="senha" name="senha" type="password" class="input-field input-password" id="senha" required/>
+        <button type="button" class="btn-eye" id="toggleSenha">%</button>
+      </div>
+
+      <label class="field-label" for="areaInput">Áreas de Atuação</label>
+      <div class="areas-input-wrap">
+        <input type="text" id="areaInput" class="areas-input input-field" placeholder="Digite uma área...">
+        <button id="addAreaBtn" class="btn">Adicionar</button>
+        <div id="suggestionsBox" class="suggestions hidden"></div>
+      </div>
+
+      <div id="tagList" class="tag-list" aria-label="Áreas selecionadas"></div>
+
+      <section class="disponibilidade-section">
+        <label class="field-label" style="margin-top: 40px;">Disponibilidades</label>
+        <div class="controls">
+          <button id="addBtn" class="btn btn-primary" type="button" aria-label="Adicionar horário">
+            Adicionar horário
+          </button>
+          <button id="clearBtn" class="btn ghost" type="button" aria-label="Limpar todos os horários">
+            Limpar tudo
+          </button>
+        </div>
+        <div id="rows" class="rows" aria-label="Lista de horários"></div>
+        <div id="summary" class="summary" aria-atomic="true"></div>
+        </div>
+      </section>
+
+      <button id="saveBtn" class="btn btn-secondary" type="button">Salvar</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <picture>
+          <source srcset="../assets/images/logo-200.png" media="(min-width: 1000px)">
+          <source srcset="../assets/images/logo-150.png" media="(min-width: 600px)">
+          <img src="../assets/images/logo-100.png" alt="Logo do site">
+        </picture>
+        <p>O conhecimento que você procura, a um clique de distância</p>
+      </div>
+
+      <nav class="footer-col">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Grupo 2. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script type="module" src="../scripts/main.js"></script>
+  <script type="module" src="../scripts/services/editUserService.js"></script>
+  <script>
+        function logout() {
+            localStorage.removeItem("jwtToken");
+            alert("Desconectando...");
+            setTimeout(() => window.location.href = "../login.html", 1000);
+        }
+    </script>
+
+</body>
+
+</html>

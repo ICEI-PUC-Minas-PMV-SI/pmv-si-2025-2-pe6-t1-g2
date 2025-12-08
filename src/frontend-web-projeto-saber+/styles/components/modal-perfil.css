@@ -1,0 +1,219 @@
+.modal--perfil {
+  background: #fff;
+
+  max-width: 720px;
+  width: 95%;
+  max-height: 85vh;
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  font-family: inherit;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Fundo do Modal (overlay) ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+/* .dialog-fallback {
+  background: white;
+  border-radius: 8px;
+  max-width: 720px;
+  width: 95%;
+  padding: 0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+} */
+
+/* header e botões (ajuste para seu CSS existente) */
+.modal--perfil .modal-header--perfil,
+.dialog-fallback {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.close-btn,
+.close {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.16s ease;
+  color: #333;
+}
+
+.close-btn:hover,
+.close:hover {
+  transform: scale(1.15);
+}
+
+.form-actions--perfil {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+
+/* .close--perfil {
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+} */
+
+.modal-header h2 {
+  font-size: var(--font-size-2xl);
+  color: #1b8ef2;
+  margin: 0;
+}
+
+/* ===== Corpo com rolagem interna ===== */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.8rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #1b8ef2 #f1f1f1;
+}
+
+.profile-header::-webkit-scrollbar {
+  width: 8px;
+}
+
+.profile-header::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.profile-header::-webkit-scrollbar-thumb {
+  background: #1b8ef2;
+  border-radius: 10px;
+}
+
+.profile-header::-webkit-scrollbar-thumb:hover {
+  background: #1678cf;
+}
+
+/* ===== Estrutura interna ===== */
+.profile-info {
+  font-size: 1.15rem;
+  color: #222;
+}
+
+.profile-price {
+  font-size: 1.05rem;
+  color: #1b8ef2;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.profile-section {
+  margin-top: 1rem;
+}
+
+.profile-section h4 {
+  font-size: 1.02rem;
+  color: #1b8ef2;
+  margin-bottom: 0.5rem;
+}
+
+.profile-section p {
+  color: #444;
+  line-height: 1.55;
+}
+
+.profile-section ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.profile-section li {
+  background: #f4f8fc;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  color: #222;
+}
+
+/* ===== Botões ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  background: #1b8ef2;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1678cf;
+}
+
+/* ===== Animações ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 600px) {
+  .modal--perfil {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

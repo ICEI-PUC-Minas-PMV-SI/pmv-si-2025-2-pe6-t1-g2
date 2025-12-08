@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <title>Aplicação - Home</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body class="body-flex">
+    <header class="header">
+        <div class="header-inner">
+            <a href="../index.html">
+                <picture>
+                    <source srcset="../assets/images/logo-120.png" media="(min-width: 1000px)">
+                    <img src="../assets/images/logo-100.png" alt="Exemplo responsivo">
+                </picture>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Como funciona?</a>
+                <div class="actions">
+                    <a href="login.html" class="btn btn-primary">Entrar</a>
+                </div>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section-size .formulario">
+            <div class="container ">
+                <div class="formulario-cadastro">
+                    <div class="form-wrap" role="region" aria-labelledby="tituloCadastro">
+                        <h1 id="tituloCadastro" class="title">Cadastro de Professor</h1>
+                        <p>
+                            Já possui uma conta?
+                            <a href="../login.html"><u>Entrar</u></a>
+                        </p>
+                        <form id="multiStepForm" class="cadastro-form" novalidate>
+                            <!-- Progress -->
+                            <div id="progress" aria-hidden="true" style="margin-bottom:12px;">
+                                <span id="progressText">Etapa 1 de 2</span>
+                                <div style="height:6px;background:#e6e6e6;border-radius:6px;margin-top:6px;">
+                                    <div id="progressBar"
+                                        style="height:100%;width:50%;background:#000;border-radius:6px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- STEP 1 -->
+                            <fieldset data-step="1">
+                                <label class="field-label" for="nome">Nome completo *</label>
+                                <input id="nome" class="input-field org-input--field" type="text" name="nome"
+                                    required />
+                                <label class="field-label" for="email">E-mail *</label>
+                                <input id="email" class="input-field org-input--field" type="email" name="email"
+                                    required />
+                                <label class="field-label" for="senha">Senha *</label>
+                                <div class="password-wrapper org-input--field">
+                                    <input id="senha" name="senha" type="password" class="input-field input-password"
+                                        required />
+                                    <button type="button" class="btn-eye" id="toggleSenha">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960"
+                                            width="20px" fill="#434343">
+                                            <path
+                                                d="M480-312q70 0 119-49t49-119q0-70-49-119t-119-49q-70 0-119 49t-49 119q0 70 49 119t119 49Zm0-72q-40 0-68-28t-28-68q0-40 28-68t68-28q40 0 68 28t28 68q0 40-28 68t-68 28Zm0 192q-142.6 0-259.8-78.5Q103-349 48-480q55-131 172.2-209.5Q337.4-768 480-768q142.6 0 259.8 78.5Q857-611 912-480q-55 131-172.2 209.5Q622.6-192 480-192Zm0-288Zm0 216q112 0 207-58t146-158q-51-100-146-158t-207-58q-112 0-207 58T127-480q51 100 146 158t207 58Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <label class="field-label" for="senha">Confirmar senha *</label>
+                                <div class="password-wrapper org-input--field">
+                                    <input id="confirmarSenha" name="confirmarSenha" type="password"
+                                        class="input-field input-password" required />
+                                    <button type="button" class="btn-eye" id="toggleConfirmarSenha">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960"
+                                            width="20px" fill="#434343">
+                                            <path
+                                                d="M480-312q70 0 119-49t49-119q0-70-49-119t-119-49q-70 0-119 49t-49 119q0 70 49 119t119 49Zm0-72q-40 0-68-28t-28-68q0-40 28-68t68-28q40 0 68 28t28 68q0 40-28 68t-68 28Zm0 192q-142.6 0-259.8-78.5Q103-349 48-480q55-131 172.2-209.5Q337.4-768 480-768q142.6 0 259.8 78.5Q857-611 912-480q-55 131-172.2 209.5Q622.6-192 480-192Zm0-288Zm0 216q112 0 207-58t146-158q-51-100-146-158t-207-58q-112 0-207 58T127-480q51 100 146 158t207 58Z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-secondary" id="nextBtn1">Próximo</button>
+                                </div>
+                            </fieldset>
+                            <!-- STEP 2 -->
+                            <fieldset data-step="2" hidden>
+                                <label class="field-label" for="cpf">CPF *</label>
+                                <input id="cpf" class="input-field org-input--field" type="text" name="cpf" required
+                                    placeholder="000.000.000-00" />
+                                <label class="field-label" for="descricao">Descrição *</label>
+                                <textarea id="descricao" class="input-field org-input--field" name="descricao" rows="4"
+                                    required></textarea>
+                                <label class="field-label" for="certificacoes">Certificações * <small>(separe por
+                                        vírgula)</small></label>
+                                <input id="certificacoes" class="input-field org-input--field" type="text"
+                                    name="certificacoes" required placeholder="Cisco, Google" />
+                                <label class="field-label" for="competencias">Competências * <small>(separe por
+                                        vírgula)</small></label>
+                                <input id="competencias" class="input-field org-input--field" type="text"
+                                    name="competencias" required placeholder="JavaScript, Python" />
+                                <label class="field-label" for="valorHora">Valor por Hora (R$) *</label>
+                                <input id="valorHora" class="input-field org-input--field" type="number"
+                                    name="valorHora" required min="0" step="0.01" placeholder="75.50" />
+                                <div class="actions">
+                                    <button type="button" class="btn btn-secondary" id="backBtn2">Voltar</button>
+                                    <button type="submit" class="btn btn-submit" id="submitBtn">Cadastrar</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <picture>
+                    <source srcset="../assets/images/logo-200.png" media="(min-width: 1000px)">
+                    <source srcset="../assets/images/logo-150.png" media="(min-width: 600px)">
+                    <img src="../assets/images/logo-100.png" alt="Logo do site">
+                </picture>
+                <p>O conhecimento que você procura, a um clique de distância</p>
+            </div>
+
+            <nav class="footer-col">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Grupo 2. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script type="module" src="../scripts/main.js"></script>
+    <script type="module" src="../scripts/form-professor.js"></script>
+</body>
+
+</html>

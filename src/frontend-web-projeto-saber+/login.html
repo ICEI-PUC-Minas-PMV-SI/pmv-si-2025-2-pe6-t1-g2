@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Aplicação - Home</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body class="body-flex">
+    <header class="header">
+        <div class="container-header header-inner">
+            <a href="./index.html">
+                <picture>
+                    <source srcset="../assets/images/logo-120.png" media="(min-width: 1000px)">
+                    <img src="../assets/images/logo-100.png" alt="Exemplo responsivo">
+                </picture>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="../buscar.html" class="nav-link">Encontrar professor</a>
+                <!-- <a href="sobre-nos.html" class="nav-link">Sobre nós</a> -->
+                <div class="actions">
+                    <button id="openModalCadastro" class="btn btn-secondary" type="button">Cadastrar</button>
+                </div>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-login">
+        <section class="secao-login">
+            <div class="container">
+                <div class="form-wrap" role="region" aria-labelledby="tituloLogin">
+                    <h1 id="tituloLogin" class="title">Entrar no perfil</h1>
+                    <p>
+                        Não possui uma conta?
+                        <button id="openModalCadastroForm" class="clicavel" type="button">
+                            <u>Criar cadastro</u>
+                        </button>
+                    </p>
+                    <form class="login-form" id="loginForm">
+                        <label class="field-label" for="email">E-mail</label>
+                        <input id="email" class="input-field org-input--field" type="email" placeholder="Seu e-mail"
+                            required autocomplete="email" />
+                        <label class="field-label" for="senha">Senha *</label>
+                        <div class="password-wrapper org-input--field">
+                            <input id="senha" name="senha" type="password" class="input-field input-password"
+                                placeholder="Sua senha" required />
+                            <button type="button" class="btn-eye" id="toggleSenha">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960"
+                                    width="20px" fill="#434343">
+                                    <path
+                                        d="M480-312q70 0 119-49t49-119q0-70-49-119t-119-49q-70 0-119 49t-49 119q0 70 49 119t119 49Zm0-72q-40 0-68-28t-28-68q0-40 28-68t68-28q40 0 68 28t28 68q0 40-28 68t-68 28Zm0 192q-142.6 0-259.8-78.5Q103-349 48-480q55-131 172.2-209.5Q337.4-768 480-768q142.6 0 259.8 78.5Q857-611 912-480q-55 131-172.2 209.5Q622.6-192 480-192Zm0-288Zm0 216q112 0 207-58t146-158q-51-100-146-158t-207-58q-112 0-207 58T127-480q51 100 146 158t207 58Z" />
+                                </svg>
+                            </button>
+                        </div>
+                        <button class="btn btn-submit" type="submit">Entrar</button>
+                        <p id="errorMsg"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <picture>
+                    <source srcset="../assets/images/logo-200.png" media="(min-width: 1000px)">
+                    <source srcset="../assets/images/logo-150.png" media="(min-width: 600px)">
+                    <img src="../assets/images/logo-100.png" alt="Logo do site">
+                </picture>
+                <p>O conhecimento que você procura, a um clique de distância</p>
+            </div>
+
+            <nav class="footer-col">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Grupo 2. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- MODAL 2 -->
+    <div id="modalCadastro" class="modal">
+        <div class="modal-content">
+            <span id="closeModalCadastro" class="close">&times;</span>
+            <h2>Cadastro</h2>
+
+            <div class="actions">
+                <!-- Login para estudante -->
+                <div class="login-option">
+                    <img src="assets/images/student.jpg" alt="Estudante" class="login-img">
+                    <a class="btn btn-primary" href="./student/cadastrar.html">Cadastro para estudante</a>
+                </div>
+
+                <!-- Login para instrutor -->
+                <div class="login-option">
+                    <img src="assets/images/teacher.png" alt="Instrutor" class="login-img">
+                    <a class="btn btn-primary" href="./teachers/cadastrar.html">Cadastro para instrutor</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/login.js"></script>
+    <script type="module" src="./scripts/services/loginUser.js"></script>
+</body>
+
+</html>

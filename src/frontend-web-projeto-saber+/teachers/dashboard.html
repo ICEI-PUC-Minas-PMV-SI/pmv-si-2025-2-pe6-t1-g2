@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <title>Aplicação - Home</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body class="body-flex">
+    <header class="header">
+        <div class="container-header header-inner">
+            <a href="../home.html">
+                <picture>
+                    <source srcset="../assets/images/logo-120.png" media="(min-width: 1000px)">
+                    <img src="../assets/images/logo-100.png" alt="Exemplo responsivo">
+                </picture>
+            </a>
+
+            <div class="user-menu">
+                <button class="user-avatar btn-primary" onclick="toggleUserMenu()">A</button>
+                <div class="user-dropdown" id="userDropdown">
+                    <a href="./editar-perfil.html">Editar Dados</a>
+                    <a href="./dashboard.html" class="hidden" id="buttonDashboard">Dashboard</a>
+                    <a href="#" class="nav-link" onclick="logout()">Sair</a>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <main class="dashboard-main">
+
+        <div class="container">
+            <!-- ======== DASHBOARD HEADER ======== -->
+            <section class="profile-header-section"></section>
+            <header class="dashboard-header">
+                <div class="welcome-section">
+                    <h1>Olá, <span id="userName"></span>! 👋</h1>
+                    <p>Bem-vindo(a) de volta ao seu painel de controle.</p>
+                </div>
+                <nav class="quick-actions">
+                    <!-- <button class="btn btn-primary" onclick="quickSchedule()">
+                        <i class="fas fa-plus"></i> Agendar Aula
+                    </button> -->
+                    <!-- <button class="btn-outline" onclick="findTeacher()">
+                            <i class="fas fa-search"></i> Buscar Professor
+                        </button> -->
+                </nav>
+            </header>
+            </section>
+
+            <!-- ======== STATS CARDS ======== -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="stat-info">
+                        <h3 id="aulasAgendadas"></h3>
+                        <p>Aulas Agendadas</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="stat-info">
+                        <h3 id="aulasConcluidas"></h3>
+                        <p>Aulas Concluídas</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="stat-info">
+                        <h3 id="totalAlunos"></h3>
+                        <p>Alunos</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                    <div class="stat-info">
+                        <h3 id="horasAulas"></h3>
+                        <p>Horas de Aula</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div id="info-professor"></div>
+            </section>
+            <!-- ======== DASHBOARD CONTENT ======== -->
+            <section class="dashboard-content">
+                <!-- ======== COLUNA ESQUERDA ======== -->
+                <aside class="dashboard-left">
+                    <!-- Próximas Aulas -->
+                    <div class="dashboard-card">
+                        <header class="card-header">
+                            <h2>Próximas Aulas</h2>
+                            <a href="#" class="view-all">Ver todas</a>
+                        </header>
+                        <div class="lessons-list" id="upcomingLessons">
+                            <!-- Conteúdo carregado dinamicamente -->
+
+                            <!-- Modal de Avaliação -->
+                            <dialog id="avaliacaoModal" class="modal-overlay--avaliacao">
+                                <div class="avaliacao-modal">
+                                    <h3 class="title">Avaliar Aula</h3>
+                                    <form id="avaliacaoForm" method="dialog">
+                                        <input type="hidden" id="agendamentoId">
+                                        <input type="hidden" id="avaliadorAlunoId">
+                                        <input type="hidden" id="avaliadorProfessorId">
+                                        <!-- Campo Nota -->
+                                        <div class="avaliacao-nota">
+                                            <label>Nota <span class="obrigatorio">*</span></label>
+                                            <div id="estrelas" class="estrelas">
+                                                <i class="fas fa-star" data-value="1"></i>
+                                                <i class="fas fa-star" data-value="2"></i>
+                                                <i class="fas fa-star" data-value="3"></i>
+                                                <i class="fas fa-star" data-value="4"></i>
+                                                <i class="fas fa-star" data-value="5"></i>
+                                            </div>
+                                        </div>
+                                        <!-- Campo Comentário -->
+                                        <div class="avaliacao-comentario">
+                                            <label for="avaliacaoTexto">Comentário <span
+                                                    class="obrigatorio">*</span></label>
+                                            <textarea id="avaliacaoTexto" placeholder="Descreva como foi a aula..."
+                                                maxlength="500" required></textarea>
+                                            <small id="contadorCaracteres">0 / 500</small>
+                                        </div>
+                                        <!-- Botões -->
+                                        <div class="avaliacao-botoes">
+                                            <button type="button" id="salvarAvaliacao"
+                                                class="btn-evaluate">Salvar</button>
+                                            <button class="btn" type="button"
+                                                onclick="fecharAvaliacao()">Cancelar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </dialog>
+
+                            <!-- <div class="card-content" id="activityTimeline">
+                                <div class="lesson-item pending">
+                                    <div class="lesson-avatar">A</div>
+                                    <div class="lesson-info">
+                                        <div class="lesson-header">
+                                            <h4>Química</h4>
+                                            <span class="lesson-status status-pending">Pendente</span>
+                                        </div>
+                                        <p class="lesson-teacher">Prof. Ana Costa</p>
+                                        <p class="lesson-topic">Química Orgânica</p>
+                                        <div class="lesson-details">
+                                            <span class="lesson-date">
+                                                <i class="fas fa-calendar"></i>
+                                                ter., 23 de jan.
+                                            </span>
+                                            <span class="lesson-time">
+                                                <i class="fas fa-clock"></i>
+                                                16:00 (90min)
+                                            </span>
+                                            <span class="lesson-type">
+                                                <i class="fas fa-video"></i>
+                                                Online
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="lesson-actions">
+                                        <button class="btn-sm btn-outline" onclick="rescheduleLesson(3)">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-sm btn-primary" onclick="joinLesson(3)">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <button class="btn-evaluate" onclick="openEvaluation()">
+                                            <i class="fas fa-star-half-alt"></i>
+                                            Avaliar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <!-- Atividade Recente -->
+                    <div class="dashboard-card">
+                        <header class="card-header">
+                            <h2>Atividade Recente</h2>
+                        </header>
+                        <div class="activity-list" id="recentActivity">
+                            <!-- Conteúdo carregado dinamicamente -->
+
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- ======== COLUNA DIREITA ======== -->
+                 <!-- Calendário -->
+                <aside class="dashboard-right">
+                    <!-- <div id="card-calendar" class="dashboard-card">
+                        <header class="card-header">
+                            <h2>Calendário</h2>
+                        </header>
+                        <div class="calendar-widget" id="calendarWidget">
+                            
+                        </div>
+                    </div> -->
+        </div>
+        </aside>
+        </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <picture>
+                    <source srcset="../assets/images/logo-200.png" media="(min-width: 1000px)">
+                    <source srcset="../assets/images/logo-150.png" media="(min-width: 600px)">
+                    <img src="../assets/images/logo-100.png" alt="Logo do site">
+                </picture>
+                <p>O conhecimento que você procura, a um clique de distância</p>
+            </div>
+
+            <nav class="footer-col">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../sobre-nos.html">Sobre Nós</a></li>
+                    <li><a href="../contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Grupo 2. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script type="module" src="../scripts/main.js"></script>
+    <script type="module" src="../scripts/dashboard.js"></script>
+    <!-- <script type="module" src="../scripts/services/professoresService.js"></script> -->
+    <!-- <script type="module" src="../scripts/config/verifyLogin.js"></script> -->
+    <script>
+        function logout() {
+            localStorage.removeItem("jwtToken");
+            alert("Desconectando...");
+            setTimeout(() => window.location.href = "../login.html", 1000);
+        }
+    </script>
+</body>
+
+</html>

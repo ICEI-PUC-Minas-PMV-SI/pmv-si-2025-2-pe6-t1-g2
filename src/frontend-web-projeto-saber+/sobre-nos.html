@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Buscar Professores — Exemplo</title>
+
+    <!-- Font Awesome (opcional) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        /* --- Reset / layout simples --- */
+        :root {
+            --bg: #f6f7fb;
+            --card: #fff;
+            --accent: #0b6;
+            --muted: #666;
+            --glass: rgba(0, 0, 0, 0.06);
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            color: #111;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px
+        }
+
+        .title {
+            margin: 8px 0 18px;
+            font-size: 1.6rem
+        }
+
+        /* Busca */
+        .search {
+            display: flex;
+            gap: 8px;
+            max-width: 640px
+        }
+
+        .search input[type="search"] {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--glass);
+            background: #fff
+        }
+
+        .search button {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--glass);
+            background: var(--accent);
+            color: #fff
+        }
+
+        /* Filtros */
+        .filtros {
+            margin: 12px 0;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--glass);
+            background: #fff;
+            cursor: pointer
+        }
+
+        .btn-primary {
+            background: #0b6;
+            color: #fff;
+            border: none
+        }
+
+        .btn-ghost {
+            background: transparent
+        }
+
+        /* Lista de professores (grid) */
+        /* .prof-lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 14px
+        } */
+
+        .prof-card {
+            background: var(--card);
+            padding: 14px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(7, 10, 20, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+
+        .prof-card__foto {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: #ddd
+        }
+
+        .prof-card__nome {
+            margin: 0;
+            font-size: 1.05rem
+        }
+
+        .prof-card__Conteúdo {
+            margin: 0;
+            color: var(--muted);
+            font-size: .95rem
+        }
+
+        .prof-card__meta {
+            list-style: none;
+            padding: 0;
+            margin: 8px 0 0;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            color: var(--muted);
+            font-size: .9rem
+        }
+
+        .prof-card__acoes {
+            margin-top: auto;
+            display: flex;
+            gap: 8px;
+            align-items: center
+        }
+
+        /* ===== Fundo do Modal (overlay) ===== */
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            z-index: 1000;
+            animation: fadeIn 0.2s ease forwards;
+        }
+
+        .overlay.show {
+            display: flex;
+        }
+
+        /* ===== Estrutura do Modal ===== */
+        .modal--perfil {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            max-width: 700px;
+            width: 100%;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* ===== Cabeçalho ===== */
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .modal-header h2 {
+            font-size: 1.35rem;
+            color: #1b8ef2;
+            margin: 0;
+        }
+
+        .modal-header .small-muted {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .close-btn {
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.16s ease;
+            color: #333;
+        }
+
+        .close-btn:hover {
+            transform: scale(1.15);
+        }
+
+        /* ===== Corpo com rolagem interna ===== */
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            padding: 1.8rem;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: #1b8ef2 #f1f1f1;
+        }
+
+        .profile-header::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .profile-header::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .profile-header::-webkit-scrollbar-thumb {
+            background: #1b8ef2;
+            border-radius: 10px;
+        }
+
+        .profile-header::-webkit-scrollbar-thumb:hover {
+            background: #1678cf;
+        }
+
+        /* ===== Estrutura interna ===== */
+        .profile-info {
+            font-size: 1.15rem;
+            color: #222;
+        }
+
+        .profile-price {
+            font-size: 1.05rem;
+            color: #1b8ef2;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .profile-section {
+            margin-top: 1rem;
+        }
+
+        .profile-section h4 {
+            font-size: 1.02rem;
+            color: #1b8ef2;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-section p {
+            color: #444;
+            line-height: 1.55;
+        }
+
+        .profile-section ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: grid;
+            gap: 0.45rem;
+        }
+
+        .profile-section li {
+            background: #f4f8fc;
+            border-radius: 8px;
+            padding: 0.55rem 0.9rem;
+            color: #222;
+        }
+
+        /* ===== Botões ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            border: none;
+            border-radius: 8px;
+            padding: 0.6rem 1rem;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: #1b8ef2;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #1678cf;
+        }
+
+        /* ===== Animações ===== */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== Responsividade ===== */
+        @media (max-width: 600px) {
+            .modal--perfil {
+                width: 95%;
+                max-height: 90vh;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Dialog agendamento */
+        dialog {
+            border: none;
+            border-radius: 12px;
+            padding: 0;
+            max-width: 640px;
+            width: 100%
+        }
+
+        .agendar-card {
+            padding: 18px;
+            background: #fff;
+            border-radius: 12px
+        }
+
+        .agendar-row {
+            display: flex;
+            gap: 8px
+        }
+
+        .agendar-input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid var(--glass)
+        }
+
+        .btn-close-modal {
+            background: transparent;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 6px
+        }
+
+        /* mensagens simples */
+        .small-muted {
+            font-size: .9rem;
+            color: var(--muted)
+        }
+
+        /* responsividade */
+        @media (max-width:560px) {
+            .profile-header {
+                flex-direction: column;
+                align-items: flex-start
+            }
+
+            .profile-foto {
+                width: 100%;
+                height: 160px
+            }
+        }
+
+        /* Oculta todas as seções de filtro */
+        .filter-section {
+            display: none;
+        }
+
+        /* Mostra apenas a aba ativa */
+        .filter-section.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html">
+                <picture>
+                    <source srcset="assets/images/logo-120.png" media="(min-width: 1000px)">
+                    <img src="assets/images/logo-100.png" alt="Exemplo responsivo">
+                </picture>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#principal" class="nav-link">Início</a>
+                <a href="#categoria" class="nav-link">Categorias</a>
+                <a href="#funcionamento" class="nav-link">Como funciona?</a>
+                <div class="actions">
+                    <a href="login.html" class="btn btn-primary">Entrar</a>
+                    <button id="openModalCadastro" class="btn btn-secondary" type="button ">Cadastrar</button>
+                </div>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="title">Busque pelo Professor Perfeito</h1>
+
+        <form class="search" id="searchForm" role="search" aria-label="Buscar professores">
+            <input id="inputBuscar" name="inputBuscar" type="search" placeholder="Pesquisar por nome, matéria ou habilidade..." />
+            <button type="submit" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <div class="filtros" aria-hidden="true">
+            <button class="btn" type="button" data-filter="valor">Valores</button>
+            <button class="btn" type="button" data-filter="categoria">Categoria</button>
+            <button class="btn" type="button" data-filter="avaliacao">Avaliação</button>
+        </div>
+
+        <!-- Lista -->
+        <section id="profLista" class="prof-lista" aria-live="polite">
+            <!-- cards serão inseridos aqui -->
+        </section>
+
+        <!-- template -->
+        <template id="profCardTemplate">
+            <article class="teacher-card">
+                <div class="teacher-header">
+                    <div class="teacher-basic-info">
+                        <h3 class="teacher-card__nome"></h3>
+                        <div class="teacher-card_competencias"></div>
+                        <div class="teacher-card__avaliacao"></div>
+                    </div>
+                    <div class="teacher-price">
+                        <span class="price"></span>
+                        <span class="price-unit">/hora</span>
+                    </div>
+                </div>
+                <p class="teacher-card__descricao"></p>
+                <div class="card-actions">
+                    <button class="btn btn-primary" data-action="open-profile">
+                        Ver Perfil
+                    </button>
+                    <button class="btn btn-secondary btn-icon" data-action="open-schedule">
+                        <i class="fa-solid fa-calendar-plus"></i> Agendar
+                    </button>
+                </div>
+            </article>
+        </template>
+
+        <!-- Perfil (overlay) -->
+        <div id="teacherModalOverlay" class="overlay" role="dialog" aria-modal="true" aria-hidden="true">
+            <div class="modal--perfil" role="document" aria-labelledby="profileTitle">
+                <div class="modal-header">
+                    <div>
+                        <h2 id="profileName" class="title"></h2>
+                        <h3 id="profileTitle">Professor</h3>
+                        <div class="small-muted" id="profileSubtitle">Carregando...</div>
+                    </div>
+                    <div> <button class="close-btn" id="closeProfileBtn" aria-label="Fechar">×</button> </div>
+                </div>
+                <div class="profile-header" style="margin-top:12px">
+
+                    <div class="profile-info">
+                        <div style="display:flex;gap:12px;align-items:center;justify-content:space-between">
+                            <div>
+                                <div class="profile-price" id="profilePrice"></div>
+                            </div>
+                            <div> <button class="btn btn-primary" id="openScheduleFromProfile"><i
+                                        class="fa-solid fa-calendar-plus"></i> Agendar Aula</button> </div>
+                        </div>
+                        <div class="profile-section" id="profileAbout">
+                            <h4>Sobre o professor</h4>
+                            <p id="profileBio" class="small-muted"></p>
+                        </div>
+                        <div class="profile-section">
+                            <h4>Interesses / Matérias</h4>
+                            <ul id="profileInteresses"></ul>
+                        </div>
+
+                        <div class="profile-section">
+                            <h4>Certificações</h4>
+                            <ul id="profileCerts"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialog de agendamento -->
+        <dialog id="bookingDialog" aria-labelledby="bookingTitle">
+            <form method="dialog" class="agendar-card" id="bookingForm">
+                <button type="button" class="btn-close-modal" id="closeBooking">×</button>
+                <h3 id="bookingTitle">Agendar Aula</h3>
+                <p class="small-muted">Professor: <strong id="bookingProfName">—</strong> <span id="bookingProfPrice"
+                        style="margin-left:8px"></span></p>
+
+                <input type="hidden" id="bookingProfId" name="profId">
+
+                <label class="small-muted" for="bookingDate">Data</label>
+                <input id="bookingDate" name="date" type="date" class="agendar-input" required>
+
+                <div class="agendar-row" style="margin-top:8px">
+                    <div style="flex:1">
+                        <label class="small-muted" for="bookingDay">Dia da semana</label>
+                        <input id="bookingDay" class="agendar-input" disabled>
+                    </div>
+                    <div style="flex:1">
+                        <label class="small-muted" for="bookingTime">Horário</label>
+                        <select id="bookingTime" name="time" class="agendar-input" required>
+                            <option value="" disabled selected>Selecione</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="margin-top:10px">
+                    <label class="small-muted">Conteúdos</label>
+                    <div id="bookingTopics"></div>
+                </div>
+
+                <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
+                    <button type="button" class="btn" id="cancelBooking">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" id="confirmBooking">Confirmar Agendamento</button>
+                </div>
+            </form>
+        </dialog>
+
+        <!-- Outros modais existentes -->
+        <!-- ... -->
+
+        <!-- MODAL DE FILTRO DE PROFESSORES -->
+        <div id="filterModal" class="modal-filtro" role="dialog" aria-modal="true" aria-hidden="true">
+            <div class="modal-content-filtro">
+                <span id="closeModal" class="close" aria-label="Fechar">&times;</span>
+
+                <h2>Filtrar Professores</h2>
+
+                <div class="section-tabs">
+                    <button class="section-tab active" data-target="valor">Valor</button>
+                    <button class="section-tab" data-target="categoria">Categoria</button>
+                    <button class="section-tab" data-target="avaliacao">Avaliação</button>
+                </div>
+
+                <!-- VALOR -->
+                <section id="valor" class="filter-section active">
+                    <h3>Valor</h3>
+                    <div class="price-range-container">
+                        <label>Intervalo de Preço (R$)</label>
+                        <div class="price-slider">
+                            <input type="range" id="priceMin" min="0" max="1000" value="50">
+                            <input type="range" id="priceMax" min="0" max="1000" value="500">
+                        </div>
+                        <div class="price-inputs">
+                            <div>
+                                <label>Mínimo</label>
+                                <input type="number" id="minValue" value="50" min="0" max="1000">
+                            </div>
+                            <div>
+                                <label>Máximo</label>
+                                <input type="number" id="maxValue" value="500" min="0" max="1000">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CATEGORIAS -->
+                <section id="categoria" class="filter-section">
+                    <h3>Categorias</h3>
+                    <div class="search-box">
+                        <i class="fa fa-search"></i>
+                        <input type="text" id="searchCategory" placeholder="Buscar categoria...">
+                    </div>
+                    <div id="categoryList" class="category-list">
+                        <!-- Categorias carregadas da API -->
+                    </div>
+                </section>
+
+                <!-- AVALIAÇÃO -->
+                <section id="avaliacao" class="filter-section">
+                    <h3>Avaliação</h3>
+                    <div class="rating-container">
+                        <div class="stars-display" id="starsDisplay">★★★★★</div>
+                        <div class="rating-value" id="ratingValue">5.0</div>
+                        <input type="range" id="rating" class="rating-slider" min="1" max="5" step="0.5" value="5">
+                    </div>
+                </section>
+
+                <div class="button-group">
+                    <button id="clearFilters" class="clear-btn">Limpar Filtros</button>
+                    <button id="applyFilters" class="btn btn-primary">Aplicar Filtros</button>
+                </div>
+            </div>
+        </div>
+    </main>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <picture>
+                        <source srcset="assets/images/logo-200.png" media="(min-width: 1000px)">
+                        <source srcset="assets/images/logo-150.png" media="(min-width: 600px)">
+                        <img src="assets/images/logo-100.png" alt="Logo do site">
+                    </picture>
+                    <p>O conhecimento que você procura, a um clique de distância.</p>
+                </div>
+
+                <nav class="footer-col">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                © 2025 Grupo 2. Todos os direitos reservados.
+            </div>
+        </footer>
+
+        <script>
+            (function () {
+                // ---------- Configurações ----------
+                const API_BASE = 'http://localhost:5041/api'; // ajuste para produção
+                const API_PROFESSORES = API_BASE + '/professores';
+                const LIMITE_CARDS = 12;
+
+                // Fallback (se a API falhar) — usei o JSON que você enviou (array com 1 item)
+                const MOCK_DATA = [
+                    {
+                        "descricao": "Professora de programação.",
+                        "certificacoes": ["Bacharelado em Sistemas de Informação"],
+                        "competencias": ["TypeScript", "Node.js"],
+                        "valorHora": 99.90,
+                        "areas": [{ "areaId": 1 }, { "areaId": 4 }],
+                        "agendamentosComoProfessor": [],
+                        "disponibilidades": [0, 2, 4], // segunda, quarta, sexta (opcional)
+                        "avaliacoes": [],
+                        "id": 21,
+                        "nome": "Ana Beatriz Faria",
+                        "email": "ana@gmail.com",
+                        "cpf": "222.968.250-44",
+                        "tipo": 1,
+                        "links": []
+                    },
+                    {
+                        "descricao": "Engenheiro de software com foco em back-end e banco de dados.",
+                        "certificacoes": ["Mestrado em Engenharia de Software"],
+                        "competencias": ["Java", "Spring Boot", "MySQL"],
+                        "valorHora": 120.00,
+                        "areas": [{ "areaId": 1 }, { "areaId": 3 }],
+                        "agendamentosComoProfessor": [],
+                        "disponibilidades": [1, 3, 5], // terça, quinta e sábado
+                        "avaliacoes": [],
+                        "id": 22,
+                        "nome": "Lucas Andrade",
+                        "email": "lucas.andrade@gmail.com",
+                        "cpf": "518.742.960-12",
+                        "tipo": 1,
+                        "links": []
+                    },
+                    {
+                        "descricao": "Desenvolvedora front-end apaixonada por interfaces acessíveis e responsivas.",
+                        "certificacoes": ["Tecnólogo em Desenvolvimento Web", "Certificação em UX Design"],
+                        "competencias": ["HTML", "CSS", "JavaScript", "React"],
+                        "valorHora": 85.50,
+                        "areas": [{ "areaId": 2 }, { "areaId": 4 }],
+                        "agendamentosComoProfessor": [],
+                        "disponibilidades": [0, 3, 4], // segunda, quinta e sexta
+                        "avaliacoes": [],
+                        "id": 23,
+                        "nome": "Mariana Oliveira",
+                        "email": "mariana.oliveira@gmail.com",
+                        "cpf": "903.176.850-07",
+                        "tipo": 1,
+                        "links": []
+                    },
+                    {
+                        "descricao": "Instrutor de ciência de dados e aprendizado de máquina.",
+                        "certificacoes": ["Bacharelado em Estatística", "Especialização em Data Science"],
+                        "competencias": ["Python", "Pandas", "TensorFlow"],
+                        "valorHora": 150.00,
+                        "areas": [{ "areaId": 5 }, { "areaId": 6 }],
+                        "agendamentosComoProfessor": [],
+                        "disponibilidades": [2, 4, 6], // quarta, sexta e domingo
+                        "avaliacoes": [],
+                        "id": 24,
+                        "nome": "Rafael Costa",
+                        "email": "rafael.costa@gmail.com",
+                        "cpf": "337.924.180-55",
+                        "tipo": 1,
+                        "links": []
+                    },
+                    {
+                        "descricao": "Professora de design gráfico e desenvolvimento de interfaces digitais.",
+                        "certificacoes": ["Bacharelado em Design Gráfico"],
+                        "competencias": ["Figma", "Adobe XD", "UI/UX"],
+                        "valorHora": 75.00,
+                        "areas": [{ "areaId": 2 }, { "areaId": 7 }],
+                        "agendamentosComoProfessor": [],
+                        "disponibilidades": [1, 2, 4], // terça, quarta e sexta
+                        "avaliacoes": [],
+                        "id": 25,
+                        "nome": "Camila Ribeiro",
+                        "email": "camila.ribeiro@gmail.com",
+                        "cpf": "681.457.220-33",
+                        "tipo": 1,
+                        "links": []
+                    }
+                ];
+
+                // Mapeamento dia (0 segunda) — usamos mesma convenção
+                const diasEnum = { 0: "Segunda", 1: "Terça", 2: "Quarta", 3: "Quinta", 4: "Sexta", 5: "Sábado", 6: "Domingo" };
+
+                // Estado local
+                let professores = [];
+                let currentProfessor = null;
+
+                // Elementos
+                const listaEl = document.getElementById('profLista');
+                const tpl = document.getElementById('profCardTemplate');
+                const searchForm = document.getElementById('searchForm');
+                const searchInput = document.getElementById('inputBuscar');
+
+                // perfil
+                const overlay = document.getElementById('teacherModalOverlay');
+                const closeProfileBtn = document.getElementById('closeProfileBtn');
+                const profileName = document.getElementById('profileName');
+                const profilePrice = document.getElementById('profilePrice');
+                // const profileFoto = document.getElementById('profileFoto');
+                const profileBio = document.getElementById('profileBio');
+                const profileInteresses = document.getElementById('profileInteresses');
+                const profileCerts = document.getElementById('profileCerts');
+                const profileSubtitle = document.getElementById('profileSubtitle');
+                const openScheduleFromProfileBtn = document.getElementById('openScheduleFromProfile');
+
+                // booking
+                const bookingDialog = document.getElementById('bookingDialog');
+                const bookingForm = document.getElementById('bookingForm');
+                const bookingProfId = document.getElementById('bookingProfId');
+                const bookingProfName = document.getElementById('bookingProfName');
+                const bookingProfPrice = document.getElementById('bookingProfPrice');
+                const bookingDate = document.getElementById('bookingDate');
+                const bookingDay = document.getElementById('bookingDay');
+                const bookingTime = document.getElementById('bookingTime');
+                const bookingTopics = document.getElementById('bookingTopics');
+                const closeBooking = document.getElementById('closeBooking');
+                const cancelBooking = document.getElementById('cancelBooking');
+
+                // ---------- Helpers ----------
+                function fmtPrice(v) { return v == null ? 'Valor não informado' : `R$ ${Number(v).toFixed(2)}/h`; }
+
+                function createCard(prof) {
+                    console.log('createCard chamado com:', prof);
+
+                    const tpl = document.getElementById('profCardTemplate');
+                    if (!tpl) {
+                        console.error('Template não encontrado: #profCardTemplate');
+                        return document.createElement('div');
+                    }
+
+                    const clone = tpl.content.cloneNode(true);
+                    const article = clone.querySelector('.teacher-card');
+                    article.dataset.id = prof.id ?? '';
+
+                    // Nome do professor
+                    const nomeEl = clone.querySelector('.teacher-card__nome');
+                    nomeEl.textContent = prof.nome || '(sem nome)';
+
+                    // Descrição
+                    const descEl = clone.querySelector('.teacher-card__descricao');
+                    descEl.textContent = prof.descricao || 'Sem descrição disponível.';
+
+                    // Valor da hora
+                    const priceEl = clone.querySelector('.price');
+                    if (prof.valorHora != null) {
+                        priceEl.textContent = `R$ ${Number(prof.valorHora).toFixed(2)}`;
+                    } else {
+                        priceEl.textContent = '—';
+                    }
+
+                    // Avaliação (se existir no JSON)
+                    const ratingEl = clone.querySelector('.teacher-card__avaliacao');
+                    if (prof.avaliacao != null) {
+                        const estrelas = '★'.repeat(Math.floor(prof.avaliacao)) + '☆'.repeat(5 - Math.floor(prof.avaliacao));
+                        ratingEl.textContent = `${estrelas} (${prof.avaliacao.toFixed(1)})`;
+                    } else {
+                        ratingEl.textContent = 'Sem avaliações';
+                    }
+
+                    // Competências (caso venha no JSON, senão pode deixar vazio)
+                    const compEl = clone.querySelector('.teacher-card_competencias');
+                    if (Array.isArray(prof.competencias) && prof.competencias.length > 0) {
+                        compEl.textContent = prof.competencias.join(', ');
+                    } else {
+                        compEl.textContent = '';
+                    }
+
+                    // Botões (para associar eventos, se necessário)
+                    const btnProfile = clone.querySelector('[data-action="open-profile"]');
+                    const btnSchedule = clone.querySelector('[data-action="open-schedule"]');
+
+                    btnProfile.addEventListener('click', () => {
+                        console.log(`Abrir perfil do professor ID ${prof.id}`);
+                        openProfile(prof);
+                        // aqui você chama a função de abrir o modal de perfil
+                    });
+
+                    btnSchedule.addEventListener('click', () => {
+                        console.log(`Agendar aula com o professor ID ${prof.id}`);
+                        openBooking(prof);
+                        // aqui você chama a função de abrir o modal de agendamento
+                    });
+
+                    return clone;
+                }
+
+
+                function renderList(list) {
+                    listaEl.innerHTML = '';
+                    if (!Array.isArray(list) || list.length === 0) {
+                        listaEl.innerHTML = `<article class="teacher-card"><div class="teacher-card__body"><h3 class="teacher-card__nome">Nenhum professor encontrado.</h3><p class="teacher-card__Conteúdo">Tente outro termo.</p></div></article>`;
+                        return;
+                    }
+                    list.slice(0, LIMITE_CARDS).forEach(p => listaEl.appendChild(createCard(p)));
+                }
+
+                // ---------- API ----------
+                async function fetchProfessores() {
+                    try {
+                        const resp = await fetch(API_PROFESSORES, { method: 'GET', headers: { 'Accept': 'application/json' } });
+                        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                        const data = await resp.json();
+                        return Array.isArray(data) ? data : [];
+                    } catch (err) {
+                        console.warn('Falha ao buscar API — usando mock local', err);
+                        return MOCK_DATA;
+                    }
+                }
+
+                // ---------- Inicialização ----------
+                async function init() {
+                    professores = await fetchProfessores();
+                    renderList(professores);
+                }
+                init();
+
+                // ---------- Busca (form) ----------
+                searchForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const termo = (searchInput.value || '').toLowerCase().trim();
+                    const filtrados = professores.filter(p => {
+                        const nome = (p.nome || '').toLowerCase();
+                        const desc = ((p.descricao || p.area || p.materia) || '').toLowerCase();
+                        const comps = (Array.isArray(p.competencias) ? p.competencias.join(' ') : (p.competencias || '')).toLowerCase();
+                        return nome.includes(termo) || desc.includes(termo) || comps.includes(termo);
+                    });
+                    renderList(filtrados);
+                });
+
+                // ---------- Event delegation para abrir perfil / agendar ----------
+                listaEl.addEventListener('click', (e) => {
+                    const btn = e.target.closest('button');
+                    if (!btn) return;
+                    const article = e.target.closest('.teacher-card');
+                    if (!article) return;
+                    const profId = article.dataset.id;
+                    const prof = professores.find(x => String(x.id) === String(profId));
+                    if (!prof) return;
+
+                    if (btn.classList.contains('btn-profile')) {
+                        openProfile(prof);
+                    } else if (btn.classList.contains('btn-schedule')) {
+                        openBooking(prof);
+                    }
+                });
+
+                // ---------- Perfil ----------
+                function openProfile(prof) {
+                    currentProfessor = prof;
+                    profileName.textContent = prof.nome || '(sem nome)';
+                    profilePrice.textContent = fmtPrice(prof.valorHora);
+                    profileBio.textContent = prof.descricao || prof.bio || 'Este professor ainda não adicionou uma descrição detalhada.';
+                    profileSubtitle.textContent = `${prof.competencias ? (Array.isArray(prof.competencias) ? prof.competencias.join(', ') : prof.competencias) : ''}`;
+
+                    // interesses / materias
+                    profileInteresses.innerHTML = '';
+                    const materias = prof.areas && Array.isArray(prof.areas) && prof.areas.length ? prof.areas.map(a => a.area || `Área ${a.areaId || ''}`) : (prof.competencias || []);
+                    (Array.isArray(materias) ? materias : [materias]).forEach(it => {
+                        const li = document.createElement('li'); li.textContent = it || '-'; profileInteresses.appendChild(li);
+                    });
+
+                    // certificações
+                    profileCerts.innerHTML = '';
+                    (Array.isArray(prof.certificacoes) ? prof.certificacoes : (prof.certificacoes ? [prof.certificacoes] : [])).forEach(c => {
+                        const li = document.createElement('li'); li.textContent = c; profileCerts.appendChild(li);
+                    });
+
+                    overlay.classList.add('show');
+                    overlay.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeProfile() {
+                    overlay.classList.remove('show');
+                    overlay.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                    currentProfessor = null;
+                }
+
+                closeProfileBtn.addEventListener('click', closeProfile);
+                overlay.addEventListener('click', (e) => { if (e.target === overlay) closeProfile(); });
+                document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { if (overlay.classList.contains('show')) closeProfile(); if (bookingDialog.open) bookingDialog.close(); } });
+
+                // Ao clicar no botão de agendar dentro do perfil
+                openScheduleFromProfileBtn.addEventListener('click', () => {
+                    if (!currentProfessor) return;
+                    openBooking(currentProfessor);
+                    closeProfile();
+                });
+
+                // ---------- Agendamento (dialog) ----------
+                function openBooking(prof) {
+                    currentProfessor = prof;
+                    bookingProfId.value = prof.id ?? '';
+                    bookingProfName.textContent = prof.nome ?? '';
+                    bookingProfPrice.textContent = fmtPrice(prof.valorHora);
+
+                    // tópicos disponíveis (conteúdos)
+                    bookingTopics.innerHTML = '';
+                    const topics = prof.competencias && Array.isArray(prof.competencias) && prof.competencias.length ? prof.competencias : ['Conteúdo geral'];
+                    topics.forEach((t, i) => {
+                        const id = `topic-${prof.id}-${i}`;
+                        const wrapper = document.createElement('div');
+                        wrapper.innerHTML = `<label><input type="checkbox" name="topics" value="${t}" id="${id}" ${i === 0 ? 'checked' : ''}> <span>${t}</span></label>`;
+                        bookingTopics.appendChild(wrapper);
+                    });
+
+                    // preencher horários (se houver disponibilidade explícita de horários, usar; senão, hora padrão)
+                    populateTimes(prof, []);
+
+                    // configurar data mínima/máxima e validação por dia da semana
+                    configurarDatasDisponiveis(bookingDate, prof.disponibilidades && prof.disponibilidades.length ? prof.disponibilidades : [0, 2, 4]);
+
+                    // reset campos
+                    bookingDate.value = '';
+                    bookingDay.value = '';
+                    bookingTime.innerHTML = '<option value="" disabled selected>Selecione</option>';
+
+                    // abrir dialog
+                    try {
+                        bookingDialog.showModal();
+                    } catch (er) {
+                        // fallback: se browser não suportar, simular com overlay
+                        alert('Seu navegador não suporta <dialog>. Implemente um fallback se necessário.');
+                    }
+                }
+
+                function construirOptionHorario(text, value) { const opt = document.createElement('option'); opt.value = value; opt.textContent = text; return opt; }
+
+                // Exemplo: aqui você preencheria de acordo com prof.disponibilidadesDetalhadas (horários por dia)
+                function populateTimes(prof, timesForSelectedDate) {
+                    bookingTime.innerHTML = '<option value="" disabled selected>Selecione</option>';
+                    // se timesForSelectedDate fornecido, usa ele; senão horários padrão
+                    const defaults = ['09:00-10:00', '11:00-12:00', '14:00-15:00', '16:00-17:00'];
+                    const times = Array.isArray(timesForSelectedDate) && timesForSelectedDate.length ? timesForSelectedDate : defaults;
+                    times.forEach(t => bookingTime.appendChild(construirOptionHorario(t, t)));
+                }
+
+                function configurarDatasDisponiveis(inputDate, diasDisponiveis) {
+                    const hoje = new Date();
+                    const maxDate = new Date();
+                    maxDate.setMonth(maxDate.getMonth() + 2);
+                    inputDate.min = hoje.toISOString().split('T')[0];
+                    inputDate.max = maxDate.toISOString().split('T')[0];
+
+                    inputDate.addEventListener('change', () => {
+                        if (!inputDate.value) return;
+                        const sel = new Date(inputDate.value + 'T00:00:00');
+                        // getDay() -> 0 domingo ... 6 sábado. Convertemos pra 0=segunda.
+                        const diaSemana = (sel.getDay() + 6) % 7;
+                        bookingDay.value = diasEnum[diaSemana] || '';
+                        if (!diasDisponiveis.includes(diaSemana)) {
+                            alert(`O professor não atende em ${bookingDay.value || 'este dia da semana'}. Escolha outra data.`);
+                            inputDate.value = '';
+                            bookingDay.value = '';
+                            bookingTime.innerHTML = '<option value="" disabled selected>Selecione</option>';
+                            return;
+                        }
+
+                        // Se tivesse horários específicos por data, poderíamos buscar aqui.
+                        // Simulamos: se a data for par, 2 horários; se ímpar, 3 horários (apenas demo)
+                        const dayNum = sel.getDate();
+                        const times = (dayNum % 2 === 0) ? ['10:00-11:00', '15:00-16:00'] : ['09:00-10:00', '13:00-14:00', '18:00-19:00'];
+                        populateTimes(currentProfessor, times);
+                    });
+                }
+
+                // fechar dialog
+                closeBooking.addEventListener('click', () => bookingDialog.close());
+                cancelBooking.addEventListener('click', () => bookingDialog.close());
+
+                // submit do agendamento
+                bookingForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const profId = bookingProfId.value;
+                    const date = bookingDate.value;
+                    const time = bookingTime.value;
+                    const topics = Array.from(bookingTopics.querySelectorAll('input[name="topics"]:checked')).map(i => i.value);
+
+                    if (!date || !time) { alert('Escolha data e horário.'); return; }
+
+                    // construir payload conforme sua API
+                    const payload = {
+                        professorId: profId,
+                        dataHora: date + 'T' + time.split('-')[0] + ':00',
+                        topicos: topics
+                    };
+
+                    // tentativa de enviar para API (rota de agendamentos fictícia)
+                    try {
+                        const resp = await fetch(API_BASE + '/agendamentos', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+
+                        if (!resp.ok) {
+                            // fallback: se a API retorna erro, apenas mostrar confirmação local
+                            const txt = await resp.text().catch(() => null);
+                            console.warn('Resposta não OK ao criar agendamento', resp.status, txt);
+                            alert('Não foi possível criar agendamento na API. (Simulação local) — ver console.');
+                        } else {
+                            alert('Agendamento criado com sucesso!');
+                        }
+                    } catch (err) {
+                        console.warn('Erro rede ao criar agendamento (mock)', err);
+                        alert('Agendamento confirmado (modo offline).');
+                    } finally {
+                        bookingDialog.close();
+                    }
+                });
+
+                // ---------- Carregamento inicial de exemplo ao clicar em filtro: demonstração ----------
+                // (já ativamos init() para carregar lista)
+            })();
+        </script>
+
+        <script>
+            // ======== CONTROLE DO MODAL DE FILTRO ========
+            const filterModal = document.getElementById('filterModal');
+            const filterButtons = document.querySelectorAll('[data-filter]');
+            const closeFilterBtn = document.getElementById('closeModal');
+            const applyFiltersBtn = document.getElementById('applyFilters');
+            const clearFiltersBtn = document.getElementById('clearFilters');
+            const tabs = document.querySelectorAll('.section-tab');
+            const sections = document.querySelectorAll('.filter-section');
+
+            // Função para exibir apenas a aba selecionada
+            function showTab(targetId) {
+                // remove classe ativa de tudo
+                tabs.forEach(t => t.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+
+                // adiciona classe ativa à aba e à seção correspondentes
+                const activeTab = [...tabs].find(t => t.dataset.target === targetId);
+                if (activeTab) activeTab.classList.add('active');
+                const activeSection = document.getElementById(targetId);
+                if (activeSection) activeSection.classList.add('active');
+            }
+            // Abre modal e mostra a aba clicada
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const target = btn.dataset.filter; // valor, categoria ou avaliacao
+                    filterModal.style.display = 'flex';
+                    filterModal.setAttribute('aria-hidden', 'false');
+                    showTab(target);
+                });
+            });
+
+            // Fecha modal
+            closeFilterBtn.addEventListener('click', () => {
+                filterModal.style.display = 'none';
+                filterModal.setAttribute('aria-hidden', 'true');
+            });
+
+            // Clique nas abas dentro do modal
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.dataset.target;
+                    showTab(target);
+                });
+            });
+
+            // ======== APLICAR FILTROS ========
+            applyFiltersBtn.addEventListener('click', () => {
+                const minVal = parseFloat(document.getElementById('minValue').value) || 0;
+                const maxVal = parseFloat(document.getElementById('maxValue').value) || Infinity;
+                const minRating = parseFloat(document.getElementById('rating').value) || 0;
+
+                const filtrados = professores.filter(p => {
+                    const preco = p.valorHora || 0;
+                    const avaliacao = p.avaliacao || 0;
+                    return preco >= minVal && preco <= maxVal && avaliacao >= minRating;
+                });
+
+                renderList(filtrados);
+                filterModal.style.display = 'none';
+            });
+
+            // ======== LIMPAR FILTROS ========
+            clearFiltersBtn.addEventListener('click', () => {
+                document.getElementById('minValue').value = 0;
+                document.getElementById('maxValue').value = 1000;
+                document.getElementById('rating').value = 1;
+                renderList(professores);
+            });
+
+            // ======== SINCRONIZAR SLIDERS ========
+            const priceMin = document.getElementById('priceMin');
+            const priceMax = document.getElementById('priceMax');
+            const minValue = document.getElementById('minValue');
+            const maxValue = document.getElementById('maxValue');
+
+            function syncPriceInputs() {
+                minValue.value = priceMin.value;
+                maxValue.value = priceMax.value;
+            }
+            priceMin.addEventListener('input', syncPriceInputs);
+            priceMax.addEventListener('input', syncPriceInputs);
+            minValue.addEventListener('input', () => (priceMin.value = minValue.value));
+            maxValue.addEventListener('input', () => (priceMax.value = maxValue.value));
+
+            // ======== EXIBIR VALOR DO SLIDER DE AVALIAÇÃO ========
+            const ratingSlider = document.getElementById('rating');
+            const ratingValue = document.getElementById('ratingValue');
+            ratingSlider.addEventListener('input', () => {
+                ratingValue.textContent = ratingSlider.value;
+            });
+        </script>
+</body>
+
+</html>

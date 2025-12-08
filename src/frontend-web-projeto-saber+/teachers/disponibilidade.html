@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <title>Disponibilidade do Professor</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <style>
+
+  </style>
+</head>
+
+<body class="body-flex">
+  <header class="header">
+    <div class="container-header header-inner">
+      <a href="../index.html">
+        <picture>
+          <source srcset="../assets/images/logo-120.png" media="(min-width: 1000px)">
+          <img src="../assets/images/logo-100.png" alt="Exemplo responsivo">
+        </picture>
+      </a>
+
+      <div class="user-menu">
+        <button class="user-avatar btn-primary" onclick="toggleUserMenu()">A</button>
+        <div class="user-dropdown" id="userDropdown">
+          <a href="./perfil.html">Meu Perfil</a>
+          <a href="./dashboard.html">Dashboard</a>
+          <a href="#" class="nav-link" onclick="logout()">Sair</a>
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+  <main class="main">
+    <div class="container" aria-live="polite">
+      <h1 class="title">Finalize o seu cadastro</h1>
+      <p>Escolha seus horários e compartilhe suas competências para disponibilizar seu perfil como professor.</p>
+      <!-- ÁREAS DE ATUAÇÃO -->
+      <section class="areas-section">
+        <h3>Áreas de atuação</h3>
+        
+        <div class="areas-input-wrap">
+          <input type="text" id="areaInput" class="areas-input input-field" placeholder="Digite uma área...">
+          <button id="addAreaBtn" class="btn">Adicionar</button>
+          <div id="suggestionsBox" class="suggestions hidden"></div>
+        </div>
+
+        <div id="tagList" class="tag-list" aria-label="Áreas selecionadas"></div>
+        
+      </section>
+      <hr style="margin: 40px 0;">
+      <section class="disponibilidade-section">
+        <h3>Disponibilidades</h3>
+        <p>Selecione os períodos da semana em que poderá atender seus alunos.</p>
+        <div class="controls">
+          <button id="addBtn" class="btn btn-primary" aria-label="Adicionar horário">
+            Adicionar horário
+          </button>
+          <button id="clearBtn" class="btn ghost" aria-label="Limpar todos os horários">
+            Limpar tudo
+          </button>
+        </div>
+        <div id="rows" class="rows" aria-label="Lista de horários"></div>
+        <div id="summary" class="summary" aria-atomic="true"></div>
+        <div class="actions-disponibilidade">
+          <button id="saveBtn" class="btn btn-secondary" style="margin-top:16px;">Salvar</button>
+        </div>
+    </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <picture>
+          <source srcset="../assets/images/logo-200.png" media="(min-width: 1000px)">
+          <source srcset="../assets/images/logo-150.png" media="(min-width: 600px)">
+          <img src="../assets/images/logo-100.png" alt="Logo do site">
+        </picture>
+        <p>O conhecimento que você procura, a um clique de distância</p>
+      </div>
+
+      <nav class="footer-col">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre-nos.html">Sobre Nós</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Grupo 2. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script type="module" src="../scripts/page-cadastro.js"></script>
+  <script>
+    //   /* =========================
+    //      Gerenciar Áreas (tags)
+    //      ========================= */
+    //   const areaInput = document.getElementById('areaInput');
+    //   const addAreaBtn = document.getElementById('addAreaBtn');
+    //   const tagList = document.getElementById('tagList');
+    //   const selectedAreas = [];
+
+    //   const mockAreas = [
+    //     { Id: 1, Nome: "Matemática" },
+    //     { Id: 2, Nome: "Português" },
+    //     { Id: 3, Nome: "Ciências" },
+    //     { Id: 4, Nome: "História" },
+    //     { Id: 5, Nome: "Geografia" },
+    //     { Id: 6, Nome: "Física" },
+    //     { Id: 7, Nome: "Química" },
+    //     { Id: 8, Nome: "Biologia" },
+    //     { Id: 9, Nome: "Educação Física" },
+    //     { Id: 10, Nome: "Artes" },
+    //     { Id: 11, Nome: "Sociologia" },
+    //     { Id: 12, Nome: "Filosofia" },
+    //     { Id: 13, Nome: "Tecnologia da Informação" },
+    //     { Id: 14, Nome: "Programação" },
+    //     { Id: 15, Nome: "Administração" }
+    //   ];
+
+    //   const suggestionsBox = document.getElementById('suggestionsBox');
+
+    //   // === Autocomplete dinâmico ===
+    //   areaInput.addEventListener('input', () => {
+    //     const query = areaInput.value.toLowerCase().trim();
+    //     suggestionsBox.innerHTML = '';
+
+    //     if (query.length === 0) {
+    //       suggestionsBox.classList.add('hidden');
+    //       return;
+    //     }
+
+    //     const filtered = mockAreas.filter(a =>
+    //       a.Nome.toLowerCase().includes(query)
+    //     );
+
+    //     if (filtered.length === 0) {
+    //       suggestionsBox.classList.add('hidden');
+    //       return;
+    //     }
+
+    //     filtered.forEach(area => {
+    //       const item = document.createElement('div');
+    //       item.classList.add('suggestion-item');
+    //       item.textContent = area.Nome;
+    //       item.addEventListener('click', () => {
+    //         suggestionsBox.classList.add("hidden");
+    //         areaInput.value = area.Nome;
+    //       });
+    //       suggestionsBox.appendChild(item);
+    //     });
+
+    //     suggestionsBox.classList.remove('hidden');
+    //   });
+
+    //   // === Adicionar e renderizar tags ===
+    //   function renderTags() {
+    //     tagList.innerHTML = '';
+    //     selectedAreas.forEach(area => {
+    //       const tag = document.createElement('div');
+    //       tag.className = 'tag';
+    //       tag.innerHTML = `<span>${area.Nome}</span> <button title="Remover área">&times;</button>`;
+    //       tag.querySelector('button').addEventListener('click', () => {
+    //         const idx = selectedAreas.findIndex(a => a.Id === area.Id);
+    //         if (idx !== -1) selectedAreas.splice(idx, 1);
+    //         renderTags();
+    //       });
+    //       tagList.appendChild(tag);
+    //     });
+    //   }
+
+    //   function addAreaByName(name) {
+    //     name = name.trim();
+    //     if (!name) return;
+    //     const found = mockAreas.find(a => a.Nome.toLowerCase() === name.toLowerCase());
+    //     const newArea = found || { Id: Date.now(), Nome: name };
+    //     if (!selectedAreas.some(a => a.Nome.toLowerCase() === newArea.Nome.toLowerCase())) {
+    //       selectedAreas.push(newArea);
+    //       renderTags();
+    //     }
+    //     areaInput.value = '';
+    //   }
+
+    //   addAreaBtn.addEventListener('click', () => addAreaByName(areaInput.value));
+    //   areaInput.addEventListener('keydown', e => {
+    //     if (e.key === 'Enter') {
+    //       e.preventDefault();
+    //       addAreaByName(areaInput.value);
+    //     }
+    //   });
+
+    //   /* =========================
+    //      Horários
+    //      ========================= */
+    //   const weekDays = [
+    //     { val: '0', label: 'Segunda' },
+    //     { val: '1', label: 'Terça' },
+    //     { val: '2', label: 'Quarta' },
+    //     { val: '3', label: 'Quinta' },
+    //     { val: '4', label: 'Sexta' },
+    //     { val: '5', label: 'Sábado' },
+    //     { val: '6', label: 'Domingo' }
+    //   ];
+
+    //   const rowsEl = document.getElementById('rows');
+    //   const addBtn = document.getElementById('addBtn');
+    //   const clearBtn = document.getElementById('clearBtn');
+    //   const summaryEl = document.getElementById('summary');
+    //   const saveBtn = document.getElementById('saveBtn');
+
+    //   let nextId = 1;
+    //   const state = { rows: [] };
+
+    //   function pad2(n) { return (n < 10 ? '0' : '') + n; }
+    //   function timeToMinutes(t) {
+    //     const [hh, mm] = (t || '0:0').split(':').map(x => parseInt(x || '0', 10));
+    //     return hh * 60 + mm;
+    //   }
+    //   function minutesToTime(min) {
+    //     min = ((min % (24 * 60)) + (24 * 60)) % (24 * 60);
+    //     const h = Math.floor(min / 60);
+    //     const m = min % 60;
+    //     return pad2(h) + ':' + pad2(m);
+    //   }
+    //   function addMinutesToTimeString(timeStr, minutesToAdd) {
+    //     if (!timeStr) return '';
+    //     const total = timeToMinutes(timeStr) + minutesToAdd;
+    //     return minutesToTime(total);
+    //   }
+    //   function durationMinutes(start, end) {
+    //     let s = timeToMinutes(start);
+    //     let e = timeToMinutes(end);
+    //     if (e <= s) e += 24 * 60;
+    //     return e - s;
+    //   }
+
+    //   function createRow(day = '0', start = '08:00') {
+    //     const id = nextId++;
+    //     const row = { id, day: String(day), start, end: addMinutesToTimeString(start, 60) };
+    //     state.rows.push(row);
+    //     renderAll();
+    //   }
+
+    //   function renderAll() {
+    //     rowsEl.innerHTML = '';
+    //     state.rows.forEach(r => {
+    //       const row = document.createElement('div');
+    //       row.className = 'row';
+    //       row.dataset.id = r.id;
+    //       const sel = document.createElement('select');
+    //       sel.className = 'day input-field';
+    //       weekDays.forEach(d => {
+    //         const o = document.createElement('option');
+    //         o.value = d.val; o.textContent = d.label;
+    //         if (d.val === r.day) o.selected = true;
+    //         sel.appendChild(o);
+    //       });
+    //       const start = document.createElement('input');
+    //       start.type = 'time'; start.value = r.start; start.className = 'start input-field';
+    //       const end = document.createElement('input');
+    //       end.type = 'time'; end.value = r.end; end.className = 'end input-field';
+    //       const meta = document.createElement('div');
+    //       meta.className = 'meta';
+    //       meta.textContent = `${durationMinutes(r.start, r.end) / 60}h`;
+    //       const del = document.createElement('button');
+    //       del.className = 'delete-btn'; del.innerHTML = '🗑️';
+    //       del.addEventListener('click', () => {
+    //         state.rows = state.rows.filter(x => x.id !== r.id);
+    //         renderAll();
+    //       });
+    //       [sel, start, end].forEach(inp => inp.addEventListener('change', () => {
+    //         r.day = sel.value; r.start = start.value; r.end = end.value;
+    //         renderAll();
+    //       }));
+    //       row.append(sel, start, end, meta, del);
+    //       rowsEl.appendChild(row);
+    //     });
+    //     updateSummary();
+    //   }
+
+    //   function updateSummary() {
+    //     const totalAulas = state.rows.length;
+    //     let totalMin = 0;
+    //     state.rows.forEach(r => totalMin += durationMinutes(r.start, r.end));
+    //     const totalHoras = Math.floor(totalMin / 60);
+    //     summaryEl.textContent = `Total de aulas: ${totalAulas} (${totalHoras}h semanais)`;
+    //   }
+
+    //   addBtn.addEventListener('click', () => createRow());
+    //   clearBtn.addEventListener('click', () => {
+    //     if (confirm('Limpar todos os horários?')) { state.rows = []; renderAll(); }
+    //   });
+
+    //   saveBtn.addEventListener('click', () => {
+    //     const payload = {
+    //       Areas: selectedAreas,
+    //       Disponibilidade: state.rows.map(r => ({
+    //         DiaDaSemana: parseInt(r.day),
+    //         HoraInicio: r.start + ':00',
+    //         HoraFim: r.end + ':00'
+    //       }))
+    //     };
+    //     console.log('Payload para enviar à API:', payload);
+    //     alert('Disponibilidade salva! (veja console)');
+    //   });
+
+    //   // inicial
+    //   createRow('0', '08:00');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação - Home</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container-header header-inner">
+            <a href="../index.html">
+                <picture>
+                    <source srcset="../assets/images/logo-120.png" media="(min-width: 1000px)">
+                    <img src="../assets/images/logo-100.png" alt="Exemplo responsivo">
+                </picture>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#categoria" class="nav-link">Categorias</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <div class="actions">
+                    <button id="openModal" class="btn btn-primary" type="button">Entrar</button>
+                </div>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <main class="profile-main">
+        <section class="profile-header-section">
+            <header class="profile-header">
+                <div class="container">
+                    <!-- <figure class="profile-cover">
+                        <div class="cover-overlay">
+                            <button class="change-cover-btn" onclick="changeCover()">
+                                <i class="fas fa-camera"></i>
+                                Alterar Capa
+                            </button>
+                        </div>
+                    </figure> -->
+                    <div class="profile-info-header">
+                        <!-- <div class="profile-avatar-section">
+                            <figure class="profile-avatar">
+                                <img id="profileAvatar" alt="Foto do perfil de Ana Silva">
+                            </figure>
+                            <button class="change-avatar-btn" onclick="changeAvatar()">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div> -->
+                        <div class="profile-basic-info">
+                            <h1 id="profileName">Sávio Sérgio</h1>
+                            <p id="profileType" class="profile-type">Professor</p>
+                            <p class="profile-join-date">
+                                Membro desde <time datetime="2023-06">Junho 2023</time>
+                            </p>
+                            <ul class="profile-stats">
+                                <li class="stat-item">
+                                    <strong id="totalLessons">45</strong> <span>Aulas</span>
+                                </li>
+                                <li class="stat-item">
+                                    <strong id="totalTeachers">8</strong> <span>Alunos</span>
+                                </li>
+                                <li class="stat-item">
+                                    <strong id="totalAvaliacao">45</strong> <span>Avaliações</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <nav class="profile-actions">
+                            <button class="btn-outline" onclick="toggleEditMode()">
+                                <i class="fas fa-edit"></i> Editar Perfil
+                            </button>
+                        </nav>
+                    </div>
+            </header>
+            </div>
+        </section>
+
+        <!-- Conteúdo principal do perfil -->
+        <section class="profile-content container">
+            <div class="profile-columns">
+                <!-- Coluna Esquerda -->
+                <aside class="profile-left">
+                    <article class="profile-card">
+                        <header class="card-header">
+                            <h2>Interesses Acadêmicos</h2>
+                            <button class="edit-section-btn" onclick="editSection('interests')">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </header>
+                        <div class="card-content">
+                            <ul class="interests-list" id="interestsList">
+                                <li>Remoto</li>
+                                <li>Presencial</li>
+                                <li>Programação</li>
+                                <li>Desenvolvimento Web</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="profile-card">
+                        <header class="card-header">
+                            <h2>Objetivos de Ensino</h2>
+                            <button class="edit-section-btn" onclick="editSection('goals')">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </header>
+                        <ul class="card-content goals-list" id="goalsList">
+                            <!-- <li><i class="fas fa-target"></i> Passar no vestibular de Engenharia</li>
+                            <li><i class="fas fa-target"></i> Melhorar fluência em inglês</li> -->
+                            <li><i class="fas fa-target"></i> Aprender programação web</li>
+                        </ul>
+                    </article>
+
+                    <article class="profile-card">
+                        <header class="card-header">
+                            <h2>Certificações</h2>
+                            <button class="edit-section-btn" onclick="editSection('goals')">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </header>
+                        <ul class="card-content goals-list" id="goalsList">
+                            <!-- <li><i class="fas fa-target"></i> Passar no vestibular de Engenharia</li>
+                            <li><i class="fas fa-target"></i> Melhorar fluência em inglês</li> -->
+                            <li><i class="fas fa-target"></i>Sistema de Informação - PUC Minas</li>
+                        </ul>
+                    </article>
+
+                    <article class="profile-card">
+                        <header class="card-header">
+                            <h2>Atividade Recente</h2>
+                            <a href="dashboard.html" class="view-all-link">Ver todas</a>
+                        </header>
+                        <div class="card-content" id="activityTimeline">
+                            <div class="lesson-item pending">
+                                <div class="lesson-avatar">A</div>
+                                <div class="lesson-info">
+                                    <div class="lesson-header">
+                                        <h4>Química</h4>
+                                        <span class="lesson-status status-pending">Pendente</span>
+                                    </div>
+                                    <p class="lesson-teacher">Prof. Ana Costa</p>
+                                    <p class="lesson-topic">Química Orgânica</p>
+                                    <div class="lesson-details">
+                                        <span class="lesson-date">
+                                            <i class="fas fa-calendar"></i>
+                                            ter., 23 de jan.
+                                        </span>
+                                        <span class="lesson-time">
+                                            <i class="fas fa-clock"></i>
+                                            16:00 (90min)
+                                        </span>
+                                        <span class="lesson-type">
+                                            <i class="fas fa-video"></i>
+                                            Online
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="lesson-actions">
+                                    <button class="btn-sm btn-outline" onclick="rescheduleLesson(3)">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn-sm btn-primary" onclick="joinLesson(3)">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                    <button class="btn-evaluate" onclick="openEvaluation()">
+                                        <i class="fas fa-star-half-alt"></i>
+                                        Avaliar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </aside>
+
+                <!-- Coluna Direita -->
+                <section class="profile-right">
+                    <article class="profile-card">
+                        <header class="card-header">
+                            <h2>Conquistas</h2>
+                        </header>
+                        <ul class="card-content achievements-grid" id="achievementsGrid">
+                            <li class="achievement-item earned">
+                                <i class="fas fa-medal"></i>
+                                <div>
+                                    <h3>Primeira Aula</h3>
+                                    <p>Completou sua primeira aula</p>
+                                </div>
+                            </li>
+                            <!-- <li class="achievement-item earned">
+                                <i class="fas fa-fire"></i>
+                                <div>
+                                    <h3>Sequência de 7 dias</h3>
+                                    <p>Estudou por 7 dias seguidos</p>
+                                </div>
+                            </li> -->
+                            <li class="achievement-item earned">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <h3>Professor 5 Estrelas</h3>
+                                    <p>Recebeu avaliação 5⭐ de um aluno</p>
+                                </div>
+                            </li>
+                            <li class="achievement-item">
+                                <i class="fas fa-trophy"></i>
+                                <div>
+                                    <h3>Mestre do Conhecimento</h3>
+                                    <p>Complete 100 aulas</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Edição de Perfil -->
+    <dialog id="editProfileModal" class="modal">
+        <form id="editProfileForm" class="edit-profile-form" method="dialog">
+            <header class="modal-header">
+                <h2>Editar Perfil</h2>
+                <button type="button" class="close" onclick="closeModal('editProfileModal')">&times;</button>
+            </header>
+
+            <section class="modal-body">
+                <!-- Conteúdo do formulário (mantém sua estrutura atual) -->
+            </section>
+
+            <footer class="form-actions">
+                <button type="button" class="btn-outline" onclick="closeModal('editProfileModal')">Cancelar</button>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Alterações
+                </button>
+            </footer>
+        </form>
+    </dialog>
+
+    <!-- Modal de Edição de Perfil -->
+    <dialog id="editProfileModal" class="modal">
+        <form id="editProfileForm" class="edit-profile-form" method="dialog">
+            <header class="modal-header">
+                <h2>Editar Perfil</h2>
+                <button type="button" class="close" onclick="closeModal('editProfileModal')">&times;</button>
+            </header>
+
+            <section class="modal-body">
+                <!-- Conteúdo do formulário (mantém sua estrutura atual) -->
+            </section>
+
+            <footer class="form-actions">
+                <button type="button" class="btn-outline" onclick="closeModal('editProfileModal')">Cancelar</button>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Alterações
+                </button>
+            </footer>
+        </form>
+    </dialog>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <picture>
+                    <source srcset="../assets/images/logo-200.png" media="(min-width: 1000px)">
+                    <source srcset="../assets/images/logo-150.png" media="(min-width: 600px)">
+                    <img src="../assets/images/logo-100.png" alt="Logo do site">
+                </picture>
+                <p>O conhecimento que você procura, a um clique de distância</p>
+            </div>
+
+            <nav class="footer-col">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Grupo 2. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="scripts/components/modal.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html>

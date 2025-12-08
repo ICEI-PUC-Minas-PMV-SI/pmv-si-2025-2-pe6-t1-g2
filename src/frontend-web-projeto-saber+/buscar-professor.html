@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Buscar Professores</title>
+
+    <!-- Font Awesome (opcional) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+
+        /* Oculta todas as seções de filtro */
+        .filter-section {
+            display: none;
+        }
+
+        /* Mostra apenas a aba ativa */
+        .filter-section.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container-header header-inner">
+            <a href="../home.html">
+                <picture>
+                    <source srcset="../assets/images/logo-120.png" media="(min-width: 1000px)">
+                    <img src="../assets/images/logo-100.png" alt="Exemplo responsivo">
+                </picture>
+            </a>
+
+            <div class="user-menu">
+                <button class="user-avatar btn-primary" onclick="toggleUserMenu()">A</button>
+                <div class="user-dropdown" id="userDropdown">
+                    <a href="./teachers/editar-perfil.html">Editar Dados</a>
+                    <a href="./teachers/dashboard.html" id="buttonDashboard">Dashboard</a>
+                    <a href="#" class="nav-link" onclick="logout()">Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="title-buscar">Busque pelo Professor Perfeito</h1>
+
+        <form class="search" id="searchForm" role="search" aria-label="Buscar professores">
+            <input id="q" name="q" type="search" placeholder="Pesquisar por nome, matéria ou habilidade..." />
+            <button type="submit" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <div class="filtros" aria-hidden="true">
+            <button class="btn" type="button" data-filter="valor">Valores</button>
+            <button class="btn" type="button" data-filter="categoria">Categoria</button>
+            <button class="btn" type="button" data-filter="avaliacao">Avaliação</button>
+        </div>
+
+        <!-- Lista -->
+        <section id="profLista" class="prof-lista" aria-live="polite">
+            <!-- cards serão inseridos aqui -->
+        </section>
+
+        <!-- template -->
+        <template id="profCardTemplate">
+            <article class="teacher-card">
+                <div class="teacher-header">
+                    <div class="teacher-basic-info">
+                        <h3 class="teacher-card__nome"></h3>
+                        <div class="teacher-card_competencias"></div>
+                        <div class="teacher-card__avaliacao"></div>
+                    </div>
+                    <div class="teacher-price">
+                        <span class="valor"></span>
+                        <span class="price-unit">/hora</span>
+                    </div>
+                </div>
+                <p class="teacher-card__descricao"></p>
+                <div class="card-actions">
+                    <button class="btn btn-primary" data-action="open-profile">
+                        Ver Perfil
+                    </button>
+                    <button class="btn btn-secondary btn-icon" data-action="open-schedule">
+                        <i class="fa-solid fa-calendar-plus"></i> Agendar
+                    </button>
+                </div>
+            </article>
+        </template>
+
+        <!-- Perfil (overlay) -->
+        <div id="teacherModalOverlay" class="overlay" role="dialog" aria-modal="true" aria-hidden="true">
+            <div class="modal--perfil" role="document" aria-labelledby="profileTitle">
+                <div class="modal-header--perfil">
+                    <div>
+                        <h2 id="profileName" class="title"></h2>
+                        <h3 id="profileTitle">Professor</h3>
+                        <div class="small-muted" id="profileSubtitle">Carregando...</div>
+                    </div>
+                    <div> <button class="close-btn" id="closeProfileBtn" aria-label="Fechar">×</button> </div>
+                </div>
+                <div class="profile-header" style="margin-top:12px">
+
+                    <div class="profile-info">
+                        <div style="display:flex;gap:12px;align-items:center;justify-content:space-between">
+                            <div>
+                                <div class="profile-price" id="profilePrice"></div>
+                            </div>
+                            <div> <button class="btn btn-primary" id="openScheduleFromProfile"><i
+                                        class="fa-solid fa-calendar-plus"></i> Agendar Aula</button> </div>
+                        </div>
+                        <div class="profile-section" id="profileAbout">
+                            <h4>Sobre o professor</h4>
+                            <p id="profileBio" class="small-muted"></p>
+                        </div>
+                        <div class="profile-section">
+                            <h4>Interesses / Matérias</h4>
+                            <ul id="profileInteresses"></ul>
+                        </div>
+
+                        <div class="profile-section">
+                            <h4>Certificações</h4>
+                            <ul id="profileCerts"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialog de agendamento -->
+            <dialog id="bookingDialog" class="modal-agendar" aria-labelledby="bookingTitle">
+                <form method="dialog" class="agendar-card" id="bookingForm">
+                    <button type="button" class="btn-close-modal" id="closeBooking">×</button>
+                    <h3 id="bookingTitle">Agendar Aula</h3>
+                    <p class="small-muted">Professor: <strong id="bookingProfName">—</strong> <strong>
+                        <span class="money" id="bookingProfPrice"
+                                style="margin-left:8px"></span>
+                    </strong></p>
+                    <input type="hidden" id="bookingProfId" name="profId">
+                    <label class="agendar-label" for="bookingDate">Data</label>
+                    <input id="bookingDate" name="date" type="date" class="agendar-input" required>
+                    <div class="agendar-row">
+                        <div class="agendar-campo">
+                            <label class="agendar-label" for="bookingDay">Dia da semana</label>
+                            <input id="bookingDay" class="agendar-input" disabled>
+                        </div>
+                        <div class="agendar-campo">
+                            <label class="agendar-label" for="bookingTime">Horário</label>
+                            <select id="bookingTime" name="time" class="agendar-input" required>
+                                <option value="" disabled selected>Selecione</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="margin-top:10px">
+                        <label class="agendar-label">Conteúdos</label>
+                        <div id="bookingTopics"></div>
+                    </div>
+                    <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
+                        <button type="button" class="btn" id="cancelBooking">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" id="confirmBooking">Confirmar Agendamento</button>
+                    </div>
+                </form>
+            </dialog>
+
+        <!-- MODAL DE FILTRO DE PROFESSORES -->
+        <div id="filterModal" class="modal-filtro" role="dialog" aria-modal="true" aria-hidden="true">
+            <div class="modal-content-filtro">
+                <span id="closeModal" class="close" aria-label="Fechar">&times;</span>
+
+                <h2>Filtrar Professores</h2>
+
+                <div class="section-tabs">
+                    <button class="section-tab active" data-target="valor">Valor</button>
+                    <button class="section-tab" data-target="categoria">Categoria</button>
+                    <button class="section-tab" data-target="avaliacao">Avaliação</button>
+                </div>
+
+                <!-- VALOR -->
+                <section id="valor" class="filter-section">
+                    <h3>Valor</h3>
+                    <div class="price-range-container">
+                        <label>Intervalo de Preço (R$)</label>
+                        <div class="price-slider">
+                            <input type="range" id="priceMin" min="0" max="1000" value="50">
+                            <input type="range" id="priceMax" min="0" max="1000" value="500">
+                        </div>
+                        <div class="price-inputs">
+                            <div>
+                                <label>Mínimo</label>
+                                <input type="number" id="minValue" value="50" min="0" max="1000">
+                            </div>
+                            <div>
+                                <label>Máximo</label>
+                                <input type="number" id="maxValue" value="500" min="0" max="1000">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CATEGORIAS -->
+                <section id="categoria" class="filter-section">
+                    <h3>Categorias</h3>
+                    <div class="search-box">
+                        <i class="fa fa-search"></i>
+                        <input type="text" id="searchCategory" placeholder="Buscar categoria...">
+                    </div>
+                    <div id="categoryList" class="category-list">
+                        <!-- Categorias carregadas da API -->
+                    </div>
+                </section>
+
+                <!-- AVALIAÇÃO -->
+                <section id="avaliacao" class="filter-section">
+                    <h3>Avaliação</h3>
+                    <div class="rating-container">
+                        <div class="stars-display" id="starsDisplay">★★★★★</div>
+                        <div class="rating-value" id="ratingValue">5.0</div>
+                        <input type="range" id="rating" class="rating-slider" min="1" max="5" step="0.5" value="5">
+                    </div>
+                </section>
+
+                <div class="button-group">
+                    <button id="clearFilters" class="clear-btn">Limpar Filtros</button>
+                    <button id="applyFilters" class="btn btn-primary">Aplicar Filtros</button>
+                </div>
+            </div>
+        </div>
+        
+        
+            <!-- MODAL 2 -->
+    <div id="modalCadastro" class="modal">
+        <div class="modal-content">
+            <span id="closeModalCadastro" class="close">&times;</span>
+            <h2>Cadastro</h2>
+
+            <div class="actions">
+                <!-- Login para estudante -->
+                <div class="login-option">
+                    <img src="assets/images/student.jpg" alt="Estudante" class="login-img">
+                    <a class="btn btn-primary" href="./student/cadastrar.html">Cadastro para estudante</a>
+                </div>
+
+                <!-- Login para instrutor -->
+                <div class="login-option">
+                    <img src="assets/images/teacher.png" alt="Instrutor" class="login-img">
+                    <a class="btn btn-primary" href="./teachers/cadastrar.html">Cadastro para instrutor</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <picture>
+                        <source srcset="assets/images/logo-200.png" media="(min-width: 1000px)">
+                        <source srcset="assets/images/logo-150.png" media="(min-width: 600px)">
+                        <img src="assets/images/logo-100.png" alt="Logo do site">
+                    </picture>
+                    <p>O conhecimento que você procura, a um clique de distância.</p>
+                </div>
+
+                <nav class="footer-col">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                © 2025 Grupo 2. Todos os direitos reservados.
+            </div>
+        </footer>
+
+        <script type="module" src="./scripts/main.js"></script>
+        <script type="module" src="./scripts/cadast/areas.js"></script>
+        <script type="module" src="./scripts/services/buscarService.js"></script>
+        <script>
+        function logout() {
+            localStorage.removeItem("jwtToken");
+            alert("Desconectando...");
+            setTimeout(() => window.location.href = "../login.html", 1000);
+        }
+    </script>
+</body>
+
+</html>

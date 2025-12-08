@@ -1,0 +1,106 @@
+    .secao-buscar {
+      display: flex;
+      align-items: center;
+    }
+
+    .title-buscar {
+      margin: 8px 0 18px;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    /* barra de busca */
+    .search {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cor-fundo);
+      border: 2px solid var(--cor-borda-suave);
+      border-radius: var(--raio-borda);
+      padding: 12px 4px;
+      width: 100%;
+      max-width: 1000px;
+      box-shadow: var(--sombra-card);
+      margin: 0 auto;
+    }
+
+    .search input[type="search"] {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      padding: 10px 12px;
+      font-size: 1rem;
+      color: #111;
+    }
+
+    .search input[type="search"]::placeholder {
+      color: #666;
+    }
+
+    .search button {
+      background: var(--cor-secundaria);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: filter .15s;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, .2);
+    }
+
+    .search button:hover {
+      filter: brightness(1.05);
+    }
+
+    .filtros {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin: 12px 0;
+      flex-wrap: wrap;
+      gap: var(--spacing-3);
+    }
+
+    .prof-lista {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(324px, 0.6fr));
+      gap: var(--spacing-3);
+      justify-content: center;
+    }
+
+    .teacher-card {
+      background-color: #fdfdfd;
+      border-radius: var(--raio-borda);
+      padding: var(--spacing-6);
+      box-shadow: var(--sombra-card);
+      border: 1px solid var(--cor-borda-suave);
+      cursor: pointer;
+      transition: var(--transition-normal);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .teacher-header {
+      display: flex;
+      gap: var(--spacing-4);
+      justify-content: space-between;
+      margin-bottom: var(--spacing-4);
+    }
+
+    .valor {
+      font-size: var(--font-size-xl);
+      font-weight: 700;
+      color: var(--cor-texto);
+    }
+
+    .card-actions {
+      display: flex;
+      gap: var(--spacing-4)
+    }
